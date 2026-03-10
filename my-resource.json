@@ -1,0 +1,3931 @@
+{
+    "resources": [
+        {
+            "id": "00efaab7-1b1e-4951-af3e-6e5a14b280b6",
+            "name": "subnet-2",
+            "provider": "vpc",
+            "type": "networks",
+            "region_id": "tr-west-1",
+            "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+            "project_name": "tr-west-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "9099d74f02a0283b32ec5e94692d3940407d4f2192362dd947bdb7b897d39457",
+            "created": "2025-10-02T06:53:07.000Z",
+            "updated": "2025-10-02T06:53:07.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "zone_id": "",
+                "vpc_id": "99e070a2-c3a7-4ebc-8508-eb690342707e",
+                "scope": "center",
+                "description": "",
+                "extra_dhcp_opts": [
+                    {
+                        "ip_version": 4,
+                        "opt_name": "51",
+                        "opt_value": "87600h"
+                    }
+                ],
+                "status": "ACTIVE",
+                "subnet_cidrs": [
+                    {
+                        "enable_dhcp": true,
+                        "ip_version": "4",
+                        "cidr": "10.0.1.0/24",
+                        "gateway_ip": "10.0.1.1",
+                        "id": "085626bd-df56-455a-92be-5710c607353d"
+                    }
+                ],
+                "dns_nameservers": [
+                    "100.125.2.250",
+                    "100.125.2.251"
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "0118768a-9c89-49e5-b503-ac3c179856ee",
+            "name": "vpc-default",
+            "provider": "vpc",
+            "type": "vpcs",
+            "region_id": "la-north-2",
+            "project_id": "64c4b4a3e24b476cb88dd27858a35b8d",
+            "project_name": "la-north-2",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "74b1e77e529e404c6f69eb72c7d1e520e820f806b36aac322deffe0b9550b6c1",
+            "created": "2026-02-02T07:49:39.000Z",
+            "updated": "2026-02-02T07:49:39.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "default_routetable_id": "25ec0567-5cf8-4eba-b309-20c4509f9331",
+                "routes": [],
+                "admin_state_up": true,
+                "description": "",
+                "cidr": "192.168.0.0/16",
+                "gateway_ip": "127.65.198.49",
+                "sys_tags": [
+                    "_sys_enterprise_project_id=0"
+                ],
+                "enable_snat": false,
+                "status": "ACTIVE"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "022679f7-acad-4ddc-8dad-69a4af36f192",
+            "name": "default",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "sa-brazil-1",
+            "project_id": "9c6fe096088c48a9956e2ed71dc166f5",
+            "project_name": "sa-brazil-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "e92b1d291f97d062eb8850698caf4779ed3469bf192e1126aebcbfee649b38af",
+            "created": "2025-09-05T16:42:05.000Z",
+            "updated": "2025-09-05T16:42:05.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "Default security group",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "022679f7-acad-4ddc-8dad-69a4af36f192",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "9c6fe096088c48a9956e2ed71dc166f5",
+                        "action": "allow",
+                        "id": "0726b623-350d-45fa-8b2c-769cd9ccc3bc",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "022679f7-acad-4ddc-8dad-69a4af36f192",
+                        "ethertype": "IPv6",
+                        "security_group_id": "022679f7-acad-4ddc-8dad-69a4af36f192",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "9c6fe096088c48a9956e2ed71dc166f5",
+                        "action": "allow",
+                        "id": "d0547749-a24d-47c5-ac3b-e01c3e1376d0",
+                        "direction": "ingress"
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "022679f7-acad-4ddc-8dad-69a4af36f192",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "9c6fe096088c48a9956e2ed71dc166f5",
+                        "action": "allow",
+                        "id": "81e0cb8c-0fa3-4073-932b-8279245d0bbd",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "022679f7-acad-4ddc-8dad-69a4af36f192",
+                        "ethertype": "IPv4",
+                        "security_group_id": "022679f7-acad-4ddc-8dad-69a4af36f192",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "9c6fe096088c48a9956e2ed71dc166f5",
+                        "action": "allow",
+                        "id": "37c86183-64bd-4ee1-98ca-2510d98cb185",
+                        "direction": "ingress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "0288e8b0-e494-4053-94a7-cea1951c8986",
+            "name": "vpc-default",
+            "provider": "vpc",
+            "type": "vpcs",
+            "region_id": "tr-west-1",
+            "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+            "project_name": "tr-west-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "c0a584faeda0ebd323d679a20172102af87bfb26fe4076c49f657a724bb7b7f1",
+            "created": "2025-09-24T05:07:29.000Z",
+            "updated": "2025-09-24T05:07:29.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "default_routetable_id": "53875336-fd1c-4c9d-97cf-538f4c73f869",
+                "routes": [],
+                "admin_state_up": true,
+                "description": "",
+                "cidr": "192.168.0.0/16",
+                "gateway_ip": "127.97.76.34",
+                "sys_tags": [
+                    "_sys_enterprise_project_id=0"
+                ],
+                "enable_snat": false,
+                "status": "ACTIVE"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "02c2f51f-4b0c-4d4b-b61d-84cf04c16394",
+            "name": "Windows-Server-Standard-2022-",
+            "provider": "ims",
+            "type": "images",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "070d23cc8a8e99a21e34107e24c9f509f816a34f5dd57df2c4214732cb0e3f84",
+            "created": "2024-09-11T06:54:57.000Z",
+            "updated": "2024-10-07T08:46:11.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "isregistered": "true",
+                "lazyLoading": "True",
+                "platform": "Windows",
+                "virtualSize": "null",
+                "originalImageName": "d6a12d51-a730-4f95-aed9-7580a728a792",
+                "file": "/v2/images/02c2f51f-4b0c-4d4b-b61d-84cf04c16394/file",
+                "protected": "false",
+                "maxRam": "0",
+                "osVersion": "Windows Server 2022 Standard 64bit",
+                "minRam": "0",
+                "checksum": "99914b932bd37a50b983c5e7c90ae93b",
+                "osBit": "64",
+                "osType": "Windows",
+                "dataOrigin": "share,me-east-1,d6a12d51-a730-4f95-aed9-7580a728a792",
+                "imageSize": "10408132608",
+                "diskFormat": "zvhd2",
+                "imageType": "shared",
+                "owner": "de028029204e44c7b020b9ecfcc332f9",
+                "virtualEnvType": "FusionCompute",
+                "shecma": "/v2/schemas/image",
+                "visibility": "shared",
+                "imageSourceType": "uds",
+                "minDisk": "50",
+                "deleted": "null",
+                "productCode": "",
+                "size": 2,
+                "rootOrigin": "file",
+                "self": "/v2/images/02c2f51f-4b0c-4d4b-b61d-84cf04c16394",
+                "containerFormat": "bare",
+                "status": "active"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "04fee844-cdc1-4fe0-b1b8-babb955fe22d",
+            "name": "ims-ecs-69ef-8511-v1-20250707_111316",
+            "provider": "ims",
+            "type": "images",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "a96e89cb60453444b54b80281d090da9f4356f58e8128896a86eb318e3e34422",
+            "created": "2025-07-07T07:14:38.000Z",
+            "updated": "2025-07-07T07:18:15.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "sequenceNum": "1",
+                "backupId": "",
+                "isregistered": "true",
+                "lazyLoading": "True",
+                "platform": "Ubuntu",
+                "virtualSize": "null",
+                "originalImageName": "e215a701-baf9-41c1-b919-2c7c095512bd",
+                "file": "/v2/images/04fee844-cdc1-4fe0-b1b8-babb955fe22d/file",
+                "protected": "false",
+                "maxRam": "0",
+                "osVersion": "Ubuntu 24.04 server 64bit",
+                "minRam": "0",
+                "checksum": "bcd7dd7dab80ca42e125a389f986404e",
+                "osBit": "64",
+                "osType": "Linux",
+                "dataOrigin": "instance,6e2fa39b-e07e-43bc-aa9f-037af833e5eb",
+                "imageSize": "2685661184",
+                "diskFormat": "zvhd2",
+                "imageType": "private",
+                "owner": "de028029204e44c7b020b9ecfcc332f9",
+                "virtualEnvType": "FusionCompute",
+                "shecma": "/v2/schemas/image",
+                "visibility": "private",
+                "hwVifMultiqueueEnabled": "true",
+                "imageSourceType": "uds",
+                "minDisk": "40",
+                "deleted": "null",
+                "productCode": "",
+                "size": 18,
+                "self": "/v2/images/04fee844-cdc1-4fe0-b1b8-babb955fe22d",
+                "containerFormat": "bare",
+                "supportKvm": "true",
+                "status": "active"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "089fe633ec464f28ba87d0f07127b597",
+            "name": "vod_admin_trust_4f0386f737fb4ad38e80006222f86b02",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "7ee571ff4f4158367c3199984b51e9084b95486139e89466cefabcc0522e72c1",
+            "created": "2025-02-20T13:18:06.000Z",
+            "updated": "2025-02-20T13:18:06.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "48c16d3d17704f33bcf9846111c0f78b",
+                    "bdd5128b2d244d72b716fbdaf39c202f"
+                ],
+                "trust_domain_id": "d9235b9f3cf549499924f6de095241af",
+                "description": "Created by VOD Team. To ensure services run properly, please do not delete or revise this agency.",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "097ec158-1d97-4872-aede-33f352c4c48d",
+            "name": "default",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "ap-southeast-2",
+            "project_id": "b2a3068d44db4d7aa933b786b532824a",
+            "project_name": "ap-southeast-2",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "e3caec0768f46db871d9db83f16d1f7a38372c872f66588dbd31bcdca002520f",
+            "created": "2023-02-08T02:46:52.000Z",
+            "updated": "2023-02-08T02:46:52.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "Default security group",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "097ec158-1d97-4872-aede-33f352c4c48d",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "b2a3068d44db4d7aa933b786b532824a",
+                        "action": "allow",
+                        "id": "a0265247-e8d6-4a82-9a88-67fb53eaac75",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "097ec158-1d97-4872-aede-33f352c4c48d",
+                        "ethertype": "IPv6",
+                        "security_group_id": "097ec158-1d97-4872-aede-33f352c4c48d",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "b2a3068d44db4d7aa933b786b532824a",
+                        "action": "allow",
+                        "id": "b2175ea8-0eb7-425c-90e1-22cfb4de888d",
+                        "direction": "ingress"
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "097ec158-1d97-4872-aede-33f352c4c48d",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "b2a3068d44db4d7aa933b786b532824a",
+                        "action": "allow",
+                        "id": "7db7d7ff-d4ae-4f73-834a-3c6d77e6b505",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "097ec158-1d97-4872-aede-33f352c4c48d",
+                        "ethertype": "IPv4",
+                        "security_group_id": "097ec158-1d97-4872-aede-33f352c4c48d",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "b2a3068d44db4d7aa933b786b532824a",
+                        "action": "allow",
+                        "id": "1995fe61-b6c5-4d60-a439-5f73e7d4f8f9",
+                        "direction": "ingress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "0b623a59d0214b899392919047e3ee64",
+            "name": "medialive_admin_trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "9dddc6e51804107d437365125f85acc06afee4fcc38b1d8dbb49dc05436ff891",
+            "created": "2025-10-09T04:25:38.000Z",
+            "updated": "2025-10-09T04:25:38.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "bdd5128b2d244d72b716fbdaf39c202f"
+                ],
+                "trust_domain_id": "260c95c1d4dc457b9117e3a507b4643a",
+                "description": "Created by MediaLive Service",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "0bf0917c-ec50-4833-991b-5c9358a9e534",
+            "name": "vpc-default-smb",
+            "provider": "vpc",
+            "type": "vpcs",
+            "region_id": "ap-southeast-3",
+            "project_id": "31e2da1575cc47048f26be2a2b5c6ec9",
+            "project_name": "ap-southeast-3",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "0c9f4809413d54d54d22e688c389dc73c48a8d039b3da0f1821732817a0a300f",
+            "created": "2025-09-25T15:15:01.000Z",
+            "updated": "2025-09-25T15:15:01.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "default_routetable_id": "57ab43a8-fd57-49f7-8246-650804843f56",
+                "routes": [],
+                "admin_state_up": true,
+                "description": "created by smb",
+                "cidr": "172.31.0.0/16",
+                "gateway_ip": "127.123.48.160",
+                "sys_tags": [
+                    "_sys_enterprise_project_id=0"
+                ],
+                "enable_snat": false,
+                "status": "ACTIVE"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "0c18fea2-d156-4ff4-996d-c6516b19d531",
+            "name": "kps/default",
+            "provider": "kms",
+            "type": "keys",
+            "region_id": "ap-southeast-3",
+            "project_id": "31e2da1575cc47048f26be2a2b5c6ec9",
+            "project_name": "ap-southeast-3",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "7a136b2b519fff9f06054840050ffdc696c7052a8740cf58b0f3f6831e3c0989",
+            "created": "2024-09-15T19:25:36.000Z",
+            "updated": "2024-09-15T19:25:37.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "owner": "4f0386f737fb4ad38e80006222f86b02",
+                "creator": "4f0386f737fb4ad38e80006222f86b02",
+                "key_rotation_enabled": "false",
+                "key_usage": "ENCRYPT_DECRYPT",
+                "partitionId": "ccdb32d8-eee7-4c99-ac33-54c8819ed729",
+                "key_spec": "AES256",
+                "origin": 0,
+                "key_state": "2",
+                "userId": "d0637be66122489b83317f41fb0dad2e"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "0c799297-0d92-4aa7-bbb8-69a5a26425de",
+            "name": "vpc-default-smb",
+            "provider": "vpc",
+            "type": "vpcs",
+            "region_id": "ap-southeast-1",
+            "project_id": "fe361917fa424d81a8dcba022cbc0fd0",
+            "project_name": "ap-southeast-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "a51a610c13a12a1ef3ace8879f2aaddb2e03b9d52d7bd2c8bd2fb4975f7db276",
+            "created": "2025-09-25T15:15:30.000Z",
+            "updated": "2025-09-25T15:15:30.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "default_routetable_id": "bf3e33e5-a0a7-425d-af5a-3d20fcd1e5ae",
+                "routes": [],
+                "admin_state_up": true,
+                "description": "created by smb",
+                "cidr": "172.31.0.0/16",
+                "gateway_ip": "127.255.120.61",
+                "sys_tags": [
+                    "_sys_enterprise_project_id=0"
+                ],
+                "enable_snat": false,
+                "status": "ACTIVE"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "0ce6e8f1-e74c-492d-b630-c4a94d123b76",
+            "name": "default",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "la-north-2",
+            "project_id": "64c4b4a3e24b476cb88dd27858a35b8d",
+            "project_name": "la-north-2",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "00d5329d0de49889ee984a468964e8bd114f89db853cebdbc0106d8fd0b99dfb",
+            "created": "2025-09-05T16:42:11.000Z",
+            "updated": "2025-09-05T16:42:11.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "Default security group",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "0ce6e8f1-e74c-492d-b630-c4a94d123b76",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "64c4b4a3e24b476cb88dd27858a35b8d",
+                        "action": "allow",
+                        "id": "4f3d35b5-dd2d-41e7-9f47-4662c4f1a848",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "0ce6e8f1-e74c-492d-b630-c4a94d123b76",
+                        "ethertype": "IPv6",
+                        "security_group_id": "0ce6e8f1-e74c-492d-b630-c4a94d123b76",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "64c4b4a3e24b476cb88dd27858a35b8d",
+                        "action": "allow",
+                        "id": "b43e2b3a-5ded-4d5b-a3b5-c421d401175a",
+                        "direction": "ingress"
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "0ce6e8f1-e74c-492d-b630-c4a94d123b76",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "64c4b4a3e24b476cb88dd27858a35b8d",
+                        "action": "allow",
+                        "id": "8eaaf7ae-04bf-458a-9df7-05f5157e4b0d",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "0ce6e8f1-e74c-492d-b630-c4a94d123b76",
+                        "ethertype": "IPv4",
+                        "security_group_id": "0ce6e8f1-e74c-492d-b630-c4a94d123b76",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "64c4b4a3e24b476cb88dd27858a35b8d",
+                        "action": "allow",
+                        "id": "1a520998-d7c7-4813-9fcb-db11d27de846",
+                        "direction": "ingress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "0cfe5d51cdc94de587b332af8919c390",
+            "name": "pipeline_admin_trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "945281cd93e4e936d54f9d82990345d4d84a695405c52a4e25ede7dc27872469",
+            "created": "2025-07-22T12:45:21.000Z",
+            "updated": "2025-07-22T12:45:21.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "7ef5803328114cbbbadc30c2057862d1"
+                ],
+                "trust_domain_id": "06339e67bb0010df0f76c017e9e66a40",
+                "description": "",
+                "policy_list": [
+                    "CODEARTSPIPELINEAgencyFullPolicy"
+                ],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "0dcb0ff1-c427-44f3-848e-d1a5ee4fb89c",
+            "name": "rtb-vpc-default",
+            "provider": "vpc",
+            "type": "routeTables",
+            "region_id": "cn-south-1",
+            "project_id": "540c893b06704836835fcb35ee46d6bb",
+            "project_name": "cn-south-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "112adc80a2540dc046a73df1c5d0bcc02e73f937bb9d4be5caa73a1e8dc0b0d7",
+            "created": "2025-09-26T05:14:26.000Z",
+            "updated": "2025-09-26T05:14:26.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "routes": [
+                    {
+                        "extra_info": {},
+                        "destination": "192.168.0.0/24",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.88.64.10",
+                            "nexthop_type": "windows"
+                        },
+                        "nexthop_ip": "10.88.64.10",
+                        "destination": "100.125.1.2/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "aeed741c-61fa-4310-afa8-14c3c35839f5"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.88.64.10",
+                            "nexthop_type": "ntp"
+                        },
+                        "nexthop_ip": "10.88.64.10",
+                        "destination": "100.125.1.251/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "be7fd37f-6c48-44ba-8c19-451185a104a3"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.88.64.10",
+                            "nexthop_type": "windows"
+                        },
+                        "nexthop_ip": "10.88.64.10",
+                        "destination": "100.125.158.178/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "70f90367-3b2f-44fc-af84-b81957b368e7"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.88.64.10",
+                            "nexthop_type": "suse"
+                        },
+                        "nexthop_ip": "10.88.64.10",
+                        "destination": "100.125.158.179/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "61a645de-6873-4b3d-8438-9efb24fc7657"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.88.64.10",
+                            "nexthop_type": "suse"
+                        },
+                        "nexthop_ip": "10.88.64.10",
+                        "destination": "100.125.166.8/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "03f08251-b0d3-4774-acde-f03a52512676"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "198.19.128.0/20",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "127.0.0.0/8",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "100.64.0.0/10",
+                        "type": "local"
+                    }
+                ],
+                "default": true,
+                "index": 1,
+                "router_id": "78add4f6-8ea7-436d-9de2-30dae0320f98",
+                "subnets": [
+                    {
+                        "network_id": "55700684-d37d-427e-8dcb-99aa0fc5b5d7",
+                        "id": "2c3dea43-d28d-40ae-b2fc-c466c88c0e17"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "10447e0f-0ba8-4435-9caf-b311a93ed000",
+            "name": "subnet-default",
+            "provider": "vpc",
+            "type": "networks",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "e1727da3277e99ad117b04cad49585a48e00cec6357c9c2dc65bb2f56936a243",
+            "created": "2024-05-14T06:13:01.000Z",
+            "updated": "2024-05-14T06:13:01.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "zone_id": "me-east-1a",
+                "vpc_id": "4195c71f-7ff5-4953-89d8-9ecd354fa716",
+                "scope": "center",
+                "description": "subnet-default",
+                "extra_dhcp_opts": [
+                    {
+                        "ip_version": 4,
+                        "opt_name": "51",
+                        "opt_value": "87600h"
+                    }
+                ],
+                "status": "ACTIVE",
+                "subnet_cidrs": [
+                    {
+                        "enable_dhcp": true,
+                        "ip_version": "4",
+                        "cidr": "192.168.0.0/24",
+                        "gateway_ip": "192.168.0.1",
+                        "id": "8fb47e62-3d91-44a2-a88b-c402005b9eb2"
+                    }
+                ],
+                "dns_nameservers": [
+                    "100.125.250.249",
+                    "100.125.250.250"
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "1055d0eef7f64d84910ca59fb622f5ba",
+            "name": "asm_admin_trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "2b60442b8e65181cf3fce2159b434989a1567fe150db815e5350968d30eaa8fe",
+            "created": "2025-05-23T07:27:12.000Z",
+            "updated": "2025-05-23T07:27:12.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "35f68956b08c45908fb6972bacad1ebf",
+                    "45c78aba7ad541c4a4e3d64085fc0339"
+                ],
+                "trust_domain_id": "658d96663d6f4ed29d9bd911674427eb",
+                "description": "Create by ASM Team",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "13dfce2783a24bdb90b981e40409677d",
+            "name": "EVSAccessKMS",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "0326bac4a7bdbec5f32d27be974f8023478d8ef8568951fe87470b329bfe0a14",
+            "created": "2025-10-09T14:08:21.000Z",
+            "updated": "2025-10-09T14:08:21.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "bef0ebf9fc39402cba7228d1c600c80c"
+                ],
+                "trust_domain_id": "ce115fbba0444e1e85ed022e8148f771",
+                "description": "EVSAccessKMS indicates that EVS has been assigned the KMS access rights for obtaining KMS keys to encrypt or decrypt disks.",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "151095c5283047f98ae51ab90c65bfe7",
+            "name": "policy_razu",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "8296dc9a2c2e643930152eca888e35760b336c5f547af90baf8c6032b7a39213",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"obs:object:GetObject\",\"obs:object:DeleteObjectVersion\",\"obs:bucket:GetBucketLocation\",\"obs:object:GetAccessLabel\",\"obs:bucket:PutEncryptionConfiguration\",\"obs:bucket:PutBucketStoragePolicy\",\"obs:object:DeleteAccessLabel\",\"obs:bucket:PutBucketCustomDomainConfiguration\",\"obs:object:PutObjectVersionAcl\",\"obs:bucket:GetLifecycleConfiguration\",\"obs:bucket:PutBucketInventoryConfiguration\",\"obs:bucket:DeleteDirectColdAccessConfiguration\",\"obs:object:AbortMultipartUpload\",\"obs:object:PutObjectAcl\",\"obs:bucket:PutBucketLogging\",\"obs:bucket:DeleteBucketWebsite\",\"obs:object:DeleteObject\",\"obs:bucket:PutBucketVersioning\",\"obs:bucket:GetBucketWebsite\",\"obs:bucket:GetBucketLogging\",\"obs:bucket:DeleteBucketPolicy\",\"obs:bucket:HeadBucket\",\"obs:bucket:PutBucketAcl\",\"obs:bucket:DeleteBucketCustomDomainConfiguration\",\"obs:object:PutObject\",\"obs:object:RestoreObject\",\"obs:bucket:PutReplicationConfiguration\",\"obs:bucket:GetBucketQuota\",\"obs:object:GetObjectVersionAcl\",\"obs:bucket:DeleteBucket\",\"obs:bucket:PutBucketPolicy\",\"obs:bucket:CreateBucket\",\"obs:bucket:GetDirectColdAccessConfiguration\",\"obs:bucket:PutDirectColdAccessConfiguration\",\"obs:bucket:GetBucketAcl\",\"obs:bucket:GetBucketVersioning\",\"obs:bucket:GetBucketInventoryConfiguration\",\"obs:bucket:GetBucketStoragePolicy\",\"obs:bucket:GetEncryptionConfiguration\",\"obs:bucket:PutBucketCORS\",\"obs:bucket:ListBucketMultipartUploads\",\"obs:bucket:PutBucketTagging\",\"obs:bucket:GetBucketTagging\",\"obs:bucket:PutLifecycleConfiguration\",\"obs:bucket:GetBucketCustomDomainConfiguration\",\"obs:object:ListMultipartUploadParts\",\"obs:object:ModifyObjectMetaData\",\"obs:bucket:ListBucketVersions\",\"obs:bucket:PutBucketQuota\",\"obs:object:PutAccessLabel\",\"obs:bucket:ListBucket\",\"obs:bucket:GetBucketCORS\",\"obs:bucket:DeleteBucketInventoryConfiguration\",\"obs:object:GetObjectVersion\",\"obs:bucket:PutBucketWebsite\",\"obs:bucket:DeleteReplicationConfiguration\",\"obs:object:GetObjectAcl\",\"obs:bucket:GetBucketNotification\",\"obs:bucket:PutBucketNotification\",\"obs:bucket:GetReplicationConfiguration\",\"obs:bucket:GetBucketPolicy\",\"obs:bucket:DeleteBucketTagging\",\"obs:bucket:GetBucketStorage\"],\"Resource\":[\"OBS:*:*:object:*\",\"OBS:*:*:bucket:testcustomer51\"],\"Effect\":\"Deny\"},{\"Action\":[\"obs:bucket:ListAllMyBuckets\"],\"Effect\":\"Deny\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "",
+                "display_name": "policy_razu",
+                "type": "AX"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "1671be59d6354fee94ce715d1625a9f7",
+            "name": "ServiceLinkedAgencyForIdentityCenter",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "9baa6788188a17b4f876c24e71f4b6e886884c0527ff26ee6b207e3a6c611ec0",
+            "created": "2025-07-23T07:35:40.000Z",
+            "updated": "2025-07-23T07:35:40.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "service-linked-agency/service.IdentityCenter/",
+                "trust_policy": "{\"Version\": \"5.0\", \"Statement\": [{\"Action\": [\"sts:agencies:assume\", \"sts::tagSession\", \"sts::setSourceIdentity\"], \"Effect\": \"Allow\", \"Principal\": {\"Service\": [\"service.IdentityCenter\"]}}]}",
+                "role_list": [],
+                "description": "Allow service.IdentityCenter to call services on your behalf.",
+                "policy_list": [
+                    "IdentityCenterServiceLinkedAgencyPolicy"
+                ],
+                "max_session_duration": 3600
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "17d9f388f34e40d78da6fc2088bbd795",
+            "name": "CCE cluster policies",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "a04370a987b36487de94d7bba0f0ceecefd2223d2c5722f085ef4b36dd327758",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"aom:alarm:put\",\"aom:event:put\",\"bms:server:deleteNics\",\"bms:servers:addNics\",\"bms:servers:attachVolume\",\"bms:servers:detachVolume\",\"cce:cluster:get\",\"cce:node:create\",\"cce:node:delete\",\"cce:node:get\",\"cce:node:list\",\"cce:nodepool:get\",\"cce:nodepool:list\",\"cce:nodepool:scale\",\"cce:nodepool:update\",\"cci:configmap:*\",\"cci:namespace:*\",\"cci:namespaceSubResource:*\",\"cci:network:*\",\"cci:persistentvolume:*\",\"cci:persistentvolumeclaim:*\",\"cci:pod:*\",\"cci:secret:*\",\"cci:storageclass:*\",\"cloudmatrix:hyperinstance:attachNodeVolume\",\"cloudmatrix:hyperinstance:detachNodeVolume\",\"cloudmatrix:hyperinstance:get\",\"cloudmatrix:hyperinstance:getNode\",\"cloudmatrix:operation:get\",\"ecs:cloudServerNics:*\",\"ecs:cloudServers:addNics\",\"ecs:cloudServers:attach\",\"ecs:cloudServers:detachVolume\",\"ecs:serverVolumeAttachments:*\",\"ecs:serverVolumes:use\",\"iam:groups:getGroup\",\"ims:images:get\",\"kms:cmk:get\",\"kms:cmk:list\",\"kms:dek:crypto\",\"lts:groupTopics:put\",\"lts:groups:create\",\"lts:groups:get\",\"lts:logs:upload\",\"lts:logsByName:upload\",\"lts:structConfig:create\",\"lts:structConfig:get\",\"lts:topics:create\",\"nat:dnatRules:*\",\"nat:natGateways:*\",\"obs:bucket:*\",\"obs:object:*\",\"sfs:shares:*\",\"sfsturbo:shares:*\",\"vpc:addressGroups:*\",\"vpc:bandwidths:*\",\"vpc:ports:*\",\"vpc:publicIps:*\",\"vpc:publicipTags:*\",\"vpc:routeTables:update\",\"vpc:securityGroupRules:*\",\"vpc:securityGroups:*\",\"vpc:subNetworkInterfaces:*\",\"vpc:vpcs:update\"],\"Effect\":\"Allow\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "policies needed by components in CCE clusters",
+                "display_name": "CCE cluster policies",
+                "type": "XA"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "19a77552-19af-4ebb-95aa-c67defc297f4",
+            "name": "system",
+            "provider": "cts",
+            "type": "trackers",
+            "region_id": "ap-southeast-1",
+            "project_id": "fe361917fa424d81a8dcba022cbc0fd0",
+            "project_name": "ap-southeast-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "d999d0a68104262c327991ea822ede6718ef56105a0fb35f8d967176f2347d25",
+            "created": "2023-09-05T11:12:09.202Z",
+            "updated": "2023-09-05T11:12:09.202Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "is_support_trace_files_encryption": false,
+                "obs_info": {
+                    "is_obs_created": false,
+                    "bucket_name": "",
+                    "is_sort_by_service": true,
+                    "is_authorized_bucket": false,
+                    "file_prefix_name": "",
+                    "bucket_lifecycle": 0
+                },
+                "is_organization_tracker": false,
+                "is_support_validate": false,
+                "tracker_type": "system",
+                "status": "enabled"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "1a9a6133-8268-40ff-b61c-9ad45da2e053",
+            "name": "Image-Win-Ser-2016-vm",
+            "provider": "ims",
+            "type": "images",
+            "region_id": "ap-southeast-3",
+            "project_id": "31e2da1575cc47048f26be2a2b5c6ec9",
+            "project_name": "ap-southeast-3",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "0e9084f2ea573aaf92de5c3b15c7afe55fd3abaa667d9ffb023b16366f7e56d5",
+            "created": "2023-02-14T18:47:35.000Z",
+            "updated": "2024-07-22T10:10:30.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "backupId": "",
+                "isregistered": "true",
+                "platform": "Windows",
+                "virtualSize": "null",
+                "originalImageName": "1a9a6133-8268-40ff-b61c-9ad45da2e053",
+                "file": "/v2/images/1a9a6133-8268-40ff-b61c-9ad45da2e053/file",
+                "protected": "false",
+                "maxRam": "4194304",
+                "osVersion": "Windows Server 2016 Standard 64bit",
+                "minRam": "2048",
+                "checksum": "99914b932bd37a50b983c5e7c90ae93b",
+                "osBit": "64",
+                "osType": "Windows",
+                "dataOrigin": "file,obs-os-1:SVR2016.ENU.APR2017-vm2.iso",
+                "imageSize": "7583694848",
+                "diskFormat": "iso",
+                "imageType": "shared",
+                "owner": "31e2da1575cc47048f26be2a2b5c6ec9",
+                "virtualEnvType": "IsoImage",
+                "shecma": "/v2/schemas/image",
+                "visibility": "shared",
+                "imageSourceType": "uds",
+                "minDisk": "40",
+                "deleted": "null",
+                "productCode": "",
+                "size": 2,
+                "rootOrigin": "file",
+                "self": "/v2/images/1a9a6133-8268-40ff-b61c-9ad45da2e053",
+                "containerFormat": "bare",
+                "supportKvm": "true",
+                "status": "active"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "1b0bfa5fc90946a78c1216ffa2200326",
+            "name": "adrian",
+            "provider": "iam",
+            "type": "users",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "c65234e3a7ed8d5298118ed64a3f3e896e4e32c3897e4f2110e2bcef2f7d36f3",
+            "created": "2025-04-23T15:58:08.000Z",
+            "updated": "2025-04-23T15:58:08.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "pwd_status": false,
+                "pwd_strength": "high",
+                "group_list": [
+                    "b3377b4657da44f8ab709db419c8f294"
+                ],
+                "role_list": [],
+                "last_login_time": "2025-04-23T17:29:20Z",
+                "virtual_mfa_device": false,
+                "login_protect": {
+                    "enabled": false
+                },
+                "credentials": [
+                    {
+                        "last_use_time": "2025-06-30T07:45:35Z",
+                        "access": "HPUAOJB1NT9PN3M1VGIN",
+                        "create_time": "2025-04-23T15:58:08Z",
+                        "status": "active"
+                    }
+                ],
+                "policy_list": [],
+                "access_mode": "default",
+                "is_root_user": false,
+                "enabled": false
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "1caef52cdaca4e2c8330215aa8813e4a",
+            "name": "cce_cluster_agency",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "fd05e39776cf015883232366cc33bbd6b4042dc363c524bb44c19c23d0993398",
+            "created": "2025-10-14T07:20:07.000Z",
+            "updated": "2025-10-14T07:20:07.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "002e10aa648948ef98b71a493aa739ab",
+                    "17d9673d80144597b38aec29fef9c1a9",
+                    "17d9f388f34e40d78da6fc2088bbd795",
+                    "22220019b61e4e85bca8927d41baccc6",
+                    "29f982b29e4e46398292ad6281813f3c",
+                    "4af084fabfcb44e8b0ff44da145d1925",
+                    "5b4ec39edbcf499192b81536c9085347",
+                    "5fbeeb0cc02b4a5c8d0a96dea4b9be89",
+                    "7285e43cc60e40ea991ad5a100a847a6",
+                    "a51f1204e8e24def8766ea096b1e5958",
+                    "a846d263c0854bc99665c5a0368f6dca",
+                    "abbcebdb0cd944fdbfa26be46decb1fa",
+                    "ce8a69d55df340caa6e32eb070a89826"
+                ],
+                "trust_domain_id": "2e4c2437c72b43a7935ef8c95b0e52a0",
+                "description": "Create by CCE Team",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "1d8da586-7106-4417-a357-12f086e7a291",
+            "name": "sg-default-smb",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "827bbd57f2242a312de1dd4312a372a28be7cbf73d46c43452909ac73356e4f7",
+            "created": "2025-04-21T11:30:55.000Z",
+            "updated": "2025-04-21T11:30:55.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "1d8da586-7106-4417-a357-12f086e7a291",
+                        "description": "Deny All Ipv6 Inbound Traffic",
+                        "remote_ip_prefix": "::/0",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "de028029204e44c7b020b9ecfcc332f9",
+                        "action": "deny",
+                        "id": "70ee4194-808d-4576-b5f1-9e98c554a871",
+                        "direction": "ingress"
+                    },
+                    {
+                        "remote_group_id": "1d8da586-7106-4417-a357-12f086e7a291",
+                        "ethertype": "IPv6",
+                        "security_group_id": "1d8da586-7106-4417-a357-12f086e7a291",
+                        "description": "",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "de028029204e44c7b020b9ecfcc332f9",
+                        "action": "allow",
+                        "id": "dac51db0-e4ea-4a83-bf1c-37920b6ceb4c",
+                        "direction": "ingress"
+                    },
+                    {
+                        "remote_group_id": "1d8da586-7106-4417-a357-12f086e7a291",
+                        "ethertype": "IPv4",
+                        "security_group_id": "1d8da586-7106-4417-a357-12f086e7a291",
+                        "description": "",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "de028029204e44c7b020b9ecfcc332f9",
+                        "action": "allow",
+                        "id": "12d5b9ff-57b9-4ff5-8fbc-a37cb4cf21f5",
+                        "direction": "ingress"
+                    },
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "1d8da586-7106-4417-a357-12f086e7a291",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "de028029204e44c7b020b9ecfcc332f9",
+                        "action": "allow",
+                        "id": "2519c718-da2c-4fcf-80df-f9284d4ab979",
+                        "direction": "egress"
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "1d8da586-7106-4417-a357-12f086e7a291",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "de028029204e44c7b020b9ecfcc332f9",
+                        "action": "allow",
+                        "id": "8e3f2807-9459-4f32-8ebd-217987c2cf87",
+                        "direction": "egress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "1fbc16404f2e45adbc2be2f61692ffbd",
+            "name": "ServiceLinkedAgencyForSecMaster",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "c3293dbe42f2e8a97d5527ef35a5561fea7ae11cab086c1d0cd8d93724225f28",
+            "created": "2024-08-22T11:28:50.000Z",
+            "updated": "2024-08-22T11:28:50.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "service-linked-agency/service.SecMaster/",
+                "trust_policy": "{\"Version\": \"5.0\", \"Statement\": [{\"Action\": [\"sts:agencies:assume\", \"sts::tagSession\", \"sts::setSourceIdentity\"], \"Effect\": \"Allow\", \"Principal\": {\"Service\": [\"service.SecMaster\"]}}]}",
+                "role_list": [],
+                "description": "Create by SecMaster",
+                "policy_list": [
+                    "SecMasterServiceLinkedAgencyPolicy"
+                ],
+                "max_session_duration": 3600
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "20c05ede12814a5e8435edb1262c86d7",
+            "name": "om-group",
+            "provider": "iam",
+            "type": "groups",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "c13fe3e41eb3e732047f721104504573831aecf6d0af49020700c237dbaf3f19",
+            "created": "2023-08-15T11:44:03.000Z",
+            "updated": "2025-09-21T10:42:11.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_list": [
+                    "c40fc1b70fb14140a61ac60c7c292874"
+                ],
+                "description": "om-group",
+                "policy_list": []
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "20ef9df40d5c4495a6b6625f74276fac",
+            "name": "Pangu OBSWriteOnly",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "a864518d254c7d6478a5144d92789432cdb48ff282145d866cce8b5a429511bc",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"obs:object:AbortMultipartUpload\",\"obs:object:DeleteObject\",\"obs:object:DeleteObjectVersion\",\"obs:object:PutObject\",\"obs:object:PutObjectAcl\"],\"Effect\":\"Allow\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "OBSWriteOnly",
+                "display_name": "Pangu OBSWriteOnly",
+                "type": "AX"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "212eb827af0a40b196bc06986bd852ff",
+            "name": "abcgo-user",
+            "provider": "iam",
+            "type": "users",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "0d7187433e0761d769bf229a667deb3f199f96ab484751d80bfccea9b443996b",
+            "created": "2025-04-24T11:06:19.000Z",
+            "updated": "2025-04-24T11:06:19.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "pwd_status": false,
+                "pwd_strength": "high",
+                "group_list": [
+                    "9a396d61e78b4d66a2cc2bfdbb072420"
+                ],
+                "role_list": [],
+                "last_login_time": "2025-04-24T18:26:36Z",
+                "virtual_mfa_device": false,
+                "login_protect": {
+                    "enabled": false
+                },
+                "credentials": [
+                    {
+                        "last_use_time": "2025-05-27T12:35:55Z",
+                        "access": "HPUASEPOT8B9FGXEKO32",
+                        "create_time": "2025-04-24T11:06:19Z",
+                        "status": "active"
+                    }
+                ],
+                "policy_list": [],
+                "access_mode": "default",
+                "is_root_user": false,
+                "enabled": false
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "2185d10dc75445afb14e119acfa5b4da",
+            "name": "myobs.example.me",
+            "provider": "cdn",
+            "type": "domains",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "69891bbc-57a7-40b1-ae20-24f9aadcdd89",
+            "ep_name": "abcCloud_EP",
+            "checksum": "f2dd39988acb4ff0e0fd54065ac8261605c21fa27e4ba33a3aed1e0f29933fff",
+            "created": "2025-05-23T12:42:35.000Z",
+            "updated": "2025-05-23T13:10:12.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "domain_name": "myobs.example.me",
+                "domain_status": "offline",
+                "business_type": "WEB",
+                "modify_time": 1748005812026,
+                "cname": "myobs.example.me.4f0386f7.cdnhwcgqa21.com",
+                "origin_protocol": "http",
+                "tls_version": "",
+                "https_status": "off"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "25ec0567-5cf8-4eba-b309-20c4509f9331",
+            "name": "rtb-vpc-default",
+            "provider": "vpc",
+            "type": "routeTables",
+            "region_id": "la-north-2",
+            "project_id": "64c4b4a3e24b476cb88dd27858a35b8d",
+            "project_name": "la-north-2",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "cf64e3a390625d500fe531a0de662ae0948f774e8942991a959ccabcd419ff8d",
+            "created": "2026-02-02T07:49:39.000Z",
+            "updated": "2026-02-02T07:49:39.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "routes": [
+                    {
+                        "extra_info": {},
+                        "destination": "192.168.0.0/24",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.90.196.10",
+                            "nexthop_type": "dns"
+                        },
+                        "nexthop_ip": "10.90.196.10",
+                        "destination": "100.125.1.242/32",
+                        "description": "traffic for DNS",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "cff1ddb6-cdf8-4caa-9054-444512df8898"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.57.84.71",
+                            "nexthop_type": "ntp"
+                        },
+                        "nexthop_ip": "10.57.84.71",
+                        "destination": "100.125.1.248/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "dc27fb68-99bc-40db-b308-657ea9aa7a5f"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.90.196.10",
+                            "nexthop_type": "dns"
+                        },
+                        "nexthop_ip": "10.90.196.10",
+                        "destination": "100.125.1.250/32",
+                        "description": "traffic for DNS",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "e80aa07a-293b-41ce-a330-3d3d379eb93f"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.57.84.71",
+                            "nexthop_type": "windows"
+                        },
+                        "nexthop_ip": "10.57.84.71",
+                        "destination": "100.125.4.109/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "11b1e57f-7709-41ca-9d14-857164826e8f"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "10.57.84.71",
+                            "nexthop_type": "suse"
+                        },
+                        "nexthop_ip": "10.57.84.71",
+                        "destination": "100.125.4.110/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "056acb23-1381-41d6-814e-d87c93f2bf96"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "198.19.128.0/20",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "127.0.0.0/8",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "100.64.0.0/10",
+                        "type": "local"
+                    }
+                ],
+                "default": true,
+                "index": 1,
+                "router_id": "0118768a-9c89-49e5-b503-ac3c179856ee",
+                "subnets": [
+                    {
+                        "network_id": "57de869a-e605-40e7-801a-306ed3725d5a",
+                        "id": "ecadcca6-64a0-432e-ab3f-082f071bd767"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "283030761c2f4c30aa973a83dbda7111",
+            "name": "dli_admin_agency",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "216e1fc7efb730b0c0e311971727fcfa285295fd98b4a3eee48c7d4589a757e0",
+            "created": "2023-01-03T05:09:35.000Z",
+            "updated": "2023-01-03T05:09:35.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "1ab47eb6114a437c960dd74a82c270b8",
+                    "3e36e08c3bc049289790f496797b312b",
+                    "5b5788508363442199a53472153d97d0",
+                    "7175fae7a0384a2885fd8d95caf4f3b0",
+                    "dc9726106d9b44f18d2c2f6a2862ade5",
+                    "e2d75429549044d2b313fbdd11520f7d"
+                ],
+                "trust_domain_id": "65836de74fe845dba084765cec94cfcb",
+                "description": "Agency to DLI created by DLI service",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "286cf4dfed174ced8691545e3d85a699",
+            "name": "CCE admin policies",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "a4058ec3029c0692c69d2beef4e3922466e5a9217ce90825b8d4f2f7e51abd49",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"cci:network:*\",\"cci:namespace:*\",\"cci:namespaceSubResource:*\",\"cci:configmap:*\",\"cci:pod:*\",\"cci:secret:*\",\"cci:persistentvolume:*\",\"cci:persistentvolumeclaim:*\",\"cci:storageclass:*\",\"obs:bucket:*\",\"obs:object:*\",\"ims:images:get\",\"ims:images:list\",\"ims:images:share\",\"ims:quotas:get\",\"iam:groups:getGroup\",\"aom:actionRule:*\",\"aom:alarmRule:*\",\"aom:event:put\",\"aom:*:list\",\"aom:*:get\",\"kms:cmk:get\",\"kms:cmk:list\",\"kms:cmk:create\",\"kms:dek:crypto\",\"dns:zone:*\",\"dns:recordset:*\",\"sfs:shares:*\",\"sfs:quotas:getOSQuotaSets\",\"sfs:availabilityZones:getAvailabilityZones\",\"sfsturbo:shares:*\",\"cloudmatrix:hyperinstanceCluster:list\",\"cloudmatrix:hyperinstanceCluster:get\",\"cloudmatrix:hyperinstanceCluster:delete\",\"cloudmatrix:hyperinstance:create\",\"cloudmatrix:hyperinstance:list\",\"cloudmatrix:hyperinstance:get\",\"cloudmatrix:hyperinstance:delete\",\"cloudmatrix:hyperinstance:updateMetadata\",\"cloudmatrix:hyperinstance:deleteMetadata\",\"cloudmatrix:hyperinstance:changeOs\",\"cloudmatrix:hyperinstance:start\",\"cloudmatrix:hyperinstance:stop\",\"cloudmatrix:hyperinstance:listNodes\",\"cloudmatrix:hyperinstance:getNode\",\"cloudmatrix:hyperinstance:stopNode\",\"cloudmatrix:hyperinstance:startNode\",\"cloudmatrix:hyperinstance:reinstallNodeOs\",\"cloudmatrix:hyperinstance:listNodeBlockDevices\",\"cloudmatrix:hyperinstance:batchCreateTags\",\"cloudmatrix:hyperinstance:batchDeleteTags\",\"cloudmatrix:operation:get\",\"cloudmatrix:operation:list\",\"cloudmatrix:hyperinstance:liveScaleUp\",\"cloudmatrix:hyperinstance:liveScaleDown\",\"cloudmatrix:hyperinstance:attachNodeVolume\",\"cloudmatrix:hyperinstance:detachNodeVolume\",\"cloudmatrix:hyperinstance:changeNodeOs\",\"cloudmatrix:hyperinstance:rebootNode\",\"cloudmatrix:hyperinstance:listTags\",\"cloudmatrix:hyperinstance:listProjectTags\",\"cloudmatrix:hyperinstance:listByTag\",\"cloudmatrix:hyperinstance:detachNodeInterface\",\"cloudmatrix:hyperinstance:updateNode\",\"cloudmatrix:hyperinstance:bindNodePublicIp\",\"cloudmatrix:hyperinstance:unbindNodePublicIp\"],\"Effect\":\"Allow\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "policies needed by CCE admin",
+                "display_name": "CCE admin policies",
+                "type": "XA"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "28dc59a8-16bf-47a2-9d5d-ecf7cdeece73",
+            "name": "default",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "af-north-1",
+            "project_id": "213f25e947c14366b5892de4784c0a70",
+            "project_name": "af-north-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "f2074ed847c1be09abcad365b084dc208e1ca0e990f4dcb1362259b0084ad386",
+            "created": "2025-07-30T13:22:32.000Z",
+            "updated": "2025-07-30T13:22:32.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "Default security group",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "28dc59a8-16bf-47a2-9d5d-ecf7cdeece73",
+                        "port_range_max": 0,
+                        "action": "allow",
+                        "id": "4f4bab32-7bac-49db-9b52-f047b331cda9",
+                        "direction": "egress",
+                        "port_range_min": 0
+                    },
+                    {
+                        "remote_group_id": "28dc59a8-16bf-47a2-9d5d-ecf7cdeece73",
+                        "ethertype": "IPv4",
+                        "security_group_id": "28dc59a8-16bf-47a2-9d5d-ecf7cdeece73",
+                        "port_range_max": 0,
+                        "action": "allow",
+                        "id": "513dac1d-e827-4f28-b592-e62d37e4de0b",
+                        "direction": "ingress",
+                        "port_range_min": 0
+                    },
+                    {
+                        "remote_group_id": "28dc59a8-16bf-47a2-9d5d-ecf7cdeece73",
+                        "ethertype": "IPv6",
+                        "security_group_id": "28dc59a8-16bf-47a2-9d5d-ecf7cdeece73",
+                        "port_range_max": 0,
+                        "action": "allow",
+                        "id": "740b84b7-8b45-4f05-821f-6e94807e3274",
+                        "direction": "ingress",
+                        "port_range_min": 0
+                    },
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "28dc59a8-16bf-47a2-9d5d-ecf7cdeece73",
+                        "port_range_max": 0,
+                        "action": "allow",
+                        "id": "e67b8e36-20e7-49b2-9843-8876e35f438b",
+                        "direction": "egress",
+                        "port_range_min": 0
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "29816fcd144141d2810848c585e63196",
+            "name": "cts_admin_trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "c795a3bb65812bf1f0cc4a07ef0ab6105502ebb05e7e95643866b3a8976a211e",
+            "created": "2022-12-21T12:47:26.000Z",
+            "updated": "2022-12-21T12:47:26.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "1c991a8e913148b4a0a2d5833f703654",
+                    "89a0becd8da8429e81f835c277f25383",
+                    "38a3dd0c3ab141de8202a7d2463af616",
+                    "dc9726106d9b44f18d2c2f6a2862ade5"
+                ],
+                "trust_domain_id": "09d347cf9e00f5eb0f2ac014bd3ca4c0",
+                "description": "Created by HIS HORIZ IAM. To ensure that services run properly, do not delete this agency.",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "2aa218ecac2944ef83521fb9a0018e3a",
+            "name": "fawad",
+            "provider": "iam",
+            "type": "users",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "9c4ab1e62791c583d53c4bc32fbb24a1286c34d3b37c79f9f5557fe86a083b1d",
+            "created": "2024-07-15T05:07:11.000Z",
+            "updated": "2026-01-12T11:55:03.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "pwd_strength": "high",
+                "role_list": [
+                    "3fd14e043bf843579d757ad52c72ba48",
+                    "8eb36151949e434e857a3446e58cf107",
+                    "e131dde32471400e8c8e4ccc3714e415"
+                ],
+                "last_login_time": "2024-11-28T07:12:37Z",
+                "login_protect": {
+                    "enabled": false
+                },
+                "credentials": [],
+                "description": "TestPassword123456789",
+                "access_mode": "default",
+                "enabled": true,
+                "pwd_status": false,
+                "group_list": [
+                    "e973a10720254a96a7aececeb9c573f6"
+                ],
+                "virtual_mfa_device": false,
+                "policy_list": [],
+                "is_root_user": false
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "2afcc22655524d019f4da3c6045cf2d8",
+            "name": "Custom Bucket Test",
+            "provider": "iam",
+            "type": "groups",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "ccadfe0fedcc9ea797240d1767403f899ae73060a918cb18e7bea50349b83f27",
+            "created": "2022-12-28T04:54:56.000Z",
+            "updated": "2025-05-07T15:44:20.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_list": [],
+                "description": "",
+                "policy_list": []
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "2c212efd-ae3d-4721-9e82-72db632b9cc7",
+            "name": "Windows-Server-Standard-2019-",
+            "provider": "ims",
+            "type": "images",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "a3382d82d0934af234ba8e0910174cc9c223efe28cd39cc90ab2b20b0afccbd2",
+            "created": "2024-09-11T07:40:24.000Z",
+            "updated": "2024-10-07T08:43:13.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "isregistered": "true",
+                "lazyLoading": "True",
+                "platform": "Windows",
+                "virtualSize": "null",
+                "originalImageName": "4ef641e8-2f2c-49db-a42d-71825958d76d",
+                "file": "/v2/images/2c212efd-ae3d-4721-9e82-72db632b9cc7/file",
+                "protected": "false",
+                "maxRam": "0",
+                "osVersion": "Windows Server 2019 Standard 64bit",
+                "minRam": "0",
+                "checksum": "99914b932bd37a50b983c5e7c90ae93b",
+                "osBit": "64",
+                "osType": "Windows",
+                "dataOrigin": "share,me-east-1,4ef641e8-2f2c-49db-a42d-71825958d76d",
+                "imageSize": "10311143424",
+                "diskFormat": "zvhd2",
+                "imageType": "shared",
+                "owner": "de028029204e44c7b020b9ecfcc332f9",
+                "virtualEnvType": "FusionCompute",
+                "shecma": "/v2/schemas/image",
+                "visibility": "shared",
+                "imageSourceType": "uds",
+                "minDisk": "50",
+                "deleted": "null",
+                "productCode": "",
+                "size": 2,
+                "rootOrigin": "file",
+                "self": "/v2/images/2c212efd-ae3d-4721-9e82-72db632b9cc7",
+                "containerFormat": "bare",
+                "status": "active"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "2e0e3e90d97247c7b03e67108335f5ab",
+            "name": "pankaj",
+            "provider": "iam",
+            "type": "users",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "4bf6cc8dfbfb312e075509d1f3cf9fde1a5c3c4b8431878e003b5c4759acf278",
+            "created": "2025-06-30T10:31:27.000Z",
+            "updated": "2025-06-30T10:31:27.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "pwd_strength": "high",
+                "role_list": [],
+                "last_login_time": "2025-06-30T11:30:27Z",
+                "login_protect": {
+                    "enabled": false
+                },
+                "credentials": [
+                    {
+                        "last_use_time": "2025-06-30T10:31:26Z",
+                        "access": "HPUAHHCEFPEBIHGI37B7",
+                        "create_time": "2025-06-30T10:31:26Z",
+                        "status": "active"
+                    }
+                ],
+                "description": "Pankaj Sharma 00938896",
+                "access_mode": "default",
+                "enabled": false,
+                "pwd_status": false,
+                "group_list": [
+                    "e973a10720254a96a7aececeb9c573f6"
+                ],
+                "virtual_mfa_device": false,
+                "policy_list": [],
+                "is_root_user": false
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "2e3c0f89c83d4c79b518e403f4633bfc",
+            "name": "agency_fg_all",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "ddb63a8b51efda2dd9536a59fc46e29a5bc71012a981a125e5b853605156b6ea",
+            "created": "2024-10-02T13:15:33.000Z",
+            "updated": "2024-10-02T13:15:33.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "e2d75429549044d2b313fbdd11520f7d"
+                ],
+                "trust_domain_id": "6b2b877ca57148dba5e11d53800bb00a",
+                "description": "",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "310c5313-4f11-4193-b4c2-e8544ec57480",
+            "name": "default",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "la-south-2",
+            "project_id": "c6721dbf27e44233884d1bac274a53e5",
+            "project_name": "la-south-2",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "0b2b1d3a89d4586fb3b84107de49083b075426cc7291f99210bc4f86d93886c1",
+            "created": "2025-07-30T13:22:18.000Z",
+            "updated": "2025-07-30T13:22:18.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "Default security group",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "310c5313-4f11-4193-b4c2-e8544ec57480",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "c6721dbf27e44233884d1bac274a53e5",
+                        "action": "allow",
+                        "id": "36fef608-9fdb-491f-8fa1-35b1c161e14f",
+                        "direction": "egress"
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "310c5313-4f11-4193-b4c2-e8544ec57480",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "c6721dbf27e44233884d1bac274a53e5",
+                        "action": "allow",
+                        "id": "b85e49f5-bcee-4958-af51-cfce86763e5f",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "310c5313-4f11-4193-b4c2-e8544ec57480",
+                        "ethertype": "IPv6",
+                        "security_group_id": "310c5313-4f11-4193-b4c2-e8544ec57480",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "c6721dbf27e44233884d1bac274a53e5",
+                        "action": "allow",
+                        "id": "c9fef6da-baa5-4757-a100-5313870141c3",
+                        "direction": "ingress"
+                    },
+                    {
+                        "remote_group_id": "310c5313-4f11-4193-b4c2-e8544ec57480",
+                        "ethertype": "IPv4",
+                        "security_group_id": "310c5313-4f11-4193-b4c2-e8544ec57480",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "c6721dbf27e44233884d1bac274a53e5",
+                        "action": "allow",
+                        "id": "3f84b9d1-8f56-49cc-bfa7-fa9d720c4805",
+                        "direction": "ingress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "344435c52bac4274bfec61075d55f7f0",
+            "name": "zdravko",
+            "provider": "iam",
+            "type": "users",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "3ed94a9561311fd367e8cfc3c96fb49707b719ec8a7b3037cf58d5ce34ed35c6",
+            "created": "2025-10-08T10:06:40.000Z",
+            "updated": "2025-11-11T07:47:36.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "pwd_status": false,
+                "pwd_strength": "high",
+                "group_list": [
+                    "e973a10720254a96a7aececeb9c573f6"
+                ],
+                "role_list": [],
+                "last_login_time": "2025-11-21T14:03:48Z",
+                "virtual_mfa_device": false,
+                "login_protect": {
+                    "enabled": false
+                },
+                "credentials": [
+                    {
+                        "last_use_time": "2026-02-11T04:53:28Z",
+                        "access": "HPUALODRWCAPB5Y9W7SO",
+                        "create_time": "2025-10-08T10:06:40Z",
+                        "status": "active"
+                    }
+                ],
+                "policy_list": [],
+                "access_mode": "default",
+                "is_root_user": false,
+                "enabled": false
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "35e87f4bc9d44f669245fed526c3c077",
+            "name": "elb_to_waf_operate_policy",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "a55a1db1c1fb5585757b119152b3b0c70ae81e3834d4e5d689b18b68e2c61514",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"elb:members:create\",\"elb:loadbalancers:get\",\"elb:members:delete\",\"elb:members:list\",\"elb:listeners:list\",\"elb:pools:list\",\"elb:listeners:get\",\"elb:loadbalancers:list\"],\"Effect\":\"Allow\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "WAF policy for ELB Operate. Please do not create a policy with the same name",
+                "display_name": "elb_to_waf_operate_policy",
+                "type": "AX"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "35f68956b08c45908fb6972bacad1ebf",
+            "name": "asm admin trust policy",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "19e70bcfa3a9a0e9a09a85374a7a52948376d3b9172758fdc99f450382ec7cca",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"elb:loadbalancers:list\",\"elb:loadbalancers:get\",\"vpc:subnets:get\",\"aom:event:put\"],\"Effect\":\"Allow\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "policies needed by components in ASM meshes",
+                "display_name": "asm admin trust policy",
+                "type": "XA"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "38d67b9b1a76435cb0bc2ce9dce052e0",
+            "name": "fgs_default_region_role",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "343447832712c2d81690d762650532793b35dd0597b8f4b1e20a0937a4a1544e",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"dms:instance:get\",\"smn:topic:list\",\"vpc:vpcs:get\",\"vpc:subnets:get\",\"vpc:securityGroups:get\",\"vpc:ports:create\",\"vpc:ports:get\",\"vpc:routeTables:get\",\"vpc:routeTables:list\",\"vpc:routes:get\",\"vpc:routes:list\",\"ecs:cloudServers:get\",\"lts:groups:get\",\"lts:groups:list\",\"lts:topics:list\",\"lts:topics:get\",\"lts:logstreams:list\",\"sfs:shares:getShareDetail\",\"sfsturbo:shares:getShare\",\"sfsturbo:shares:getAllShares\",\"dns:recordset:update\",\"dns:recordset:create\",\"dns:recordset:list\",\"dns:recordset:get\",\"dns:zone:delete\",\"dns:zone:get\",\"dns:zone:list\",\"dns:zone:create\",\"sfs3:fileSystem:putACL\",\"sfs3:fileSystem:listFileSystems\",\"sfs3:fileSystem:getACL\"],\"Effect\":\"Allow\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "Project-level service policy which includes the minimum permission set for Virtual Private Cloud (VPC) and Scalable File Service (SFS).",
+                "display_name": "fgs_default_region_role",
+                "type": "XA"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "3abf772ce8dc4496ac959806df095de2",
+            "name": "expressnews.example.com",
+            "provider": "cdn",
+            "type": "domains",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "527a3c1892eea4979412608463293490efb2baec462e391e7bfff8b2a5be3e0d",
+            "created": "2023-12-22T18:14:04.000Z",
+            "updated": "2024-01-19T06:46:21.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "domain_name": "expressnews.example.com",
+                "domain_status": "online",
+                "business_type": "WEB",
+                "modify_time": 1705646781889,
+                "cname": "expressnews.example.com.4f0386f7.cdnhwcgqa21.com",
+                "origin_protocol": "http",
+                "tls_version": "",
+                "https_status": "off"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "3c0fa32d-bea0-4555-8f04-23d8fb25b3f3",
+            "name": "subnet-default",
+            "provider": "vpc",
+            "type": "networks",
+            "region_id": "cn-north-4",
+            "project_id": "8edad4d47bf845ad9d6552823528b879",
+            "project_name": "cn-north-4",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "08567799fb196e686438df81a3b0c22de479c4dbefdf53472337e1b4f352bf3a",
+            "created": "2025-09-19T05:10:22.000Z",
+            "updated": "2025-09-19T05:10:24.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "zone_id": "",
+                "vpc_id": "3cf58bfe-4135-4716-ae39-47e005327c86",
+                "scope": "center",
+                "description": "",
+                "extra_dhcp_opts": [
+                    {
+                        "ip_version": 4,
+                        "opt_name": "51",
+                        "opt_value": "87600h"
+                    }
+                ],
+                "status": "ACTIVE",
+                "subnet_cidrs": [
+                    {
+                        "enable_dhcp": true,
+                        "ip_version": "4",
+                        "cidr": "192.168.0.0/24",
+                        "gateway_ip": "192.168.0.1",
+                        "id": "301224ec-9d7d-4a18-b87b-505f58fca7d6"
+                    }
+                ],
+                "dns_nameservers": [
+                    "100.125.1.250",
+                    "100.125.129.250"
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "3cf58bfe-4135-4716-ae39-47e005327c86",
+            "name": "vpc-default",
+            "provider": "vpc",
+            "type": "vpcs",
+            "region_id": "cn-north-4",
+            "project_id": "8edad4d47bf845ad9d6552823528b879",
+            "project_name": "cn-north-4",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "40c3e0862d3d16c17571909466655fd659a6a0bf12beb76843e41f0131862c36",
+            "created": "2025-09-19T05:10:21.000Z",
+            "updated": "2025-09-19T05:10:21.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "default_routetable_id": "f3ec233b-0885-48fa-b831-5430ff04ed98",
+                "routes": [],
+                "admin_state_up": true,
+                "description": "",
+                "cidr": "192.168.0.0/16",
+                "gateway_ip": "127.72.101.118",
+                "sys_tags": [
+                    "_sys_enterprise_project_id=0"
+                ],
+                "enable_snat": false,
+                "status": "ACTIVE"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "3cfc1d22190f45ecb703bfa5e6a761be",
+            "name": "modelarts_agency",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "76f0f55f8180ab42c1fab7898786abaaeb2c09d578b32acb0d2cffa6c04fe7b3",
+            "created": "2025-03-19T06:02:51.000Z",
+            "updated": "2025-03-19T06:02:51.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "002e10aa648948ef98b71a493aa739ab",
+                    "5a7231e63e3147cba475e48273d4b9d6",
+                    "794296b6c00542eab578fd2a42091a21",
+                    "96bf9aa90cf049c6abbfc5d53cb0b456",
+                    "a51f1204e8e24def8766ea096b1e5958",
+                    "b27e9312a93c4b9a8b530158f9c30f1f"
+                ],
+                "trust_domain_id": "5eb2972c64914f4a9759101425127f44",
+                "description": "Created by ModelArts service.",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "3e58a5d4c2b2418198c0de2f41eaee91",
+            "name": "python_ddemo_test-23063533",
+            "provider": "codeartsbuild",
+            "type": "CloudBuildServer",
+            "region_id": "ap-southeast-3",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "5b97e796bfde37d79efb80c74d474e5ad7cb3012292fc0f5265812738d7afabb",
+            "created": "2023-01-26T08:51:30.000Z",
+            "updated": "2023-01-26T08:52:37.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "buildParameter": [
+                    {
+                        "name": "hudson.model.StringParameterDefinition",
+                        "params": [
+                            {
+                                "name": "name",
+                                "value": "codeBranch"
+                            },
+                            {
+                                "name": "type",
+                                "value": "normalparam"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Code branch, predefined parameters"
+                            },
+                            {
+                                "name": "deletion",
+                                "value": "false"
+                            },
+                            {
+                                "name": "defaults",
+                                "value": "true"
+                            },
+                            {
+                                "name": "staticVar",
+                                "value": "false"
+                            },
+                            {
+                                "name": "sensitiveVar",
+                                "value": "false"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "3f2d9394-34c8-49a7-a72a-6c2cd1da83ca",
+            "name": "me-east-1.cloudide.3f2d9394-34c8-49a7-a72a-6c2cd1da83ca",
+            "provider": "vpcep",
+            "type": "endpointServices",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "50d460f26b25f3aff38857e045a7c52de1312c63e265ee53e3c8554e40a6ff9c",
+            "created": "2025-11-25T13:33:03.060Z",
+            "updated": "2025-11-25T13:33:06.381Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "approval_enabled": false,
+                "service_type": "interface",
+                "vpc_id": "4195c71f-7ff5-4953-89d8-9ecd354fa716",
+                "service_name": "me-east-1.cloudide.3f2d9394-34c8-49a7-a72a-6c2cd1da83ca",
+                "connection_count": 0,
+                "port_id": "ed665d0b-b8f2-417f-9c11-744850043ff6",
+                "ports": [
+                    {
+                        "client_port": 5443,
+                        "protocol": "TCP",
+                        "server_port": 5443
+                    }
+                ],
+                "pool_id": "8b4065e6-c9d1-40cd-ac76-4cd9de230ff5",
+                "tcp_proxy": "close",
+                "status": "available",
+                "server_type": "VM"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "3fd14e043bf843579d757ad52c72ba48",
+            "name": "policy_restrict_ecs",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "1ceec812886797ea7197416ce919834cf631288b76b1c833872f76c2c749f47d",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"ECS:*:*\"],\"Effect\":\"Deny\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "",
+                "display_name": "policy_restrict_ecs",
+                "type": "XA"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "401ccb07a22542398e29dc5deeb4349a",
+            "name": "ArchFormation-Group",
+            "provider": "iam",
+            "type": "groups",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "e32f4cf6acd66207c202b0783282b48d0e70357862a8a53649727f8d6d8b3347",
+            "created": "2025-12-10T15:20:01.000Z",
+            "updated": "2025-12-11T12:39:25.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_list": [
+                    "d990dd3b8c0b4da6b41f453de71bc6de",
+                    "8eb36151949e434e857a3446e58cf107"
+                ],
+                "description": "",
+                "policy_list": []
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "40da35eb5b57455db4018c9eaec78719",
+            "name": "newuser",
+            "provider": "iam",
+            "type": "users",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "2e2bb9ba01268eef7f011e6ee7609a0f556451aac4b0af345361d34d6458882e",
+            "created": "2025-12-10T15:16:46.000Z",
+            "updated": "2025-12-10T15:16:46.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "pwd_strength": "high",
+                "role_list": [],
+                "last_login_time": "2025-12-11T11:16:19Z",
+                "login_protect": {
+                    "enabled": false
+                },
+                "credentials": [
+                    {
+                        "last_use_time": "2025-12-10T15:16:46Z",
+                        "access": "HPUASSEYYUSMC8IWCNDU",
+                        "create_time": "2025-12-10T15:16:46Z",
+                        "status": "active"
+                    }
+                ],
+                "description": "test at 123456789",
+                "access_mode": "default",
+                "enabled": false,
+                "pwd_status": false,
+                "group_list": [
+                    "401ccb07a22542398e29dc5deeb4349a"
+                ],
+                "virtual_mfa_device": false,
+                "policy_list": [],
+                "is_root_user": false
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "4195c71f-7ff5-4953-89d8-9ecd354fa716",
+            "name": "vpc-default",
+            "provider": "vpc",
+            "type": "vpcs",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "45adf8b1d97284645daddb67482df0b84479a1737ff69ee80ddde814e83d487a",
+            "created": "2024-05-14T06:13:01.000Z",
+            "updated": "2024-05-14T06:13:01.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "default_routetable_id": "dc32ac3f-1192-4ed4-9325-4c267cca017b",
+                "routes": [],
+                "admin_state_up": true,
+                "description": "vpc-default",
+                "cidr": "192.168.0.0/16",
+                "gateway_ip": "127.0.6.191",
+                "sys_tags": [
+                    "_sys_enterprise_project_id=0"
+                ],
+                "enable_snat": false,
+                "status": "ACTIVE"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "42b2e7b0-0217-4148-9f9f-ce49b51bc158",
+            "name": "default",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "ap-southeast-4",
+            "project_id": "2ef22288d57649f699cb07ce191f7c35",
+            "project_name": "ap-southeast-4",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "9f8cb389bcde741c96bb5e71c149307b640a48322f6ff30042ec4fe96bbbaac6",
+            "created": "2023-02-03T07:27:28.000Z",
+            "updated": "2023-02-03T07:27:28.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "Default security group",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "42b2e7b0-0217-4148-9f9f-ce49b51bc158",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "2ef22288d57649f699cb07ce191f7c35",
+                        "action": "allow",
+                        "id": "71ab7a39-5ca6-4cc8-bd5a-b24d412312d6",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "42b2e7b0-0217-4148-9f9f-ce49b51bc158",
+                        "ethertype": "IPv6",
+                        "security_group_id": "42b2e7b0-0217-4148-9f9f-ce49b51bc158",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "2ef22288d57649f699cb07ce191f7c35",
+                        "action": "allow",
+                        "id": "bba720e3-7fea-4c55-915b-2a07fa1e695c",
+                        "direction": "ingress"
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "42b2e7b0-0217-4148-9f9f-ce49b51bc158",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "2ef22288d57649f699cb07ce191f7c35",
+                        "action": "allow",
+                        "id": "cf9b352e-1514-4e8f-bff8-138f12949dab",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "42b2e7b0-0217-4148-9f9f-ce49b51bc158",
+                        "ethertype": "IPv4",
+                        "security_group_id": "42b2e7b0-0217-4148-9f9f-ce49b51bc158",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "2ef22288d57649f699cb07ce191f7c35",
+                        "action": "allow",
+                        "id": "85a83c16-3736-45ff-b1ca-4e7a30140791",
+                        "direction": "ingress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "439e030836134497a3e47e8d196f462b",
+            "name": "ssa_admin_trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "7125957700576cda59ac1c320ce0b5d7b51845bb67f41dfb3f680738bd8249f9",
+            "created": "2023-03-24T10:42:49.000Z",
+            "updated": "2023-03-24T10:42:49.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "e2d75429549044d2b313fbdd11520f7d"
+                ],
+                "trust_domain_id": "5cdaf988b7ff4b86ba57ecf24b2024c1",
+                "description": "Created by SA Service",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "45da0a44-6cd6-44c8-bb3c-d2d8f4161f91",
+            "name": "defaultPolicy",
+            "provider": "cbr",
+            "type": "policy",
+            "region_id": "cn-south-1",
+            "project_id": "540c893b06704836835fcb35ee46d6bb",
+            "project_name": "cn-south-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "b4a58c41f4c499d45bfc153da3e934a55965977795cd678d811d5855f218a4ff",
+            "created": "2025-09-26T05:14:26.000Z",
+            "updated": "2025-09-26T05:14:27.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "enable_acceleration": "False",
+                "full_backup_interval": "-1",
+                "destination_project_id": "",
+                "operation_type": "backup",
+                "timezone": "",
+                "week_backups": 0,
+                "pattern": "BEGIN:VEVENT\nRRULE:FREQ=WEEKLY;BYDAY=SU,MO,TU,WE,TH,FR,SA;BYHOUR=20;BYMINUTE=00\nEND:VEVENT",
+                "destination_region": "",
+                "retention_duration_days": 30,
+                "enabled": true,
+                "day_backups": 0,
+                "associate_vaults": [],
+                "start_time": "2025-09-26 05:14:26Z",
+                "max_backups": -1,
+                "year_backups": 0,
+                "month_backups": 0,
+                "cross_account_urn": ""
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "45e4979d8dcb49f08f1b425ce07add59",
+            "name": "SecMaster_Agency",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "f3f95cd3e0af8023d347a938c3ec8ccd74cea585ea1684312bcbf457705283bc",
+            "created": "2024-08-22T11:28:45.000Z",
+            "updated": "2024-08-22T11:28:45.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "816e665a5fbd41cb8f02b7ec329756bb",
+                    "c40fc1b70fb14140a61ac60c7c292874"
+                ],
+                "trust_domain_id": "5cdaf988b7ff4b86ba57ecf24b2024c1",
+                "description": "Created by SecMaster service.",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "47a57b66-f190-4772-ad90-652fd8229b4f",
+            "name": "lts-topic-topic1",
+            "provider": "lts",
+            "type": "topics",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "947d81e3080181d8ef1eb45498afcfe299b198de9d389315bc4f14d6f0d7cb6c",
+            "created": "2025-09-03T20:31:24.000Z",
+            "updated": "2025-09-03T20:31:24.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "detailId": "d5f6a436-ced2-46d0-8e57-90b950208d74"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "489dfae4b604405989ef59f0da9982b4",
+            "name": "workspace_admin_trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "64df78378e91bcb15fa6cca8c5f82ef19f498f0efeb5a4c767b5c8d4fedf01ba",
+            "created": "2024-11-15T13:11:21.000Z",
+            "updated": "2026-01-18T15:49:31.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "831db399f58d484799ebd81e6efced0c",
+                    "f63c9cc0cb3b418689635667af5defe2"
+                ],
+                "trust_domain_id": "9aeab4e7596d4532b9db4bda7f04c6a8",
+                "description": "Updating or deleting this agency created by Workspace may affect service usage. Exercise caution when performing this operation.",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "48c16d3d17704f33bcf9846111c0f78b",
+            "name": "QueryANDDownloadSCM",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "7629f439332ab1f94e026b4b3d274fbbeca570898b675fdc61ba7a601e6ffa18",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"scm:cert:list\",\"scm:cert:download\",\"scm:cert:get\"],\"Effect\":\"Allow\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "Created by MediaVOD Service",
+                "display_name": "QueryANDDownloadSCM",
+                "type": "AX"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "4aac4f26-2bc9-478d-97ce-7f52a3cd1e85",
+            "name": "sg-c074",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "tr-west-1",
+            "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+            "project_name": "tr-west-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "571fd2629a9a145162a70a8f7e1d4eebe6824ce1403ff14eb069898ea5ca4f4d",
+            "created": "2026-02-03T11:22:23.000Z",
+            "updated": "2026-02-03T11:22:23.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "4aac4f26-2bc9-478d-97ce-7f52a3cd1e85",
+                        "description": "",
+                        "remote_ip_prefix": "0.0.0.0/0",
+                        "port_range_max": 22,
+                        "priority": 1,
+                        "enabled": true,
+                        "protocol": "tcp",
+                        "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+                        "action": "allow",
+                        "id": "5136f73a-23c2-43cd-b211-1a00cbf5993f",
+                        "direction": "ingress",
+                        "port_range_min": 22
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "4aac4f26-2bc9-478d-97ce-7f52a3cd1e85",
+                        "description": "Allows all traffic from the instances in the security group to external resources.",
+                        "remote_ip_prefix": "0.0.0.0/0",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+                        "action": "allow",
+                        "id": "ce05cb3f-5903-4bd8-8c8c-bb54250c99f0",
+                        "direction": "egress"
+                    },
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "4aac4f26-2bc9-478d-97ce-7f52a3cd1e85",
+                        "description": "Allows all traffic from the instances in the security group to external resources.",
+                        "remote_ip_prefix": "::/0",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+                        "action": "allow",
+                        "id": "e0991e5d-e494-435b-9fd4-2c5f6989d8da",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "4aac4f26-2bc9-478d-97ce-7f52a3cd1e85",
+                        "ethertype": "IPv6",
+                        "security_group_id": "4aac4f26-2bc9-478d-97ce-7f52a3cd1e85",
+                        "description": "Allows the instances in the security group to communicate with each other over a private network.",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+                        "action": "allow",
+                        "id": "f5c41d2d-f8ec-4e2b-a7dc-a1f01bacb295",
+                        "direction": "ingress"
+                    },
+                    {
+                        "remote_group_id": "4aac4f26-2bc9-478d-97ce-7f52a3cd1e85",
+                        "ethertype": "IPv4",
+                        "security_group_id": "4aac4f26-2bc9-478d-97ce-7f52a3cd1e85",
+                        "description": "Allows the instances in the security group to communicate with each other over a private network.",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+                        "action": "allow",
+                        "id": "f6574e1b-f078-4b8b-a370-cc5af1dc0d7e",
+                        "direction": "ingress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "4bceed196ba0eed72b3a72434f369679",
+            "name": "AstroZero 免费版",
+            "provider": "astrozero",
+            "type": "instances",
+            "region_id": "cn-north-4",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "e01156471dab2c67f674cc3756f62074f12c7bdc1be1e273203adf2961c48eab",
+            "created": "2025-07-22T12:34:11.000Z",
+            "updated": "2025-07-22T12:34:11.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "masterResourceId": "",
+                "productId": "",
+                "orderId": "",
+                "statusValue": "normal",
+                "changeSpec": false,
+                "resourceName": "free-instance",
+                "env": "dev",
+                "fixedStatus": false,
+                "defaultStatus": false,
+                "unSubscribable": true,
+                "renewable": false,
+                "cloudServiceType": "hws.service.type.appcube",
+                "resourceSize": 0,
+                "resourceSpecCode": "free",
+                "isSubResource": true,
+                "resourceType": "hws.resource.type.appcube.developer",
+                "status": 0
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "4d4ab1a6-9218-48e1-8f1f-3ab1a6326761",
+            "name": "defaultPolicy",
+            "provider": "cbr",
+            "type": "policy",
+            "region_id": "ap-southeast-3",
+            "project_id": "31e2da1575cc47048f26be2a2b5c6ec9",
+            "project_name": "ap-southeast-3",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "fff6889db45a4559193320e2693063aa31a2610bc4931cb71566c9b47d05880c",
+            "created": "2025-08-16T23:03:53.000Z",
+            "updated": "2025-08-16T23:03:54.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "enable_acceleration": "False",
+                "full_backup_interval": "-1",
+                "destination_project_id": "",
+                "operation_type": "backup",
+                "timezone": "",
+                "week_backups": 0,
+                "pattern": "BEGIN:VEVENT\nRRULE:FREQ=WEEKLY;BYDAY=SU,MO,TU,WE,TH,FR,SA;BYHOUR=20;BYMINUTE=00\nEND:VEVENT",
+                "destination_region": "",
+                "retention_duration_days": 30,
+                "enabled": true,
+                "day_backups": 0,
+                "associate_vaults": [],
+                "start_time": "2025-08-16 23:03:53Z",
+                "max_backups": -1,
+                "year_backups": 0,
+                "month_backups": 0,
+                "cross_account_urn": ""
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "4d958d0a49b44c53ae603b8d48eb738b",
+            "name": "db-group",
+            "provider": "iam",
+            "type": "groups",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "3bc29d4da7170365186de3cd8f13b1d66acb838ff6d6c2a9763363c69afe5f8a",
+            "created": "2023-08-15T11:44:40.000Z",
+            "updated": "2025-05-07T15:44:20.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_list": [],
+                "description": "db-group",
+                "policy_list": []
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "4f0386f737fb4ad38e80006222f86b02",
+            "name": "HIS_FAWAD",
+            "provider": "organizations",
+            "type": "account",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "d019ec7179b93ac19aad7601c6af7df0354e35e82ef13786e0db620cbea0be28",
+            "created": "2024-07-12T11:47:42.000Z",
+            "updated": "2024-07-12T11:47:42.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "urn": "organizations::4f0386f737fb4ad38e80006222f86b02:account:o-to4y1ztb17glazbrrt3wbii9sofgid63/4f0386f737fb4ad38e80006222f86b02",
+                "joined_at": "2024-07-12T11:47:42Z",
+                "join_method": "invited",
+                "status": "active"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "4f437b1b124545b6a02ae1f5d2d8b8d4",
+            "name": "aimalexe",
+            "provider": "iam",
+            "type": "users",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "646be96e8fb03bbd20b3e231e5df35e815db41e6dd1042ba646eb08fd45adc79",
+            "created": "2024-04-12T17:57:36.000Z",
+            "updated": "2024-04-12T17:57:36.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "pwd_strength": "high",
+                "role_list": [],
+                "last_login_time": "2024-10-27T08:04:24Z",
+                "login_protect": {
+                    "enabled": false
+                },
+                "credentials": [
+                    {
+                        "last_use_time": "2024-04-12T17:57:36Z",
+                        "access": "FRHY1PSTKTQ0EH2TJ5PX",
+                        "create_time": "2024-04-12T17:57:36Z",
+                        "status": "active"
+                    }
+                ],
+                "description": "Aimal Khan",
+                "access_mode": "default",
+                "enabled": false,
+                "pwd_status": false,
+                "group_list": [
+                    "20c05ede12814a5e8435edb1262c86d7",
+                    "e973a10720254a96a7aececeb9c573f6"
+                ],
+                "virtual_mfa_device": false,
+                "policy_list": [],
+                "is_root_user": false
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "5017634bf12a47dabed986c5ff034f30",
+            "name": "user0",
+            "provider": "iam",
+            "type": "users",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "e23a22b17b15d29a1d2e20b03d239f2981560d9faa180d7fdf9b6e88c4449497",
+            "created": "2026-02-11T05:03:51.000Z",
+            "updated": "2026-02-11T05:03:51.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "pwd_status": false,
+                "pwd_strength": "high",
+                "group_list": [
+                    "e973a10720254a96a7aececeb9c573f6"
+                ],
+                "role_list": [],
+                "last_login_time": "2026-02-12T15:28:21Z",
+                "virtual_mfa_device": false,
+                "login_protect": {
+                    "enabled": false
+                },
+                "credentials": [
+                    {
+                        "last_use_time": "2026-02-11T05:03:51Z",
+                        "access": "HPUAUXLQO56WHENRUOML",
+                        "create_time": "2026-02-11T05:03:51Z",
+                        "status": "active"
+                    }
+                ],
+                "policy_list": [],
+                "access_mode": "default",
+                "is_root_user": false,
+                "enabled": true
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "5253ae11-2730-4444-b742-f594e5f13271",
+            "name": "defaultPolicy",
+            "provider": "cbr",
+            "type": "policy",
+            "region_id": "la-north-2",
+            "project_id": "64c4b4a3e24b476cb88dd27858a35b8d",
+            "project_name": "la-north-2",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "c812f3a34b2a90b674d8792e64bfd259fbda857735e77c200a631e481c67e33e",
+            "created": "2026-02-02T07:49:38.000Z",
+            "updated": "2026-02-02T07:49:40.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "enable_acceleration": "False",
+                "full_backup_interval": "-1",
+                "destination_project_id": "",
+                "operation_type": "backup",
+                "timezone": "",
+                "week_backups": 0,
+                "pattern": "BEGIN:VEVENT\nRRULE:FREQ=WEEKLY;BYDAY=SU,MO,TU,WE,TH,FR,SA;BYHOUR=20;BYMINUTE=00\nEND:VEVENT",
+                "destination_region": "",
+                "retention_duration_days": 30,
+                "enabled": true,
+                "day_backups": 0,
+                "associate_vaults": [],
+                "start_time": "2026-02-02 07:49:38Z",
+                "max_backups": -1,
+                "year_backups": 0,
+                "month_backups": 0,
+                "cross_account_urn": ""
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "53875336-fd1c-4c9d-97cf-538f4c73f869",
+            "name": "rtb-vpc-default",
+            "provider": "vpc",
+            "type": "routeTables",
+            "region_id": "tr-west-1",
+            "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+            "project_name": "tr-west-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "345213fa436c361646497cd1bde098b9abd40fe86576bd6b6994f9b10e91864d",
+            "created": "2025-09-24T05:07:29.000Z",
+            "updated": "2026-02-24T05:22:51.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "routes": [
+                    {
+                        "extra_info": {},
+                        "destination": "192.168.0.0/24",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "26.177.120.14",
+                            "nexthop_type": "ntp"
+                        },
+                        "nexthop_ip": "26.177.120.14",
+                        "destination": "100.125.5.251/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "13eca471-6836-4886-82ec-66abd9d7fbc7"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "26.177.120.14",
+                            "nexthop_type": "windows"
+                        },
+                        "nexthop_ip": "26.177.120.14",
+                        "destination": "100.125.8.32/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "4a6c89a1-8856-4405-b26b-1d76445c251e"
+                    },
+                    {
+                        "extra_info": {
+                            "routes_api_v2": true,
+                            "nexthop_ip": "26.177.120.14",
+                            "nexthop_type": "suse"
+                        },
+                        "nexthop_ip": "26.177.120.14",
+                        "destination": "100.125.8.33/32",
+                        "type": "system-vxlan",
+                        "type_index": 23,
+                        "nexthop": "80d4d83b-b4da-4898-9f92-45a3317ea6b1"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "198.19.128.0/20",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "127.0.0.0/8",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "100.64.0.0/10",
+                        "type": "local"
+                    }
+                ],
+                "default": true,
+                "index": 1,
+                "router_id": "0288e8b0-e494-4053-94a7-cea1951c8986",
+                "subnets": [
+                    {
+                        "network_id": "8750829f-c99f-4cd0-b8f3-9e79e35a2d19",
+                        "id": "496ee2a3-d275-4bff-a34d-0993a5425d3c"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "5403ef2dccde4b6fb7e4d13909ca968f",
+            "name": "obs_obs-bucket",
+            "provider": "iam",
+            "type": "policies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "3f2601869db34973e834b4dd2e5477a2520c67648a427ccc6a0d80743ca1bf73",
+            "created": "2025-10-14T10:22:28.000Z",
+            "updated": "2025-10-14T10:22:28.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "urn": "iam::4f0386f737fb4ad38e80006222f86b02:policy:obs_obs-bucket",
+                "path": "",
+                "policy_type": "custom",
+                "description": "",
+                "default_version_id": "v8",
+                "attachment_count": 1,
+                "policy_document": "{\"Version\":\"5.0\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":[\"obs:object:GetObject\",\"obs:object:ListMultipartUploadParts\",\"obs:bucket:ListBucket\",\"obs:object:DeleteObject\",\"obs:object:PutObject\"],\"Resource\":[\"obs:*:*:bucket:obs-bucket-shining\",\"obs:*:*:object:obs-bucket-shining/*\"]}]}"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "55700684-d37d-427e-8dcb-99aa0fc5b5d7",
+            "name": "subnet-default",
+            "provider": "vpc",
+            "type": "networks",
+            "region_id": "cn-south-1",
+            "project_id": "540c893b06704836835fcb35ee46d6bb",
+            "project_name": "cn-south-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "7e0e3f790e0dafcdc26632bd7db0b3d74b9b59a9648f95a00a4f573d0a0dda25",
+            "created": "2025-09-26T05:14:28.000Z",
+            "updated": "2025-09-26T05:14:29.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "zone_id": "",
+                "vpc_id": "78add4f6-8ea7-436d-9de2-30dae0320f98",
+                "scope": "center",
+                "description": "",
+                "extra_dhcp_opts": [
+                    {
+                        "ip_version": 4,
+                        "opt_name": "51",
+                        "opt_value": "87600h"
+                    }
+                ],
+                "status": "ACTIVE",
+                "subnet_cidrs": [
+                    {
+                        "enable_dhcp": true,
+                        "ip_version": "4",
+                        "cidr": "192.168.0.0/24",
+                        "gateway_ip": "192.168.0.1",
+                        "id": "2c3dea43-d28d-40ae-b2fc-c466c88c0e17"
+                    }
+                ],
+                "dns_nameservers": [
+                    "100.125.1.250",
+                    "100.125.136.29"
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "57ab43a8-fd57-49f7-8246-650804843f56",
+            "name": "rtb-vpc-default-smb",
+            "provider": "vpc",
+            "type": "routeTables",
+            "region_id": "ap-southeast-3",
+            "project_id": "31e2da1575cc47048f26be2a2b5c6ec9",
+            "project_name": "ap-southeast-3",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "002573c956696238caa8bd1c3c28335887d781cdb6d79983e1139d78a5ebde42",
+            "created": "2025-09-25T15:15:01.000Z",
+            "updated": "2025-11-12T06:43:26.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "routes": [
+                    {
+                        "extra_info": {},
+                        "destination": "172.31.0.0/20",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "198.19.128.0/20",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "127.0.0.0/8",
+                        "type": "local"
+                    },
+                    {
+                        "extra_info": {},
+                        "destination": "100.64.0.0/10",
+                        "type": "local"
+                    }
+                ],
+                "default": true,
+                "index": 1,
+                "router_id": "0bf0917c-ec50-4833-991b-5c9358a9e534",
+                "subnets": [
+                    {
+                        "network_id": "dc04d94c-aaf6-4ff5-a2b0-fea0c623c02c",
+                        "id": "195b1e85-9de7-4d36-882f-44d0b62c09df"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "57de869a-e605-40e7-801a-306ed3725d5a",
+            "name": "subnet-default",
+            "provider": "vpc",
+            "type": "networks",
+            "region_id": "la-north-2",
+            "project_id": "64c4b4a3e24b476cb88dd27858a35b8d",
+            "project_name": "la-north-2",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "520bc456dcade8e70509221116d32176f35fa2a40c1dd1a66b98e43903f234af",
+            "created": "2026-02-02T07:49:40.000Z",
+            "updated": "2026-02-02T07:49:40.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "zone_id": "",
+                "vpc_id": "0118768a-9c89-49e5-b503-ac3c179856ee",
+                "scope": "center",
+                "description": "",
+                "extra_dhcp_opts": [
+                    {
+                        "ip_version": 4,
+                        "opt_name": "51",
+                        "opt_value": "87600h"
+                    }
+                ],
+                "status": "ACTIVE",
+                "subnet_cidrs": [
+                    {
+                        "enable_dhcp": true,
+                        "ip_version": "4",
+                        "cidr": "192.168.0.0/24",
+                        "gateway_ip": "192.168.0.1",
+                        "id": "ecadcca6-64a0-432e-ab3f-082f071bd767"
+                    }
+                ],
+                "dns_nameservers": [
+                    "100.125.1.250",
+                    "100.125.1.242"
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "57e68441c535424c8970109e932fab4b",
+            "name": "LimitedAccess-Temp",
+            "provider": "iam",
+            "type": "groups",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "2554721e015274eec9f98801eda4d75b63a2f9aecb573a85695b5258b73ca2b2",
+            "created": "2023-05-29T05:26:02.000Z",
+            "updated": "2025-05-07T15:44:20.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_list": [],
+                "description": "Thiasjnad",
+                "policy_list": []
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "588c9bf4931e4e35afc0ebc414fa78b9",
+            "name": "AirLiveDrive1_UG",
+            "provider": "iam",
+            "type": "groups",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "e9f8e54f99c9e367fc40fe57beb79a5cd0010e075ef90a4c86f1749480d8bed2",
+            "created": "2026-02-09T13:33:00.000Z",
+            "updated": "2026-02-09T16:08:36.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_list": [
+                    "8eb36151949e434e857a3446e58cf107"
+                ],
+                "description": "",
+                "policy_list": []
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "6299879a-31e8-4d19-981f-698b26c6b87a",
+            "name": "defaultPolicy",
+            "provider": "cbr",
+            "type": "policy",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "77bb708764fac3579c7fd6cc52c481d33cd5c92ab3189b35ef0840057d50c918",
+            "created": "2024-06-04T09:26:21.000Z",
+            "updated": "2025-11-12T15:42:06.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "enable_acceleration": "False",
+                "full_backup_interval": "-1",
+                "destination_project_id": "",
+                "operation_type": "backup",
+                "timezone": "",
+                "week_backups": 0,
+                "pattern": "BEGIN:VEVENT\nRRULE:FREQ=WEEKLY;BYDAY=SU,MO,TU,WE,TH,FR,SA;BYHOUR=20;BYMINUTE=00\nEND:VEVENT",
+                "destination_region": "",
+                "retention_duration_days": 30,
+                "enabled": true,
+                "day_backups": 0,
+                "associate_vaults": [],
+                "start_time": "2024-06-04 09:26:21Z",
+                "max_backups": -1,
+                "year_backups": 0,
+                "month_backups": 0,
+                "cross_account_urn": ""
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "63872747cf184792896bfe50f1451a51",
+            "name": "servicestage_trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "024730c5a76e3f1eebcfcc95d4bc799099da77caaa93ea35b4e107656709d2f0",
+            "created": "2023-01-04T05:15:46.000Z",
+            "updated": "2023-01-04T05:15:46.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "45c78aba7ad541c4a4e3d64085fc0339",
+                    "6d3ff0b3ce8246f1a43f4d5e2c40fe1e",
+                    "a51f1204e8e24def8766ea096b1e5958",
+                    "e2d75429549044d2b313fbdd11520f7d"
+                ],
+                "trust_domain_id": "4a2caee2fa334cee8ce86acebc6fb14c",
+                "description": "Create by ServiceStage Team",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "656e540ae39843c597072603128b13c4",
+            "name": "obs_agency",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "23c0805310ab2aed0921217f015f03f7fc0bcabd9a04aefc12b8bc01b7cf9839",
+            "created": "2025-10-16T11:08:39.000Z",
+            "updated": "2025-10-16T11:08:39.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "8eb36151949e434e857a3446e58cf107"
+                ],
+                "trust_domain_id": "137dacac97ad46e8ad9fd15bf6f3817e",
+                "description": "",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "66cc53deaf5f434483ec7aa508822541",
+            "name": "example.com",
+            "provider": "cdn",
+            "type": "domains",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "c210d995d45fea1b84d00814787b646cbbf2460112b20fcb57d447e24e40eead",
+            "created": "2023-11-21T12:45:52.000Z",
+            "updated": "2025-09-30T14:37:01.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "domain_name": "example.com",
+                "domain_status": "online",
+                "business_type": "WEB",
+                "modify_time": 1759243021455,
+                "cname": "example.com.4f0386f7.cdnhwcgqa21.com",
+                "origin_protocol": "http",
+                "tls_version": "",
+                "https_status": "off"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "69ffa3baf65f4b9ab65c00de87e75e1d",
+            "name": "python_ddemo_test-cloudbuild",
+            "provider": "codeartsbuild",
+            "type": "CloudBuildServer",
+            "region_id": "ap-southeast-3",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "7a4deeef44237a5b4ebefe30272b3b70a151f82d1fbf60f7a8cae72d73efa401",
+            "created": "2023-01-26T08:43:51.000Z",
+            "updated": "2023-01-26T08:43:51.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "buildParameter": [
+                    {
+                        "name": "hudson.model.StringParameterDefinition",
+                        "params": [
+                            {
+                                "name": "name",
+                                "value": "codeBranch"
+                            },
+                            {
+                                "name": "type",
+                                "value": "normalparam"
+                            },
+                            {
+                                "name": "staticVar",
+                                "value": "false"
+                            },
+                            {
+                                "name": "description",
+                                "value": "Parameters"
+                            },
+                            {
+                                "name": "deletion",
+                                "value": "false"
+                            },
+                            {
+                                "name": "defaults",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "6ba2f524dbf4469881a255e03969fa14",
+            "name": "ei-pangulargemodels-trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "41f8857b56895eb19999531634ffcb779e321f815a48e1d91b4e761a89137c5d",
+            "created": "2025-10-26T02:07:12.000Z",
+            "updated": "2025-10-26T02:07:12.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "0be64608947e42be951f5d2d9899209d",
+                    "20ef9df40d5c4495a6b6625f74276fac",
+                    "24007820a5de4bd99e081b9a4734edef",
+                    "84554533eec2498893360c25a8317bcb",
+                    "a51f1204e8e24def8766ea096b1e5958",
+                    "f90878dfa416446fb8fddb7c8c9b849a"
+                ],
+                "trust_domain_id": "87d178181a6b475e9bb7be4695a249cc",
+                "description": "Create by PANGU Team",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "6bb31a615262487e9f4703771ac07958",
+            "name": "cicd-github-actions",
+            "provider": "iam",
+            "type": "groups",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "aa3f857e33c49c651add8cefd339847cd40c682eded85d907fb8c42dab294b15",
+            "created": "2023-08-31T07:49:01.000Z",
+            "updated": "2025-05-07T15:44:20.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_list": [],
+                "description": "",
+                "policy_list": []
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "6d19a714-21be-46fd-abcc-83782bc108e0",
+            "name": "ims-ecs-69ef-8511-v2-20250707_0914",
+            "provider": "ims",
+            "type": "images",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "7a0604a6b31be96dcda10701c0ba9d717b65c42d00fae7c8066d1fb2b8fc07f3",
+            "created": "2025-07-07T05:16:14.000Z",
+            "updated": "2025-07-07T05:19:51.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "sequenceNum": "1",
+                "backupId": "",
+                "isregistered": "true",
+                "lazyLoading": "True",
+                "platform": "Ubuntu",
+                "virtualSize": "null",
+                "originalImageName": "e215a701-baf9-41c1-b919-2c7c095512bd",
+                "file": "/v2/images/6d19a714-21be-46fd-abcc-83782bc108e0/file",
+                "protected": "false",
+                "maxRam": "0",
+                "osVersion": "Ubuntu 24.04 server 64bit",
+                "minRam": "0",
+                "checksum": "bcd7dd7dab80ca42e125a389f986404e",
+                "osBit": "64",
+                "osType": "Linux",
+                "dataOrigin": "instance,6e2fa39b-e07e-43bc-aa9f-037af833e5eb",
+                "imageSize": "2697949184",
+                "diskFormat": "zvhd2",
+                "imageType": "private",
+                "owner": "de028029204e44c7b020b9ecfcc332f9",
+                "virtualEnvType": "FusionCompute",
+                "shecma": "/v2/schemas/image",
+                "visibility": "private",
+                "hwVifMultiqueueEnabled": "true",
+                "imageSourceType": "uds",
+                "minDisk": "40",
+                "deleted": "null",
+                "productCode": "",
+                "size": 18,
+                "self": "/v2/images/6d19a714-21be-46fd-abcc-83782bc108e0",
+                "containerFormat": "bare",
+                "supportKvm": "true",
+                "status": "active"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "6d753dee-f4ab-4d12-b199-cc13d3563a74",
+            "name": "er-97e0",
+            "provider": "er",
+            "type": "instances",
+            "region_id": "me-east-1",
+            "project_id": "de028029204e44c7b020b9ecfcc332f9",
+            "project_name": "me-east-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "424b096bdd5639e7abdbec86843c912ae19f0fda1bbd3992d386521656d1440a",
+            "created": "2025-10-01T05:03:56.516Z",
+            "updated": "2025-10-01T05:04:08.870Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "enable_default_propagation": true,
+                "availability_zone_ids": [
+                    "me-east-1a",
+                    "me-east-1b"
+                ],
+                "enable_default_association": true,
+                "description": "",
+                "default_association_route_table_id": "4beda736-3911-49a2-bb23-ce3aff90dbe4",
+                "performance_flavor": "3e052837-3711-4af4-b5ab-a59846a4e87d",
+                "asn": 4294967294,
+                "default_propagation_route_table_id": "4beda736-3911-49a2-bb23-ce3aff90dbe4"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "6d76f247-2d8d-4b25-ad62-4d3f5a651bd5",
+            "name": "default",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "cn-south-1",
+            "project_id": "540c893b06704836835fcb35ee46d6bb",
+            "project_name": "cn-south-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "6ae99c095ecfe6af2d8fec5665ade7f16a827b9a9b0160c6ed8f743f199d8bd2",
+            "created": "2025-09-26T05:14:24.000Z",
+            "updated": "2025-09-26T05:14:24.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "Default security group",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "6d76f247-2d8d-4b25-ad62-4d3f5a651bd5",
+                        "description": "",
+                        "remote_ip_prefix": "185.193.152.119/32",
+                        "port_range_max": 7090,
+                        "priority": 1,
+                        "enabled": true,
+                        "protocol": "tcp",
+                        "project_id": "540c893b06704836835fcb35ee46d6bb",
+                        "action": "allow",
+                        "id": "f88b3257-533b-4a67-b0ac-d3dd31d17e9c",
+                        "direction": "ingress",
+                        "port_range_min": 7090
+                    },
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "6d76f247-2d8d-4b25-ad62-4d3f5a651bd5",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "540c893b06704836835fcb35ee46d6bb",
+                        "action": "allow",
+                        "id": "397ac572-ff34-4c09-a5ea-217c46abcaad",
+                        "direction": "egress"
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "6d76f247-2d8d-4b25-ad62-4d3f5a651bd5",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "540c893b06704836835fcb35ee46d6bb",
+                        "action": "allow",
+                        "id": "e7c46d6b-4a99-4069-be7b-4a6ba509033a",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "6d76f247-2d8d-4b25-ad62-4d3f5a651bd5",
+                        "ethertype": "IPv6",
+                        "security_group_id": "6d76f247-2d8d-4b25-ad62-4d3f5a651bd5",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "540c893b06704836835fcb35ee46d6bb",
+                        "action": "allow",
+                        "id": "63bd3184-7286-401d-bccb-ba52b5578c7d",
+                        "direction": "ingress"
+                    },
+                    {
+                        "remote_group_id": "6d76f247-2d8d-4b25-ad62-4d3f5a651bd5",
+                        "ethertype": "IPv4",
+                        "security_group_id": "6d76f247-2d8d-4b25-ad62-4d3f5a651bd5",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "540c893b06704836835fcb35ee46d6bb",
+                        "action": "allow",
+                        "id": "850f985f-92aa-4094-85fe-d50bd09dc0e2",
+                        "direction": "ingress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "6ea8519792bf4b5fae1083919d3b98f6",
+            "name": "hilens_admin_trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "1996db0fc6c4a500f0390635999a36860ab44dfdfcbb2025c02d239150def09f",
+            "created": "2023-06-05T05:48:38.000Z",
+            "updated": "2023-06-05T05:48:38.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "e2d75429549044d2b313fbdd11520f7d"
+                ],
+                "trust_domain_id": "8d1e32ca88d64beaa5ed8e01d93f7671",
+                "description": "Created by HiLens service.",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "6fb51e4b-e47a-4a82-821d-53b006389622",
+            "name": "default",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "na-mexico-1",
+            "project_id": "9bd956e05ea94c639c351440a753ebae",
+            "project_name": "na-mexico-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "2a032cdaf81b84d42b5b95232c1e5afe38dbd4f8389d1a547b9f6097a44c160f",
+            "created": "2025-09-05T16:42:09.000Z",
+            "updated": "2025-09-05T16:42:09.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "Default security group",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "6fb51e4b-e47a-4a82-821d-53b006389622",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "9bd956e05ea94c639c351440a753ebae",
+                        "action": "allow",
+                        "id": "530e0416-6369-4cfc-967b-34d5f2349b4d",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "6fb51e4b-e47a-4a82-821d-53b006389622",
+                        "ethertype": "IPv6",
+                        "security_group_id": "6fb51e4b-e47a-4a82-821d-53b006389622",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "9bd956e05ea94c639c351440a753ebae",
+                        "action": "allow",
+                        "id": "029d5114-a710-4d3e-a22d-0e53c51108f5",
+                        "direction": "ingress"
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "6fb51e4b-e47a-4a82-821d-53b006389622",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "9bd956e05ea94c639c351440a753ebae",
+                        "action": "allow",
+                        "id": "15deea0f-6611-4410-8728-9fa462364976",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "6fb51e4b-e47a-4a82-821d-53b006389622",
+                        "ethertype": "IPv4",
+                        "security_group_id": "6fb51e4b-e47a-4a82-821d-53b006389622",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "9bd956e05ea94c639c351440a753ebae",
+                        "action": "allow",
+                        "id": "67ae2349-3d18-4764-b00a-069a2df6e285",
+                        "direction": "ingress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "6fb5a1a45e814eb4b84e81fdeb3608ed",
+            "name": "aos_admin_trust",
+            "provider": "iam",
+            "type": "agencies",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "24217b53a638ac78a996dc9e2c86d56a8d875255e30ab35c49678aa1f92941f7",
+            "created": "2024-06-19T11:39:46.000Z",
+            "updated": "2024-06-19T11:39:46.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "path": "",
+                "role_list": [
+                    "e2d75429549044d2b313fbdd11520f7d",
+                    "e2d75429549044d2b313fbdd11520f7d"
+                ],
+                "trust_domain_id": "9cad702213564863a63962e00800e5b7",
+                "description": "Create by AOS Service.",
+                "policy_list": [],
+                "max_session_duration": 86400
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "70e22bb6-c6c0-4045-88ab-a276c345a3dc",
+            "name": "sg-default-smb",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "ap-southeast-1",
+            "project_id": "fe361917fa424d81a8dcba022cbc0fd0",
+            "project_name": "ap-southeast-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "6e730e0b9bdb5a5552bc50e1cd09e998490f4a6f6b648e1b93a390fda940d229",
+            "created": "2025-09-25T15:15:33.000Z",
+            "updated": "2025-09-25T15:15:33.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "70e22bb6-c6c0-4045-88ab-a276c345a3dc",
+                        "description": "Deny All Ipv6 Inbound Traffic",
+                        "remote_ip_prefix": "::/0",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "fe361917fa424d81a8dcba022cbc0fd0",
+                        "action": "deny",
+                        "id": "ae8a0e62-73ba-47d2-b843-b81dc2aa16b4",
+                        "direction": "ingress"
+                    },
+                    {
+                        "remote_group_id": "70e22bb6-c6c0-4045-88ab-a276c345a3dc",
+                        "ethertype": "IPv6",
+                        "security_group_id": "70e22bb6-c6c0-4045-88ab-a276c345a3dc",
+                        "description": "",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "fe361917fa424d81a8dcba022cbc0fd0",
+                        "action": "allow",
+                        "id": "771633fb-82f2-489a-a6ac-71ca2d27ca40",
+                        "direction": "ingress"
+                    },
+                    {
+                        "remote_group_id": "70e22bb6-c6c0-4045-88ab-a276c345a3dc",
+                        "ethertype": "IPv4",
+                        "security_group_id": "70e22bb6-c6c0-4045-88ab-a276c345a3dc",
+                        "description": "",
+                        "priority": 1,
+                        "enabled": true,
+                        "project_id": "fe361917fa424d81a8dcba022cbc0fd0",
+                        "action": "allow",
+                        "id": "7c38ed42-6205-49ad-8359-473607f8ea1d",
+                        "direction": "ingress"
+                    },
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "70e22bb6-c6c0-4045-88ab-a276c345a3dc",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "fe361917fa424d81a8dcba022cbc0fd0",
+                        "action": "allow",
+                        "id": "4ce6875a-ab36-4cd0-be83-4f35781ccf5e",
+                        "direction": "egress"
+                    },
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "70e22bb6-c6c0-4045-88ab-a276c345a3dc",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "fe361917fa424d81a8dcba022cbc0fd0",
+                        "action": "allow",
+                        "id": "3154e014-cfb9-4db8-bec4-e0be6ea0123a",
+                        "direction": "egress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "72303dcc-bdcf-4980-832f-2d29b973f798",
+            "name": "default",
+            "provider": "vpc",
+            "type": "securityGroups",
+            "region_id": "tr-west-1",
+            "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+            "project_name": "tr-west-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "39a8a9b531dbe55607243814dd60e2245e21227acc352bab35ba55a5eddc85b6",
+            "created": "2025-09-20T00:30:20.000Z",
+            "updated": "2025-09-20T00:30:20.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "description": "Default security group",
+                "security_group_rules": [
+                    {
+                        "ethertype": "IPv4",
+                        "security_group_id": "72303dcc-bdcf-4980-832f-2d29b973f798",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+                        "action": "allow",
+                        "id": "75350403-3861-400d-b552-3f4bcb2cfd9c",
+                        "direction": "egress"
+                    },
+                    {
+                        "remote_group_id": "72303dcc-bdcf-4980-832f-2d29b973f798",
+                        "ethertype": "IPv6",
+                        "security_group_id": "72303dcc-bdcf-4980-832f-2d29b973f798",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+                        "action": "allow",
+                        "id": "810a07f6-0cd1-4f10-8c4f-695ef9521785",
+                        "direction": "ingress"
+                    },
+                    {
+                        "remote_group_id": "72303dcc-bdcf-4980-832f-2d29b973f798",
+                        "ethertype": "IPv4",
+                        "security_group_id": "72303dcc-bdcf-4980-832f-2d29b973f798",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+                        "action": "allow",
+                        "id": "e2ac383a-623f-460f-aa09-41e12108f445",
+                        "direction": "ingress"
+                    },
+                    {
+                        "ethertype": "IPv6",
+                        "security_group_id": "72303dcc-bdcf-4980-832f-2d29b973f798",
+                        "description": "",
+                        "priority": 100,
+                        "enabled": true,
+                        "project_id": "83e3e85efa104cc5a0433d1317d7f7a0",
+                        "action": "allow",
+                        "id": "e9590d24-6ffd-43b2-8b07-ef6993b2ed5b",
+                        "direction": "egress"
+                    }
+                ]
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "75ed1272-9902-4f3a-8d6b-8be65d3b113a",
+            "name": "csms/default",
+            "provider": "kms",
+            "type": "keys",
+            "region_id": "af-north-1",
+            "project_id": "213f25e947c14366b5892de4784c0a70",
+            "project_name": "af-north-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "aa0b0f51add3ca60804bd9111a253a68651f59ab897a4dd9a1a1acda297109fe",
+            "created": "2025-11-04T12:45:34.000Z",
+            "updated": "2025-11-04T12:45:35.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "owner": "4f0386f737fb4ad38e80006222f86b02",
+                "creator": "4f0386f737fb4ad38e80006222f86b02",
+                "key_rotation_enabled": "false",
+                "key_usage": "ENCRYPT_DECRYPT",
+                "partitionId": "205e533c-f64b-40ae-93d9-b984390650a5",
+                "key_spec": "AES256",
+                "origin": 0,
+                "key_state": "2",
+                "userId": "d0637be66122489b83317f41fb0dad2e"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "75f6f28e9ca942a8b03e7d6c06cdeaa7",
+            "name": "fgs_default_global_role",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "fc2fb0e8719b03f138e922deeb167a0e490cab3a80d891a9c3e1cefd46cc7327",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"iam:agencies:getAgency\",\"iam:roles:getRole\",\"obs:bucket:HeadBucket\"],\"Effect\":\"Allow\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "Global service policy which includes the minimum permission set of Identity and Access Management (IAM) and Object Storage Service (OBS).",
+                "display_name": "fgs_default_global_role",
+                "type": "AX"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "78add4f6-8ea7-436d-9de2-30dae0320f98",
+            "name": "vpc-default",
+            "provider": "vpc",
+            "type": "vpcs",
+            "region_id": "cn-south-1",
+            "project_id": "540c893b06704836835fcb35ee46d6bb",
+            "project_name": "cn-south-1",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "02240a0d767eb446ea1af3a6f411266c9b85ae51281f4615011554a24dd612a5",
+            "created": "2025-09-26T05:14:26.000Z",
+            "updated": "2025-09-26T05:14:26.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "default_routetable_id": "0dcb0ff1-c427-44f3-848e-d1a5ee4fb89c",
+                "routes": [],
+                "admin_state_up": true,
+                "description": "",
+                "cidr": "192.168.0.0/16",
+                "gateway_ip": "127.99.19.135",
+                "sys_tags": [
+                    "_sys_enterprise_project_id=0"
+                ],
+                "enable_snat": false,
+                "status": "ACTIVE"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "794296b6c00542eab578fd2a42091a21",
+            "name": "modelarts_policy_8gi19x",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "d8d09a6ed3fadd35507f7b67da907361fcdebecf712704548180ba7fa8a9cf34",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"ecs:cloudServers:get\",\"ecs:cloudServers:changeVpc\",\"ecs:cloudServers:showServer\",\"ecs:cloudServers:start\",\"ecs:cloudServers:listServerInterfaces\",\"ecs:cloudServers:delete\",\"ecs:cloudServers:redeploy\",\"ecs:cloudServers:batchSetServerTags\",\"ecs:cloudServers:reboot\",\"ecs:cloudServerFlavors:get\",\"ecs:cloudServers:list\",\"ecs:cloudServerQuotas:get\",\"ecs:quotas:get\",\"ecs:servers:get\",\"ecs:cloudServers:create\",\"ecs:cloudServers:stop\"],\"Effect\":\"Allow\"},{\"Action\":[\"mrs:cluster:list\",\"mrs:job:submit\",\"mrs:file:list\",\"mrs:job:stop\",\"mrs:job:get\",\"mrs:job:delete\",\"mrs:cluster:get\",\"mrs:job:list\"],\"Effect\":\"Allow\"},{\"Action\":[\"apm:icmgr:create\"],\"Effect\":\"Allow\"},{\"Action\":[\"evs:volumes:list\",\"evs:types:get\",\"evs:volumes:get\",\"evs:quotas:get\"],\"Effect\":\"Allow\"},{\"Action\":[\"dws:openAPICluster:list\",\"dws:cluster:list\",\"dws:openAPICluster:getDetail\"],\"Effect\":\"Allow\"},{\"Action\":[\"csms:*:list*\",\"csms:*:get*\",\"kms:*:*\",\"kps:domainKeypairs:get\"],\"Effect\":\"Allow\"},{\"Action\":[\"modelarts:workspace:list\",\"modelarts:model:delete\",\"modelarts:trainJobVersion:delete\",\"modelarts:service:delete\",\"modelarts:aiAlgorithm:create\",\"modelarts:trainJob:create\",\"modelarts:trainJobVersion:list\",\"modelarts:dataset:get\",\"modelarts:service:get\",\"modelarts:service:update\",\"modelarts:trainJob:update\",\"modelarts:workspace:delete\",\"modelarts:pool:get\",\"modelarts:dataset:delete\",\"modelarts:workspace:get\",\"modelarts:dataset:import\",\"modelarts:app:delete\",\"modelarts:notebook:umountStorage\",\"modelarts:notebook:getMountedStorage\",\"modelarts:service:list\",\"modelarts:notebook:listMountedStorages\",\"modelarts:trainJob:logExport\",\"modelarts:trainJobVersion:stop\",\"modelarts:notebook:updateStopPolicy\",\"modelarts:dataset:list\",\"modelarts:model:get\",\"modelarts:app:list\",\"modelarts:aiAlgorithm:get\",\"modelarts:aiAlgorithm:list\",\"modelarts:dataset:publishVersion\",\"modelarts:dataset:deleteVersion\",\"modelarts:notebook:stop\",\"modelarts:trainJob:list\",\"modelarts:trainJobVersion:create\",\"modelarts:trainJobInnerModel:list\",\"modelarts:trainJob:delete\",\"modelarts:aiAlgorithm:delete\",\"modelarts:notebook:mountStorage\",\"modelarts:app:update\",\"modelarts:workspace:getQuotas\",\"modelarts:trainJob:get\",\"modelarts:dataAnnotation:get\",\"modelarts:model:list\",\"modelarts:service:create\",\"modelarts:model:create\",\"modelarts:app:create\",\"modelarts:dataset:create\",\"modelarts:notebook:get\",\"modelarts:app:get\",\"modelarts:service:action\",\"modelarts:workspace:update\"],\"Effect\":\"Allow\"},{\"Action\":[\"aom:event:list\",\"aom:alarm:put\",\"aom:event:put\",\"aom:event:get\",\"aom:log:get\",\"aom:metric:put\",\"aom:uniagentAgent:list\",\"aom:alarm:get\"],\"Effect\":\"Allow\"},{\"Action\":[\"bms:servers:create\",\"bms:serverFlavors:get\"],\"Effect\":\"Allow\"},{\"Action\":[\"ims:images:get\",\"ims:images:share\"],\"Effect\":\"Allow\"},{\"Action\":[\"dli:jobs:delete\",\"dli:database:displayAllTables\",\"dli:queue:scaleQueue\",\"dli:queue:dropQueue\",\"dli:table:describeTable\",\"dli:jobs:create\",\"dli:queue:submitJob\",\"dli:jobs:get\",\"dli:queue:createQueue\",\"dli:table:dropTable\",\"dli:jobs:listAll\",\"dli:database:displayDatabase\",\"dli:jobs:stop\",\"dli:table:showPrivileges\"],\"Effect\":\"Allow\"},{\"Action\":[\"smn:template:create\",\"smn:template:list\",\"smn:application:publish\",\"smn:topic:list\",\"smn:topic:publish\"],\"Effect\":\"Allow\"},{\"Action\":[\"cce:node:delete\",\"cce:nodepool:delete\",\"cce:addonInstance:update\",\"cce:cluster:revokeClientCredential\",\"cce:node:get\",\"cce:addonInstance:list\",\"cce:node:create\",\"cce:node:list\",\"cce:addonInstance:get\",\"cce:node:remove\",\"cce:accessPolicy:*\",\"cce:addonInstance:delete\",\"cce:nodepool:create\",\"cce:cluster:get\",\"cce:addonInstance:create\",\"cce:job:get\"],\"Effect\":\"Allow\"},{\"Action\":[\"ces:metricMeta:create\"],\"Effect\":\"Allow\"},{\"Action\":[\"vpc:routeTables:get\",\"vpc:routers:create\",\"vpc:routes:create\",\"vpc:ports:create\",\"vpc:vpcs:get\",\"vpc:subnets:get\",\"vpc:routes:get\",\"vpc:routes:delete\",\"vpc:subnets:getReservation\",\"vpc:ports:get\",\"vpc:ports:delete\",\"vpc:peerings:accept\",\"vpc:routeTables:update\"],\"Effect\":\"Allow\"},{\"Action\":[\"ief:deployment:list\",\"ief:deployment:update\",\"ief:node:createNodeCert\",\"ief:IEFInstance:list\",\"ief:node:list\",\"ief:deployment:create\",\"ief:deployment:delete\"],\"Effect\":\"Allow\"},{\"Action\":[\"lts:groups:list\",\"lts:topics:create\",\"lts:topics:delete\",\"lts:groups:create\",\"lts:topics:list\"],\"Effect\":\"Allow\"},{\"Action\":[\"sfsturbo:shares:getQuota\",\"sfsturbo:shares:getJob\",\"sfsturbo:shares:getAllTag\",\"sfsturbo:shares:showShareNic\",\"sfsturbo:shares:getAZInfo\",\"sfsturbo:shares:addShareNic\",\"sfsturbo:shares:getShare\",\"sfsturbo:shares:listShareNics\",\"sfsturbo:shares:getDataRepositoryTask\",\"sfsturbo:shares:getAllDataRepositoryTasks\",\"sfsturbo:shares:deleteShareNic\",\"sfsturbo:shares:getFlavors\",\"sfsturbo:shares:getTag\",\"sfsturbo:shares:getAllShares\"],\"Effect\":\"Allow\"},{\"Action\":[\"vpcep:connections:update\",\"vpcep:endpoints:list\",\"vpcep:endpoints:get\",\"vpcep:epservices:get\",\"vpcep:endpoints:create\",\"vpcep:epservices:list\",\"vpcep:permissions:update\",\"vpcep:endpoints:delete\"],\"Effect\":\"Allow\"},{\"Action\":[\"cts:notification:create\"],\"Effect\":\"Allow\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "Created by ModelArts service.",
+                "display_name": "modelarts_policy_8gi19x",
+                "type": "XA"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "7bebdc7c-f2c1-408a-a461-8b01463b3623",
+            "name": "system",
+            "provider": "cts",
+            "type": "trackers",
+            "region_id": "ap-southeast-3",
+            "project_id": "31e2da1575cc47048f26be2a2b5c6ec9",
+            "project_name": "ap-southeast-3",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "bf5774b3209eddeca0423709c4a80dfc8bacd7f82ea1f1accda63141fa1cc67c",
+            "created": "2025-02-03T15:57:02.325Z",
+            "updated": "2025-02-03T15:57:02.325Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "is_support_trace_files_encryption": false,
+                "obs_info": {
+                    "is_obs_created": false,
+                    "bucket_name": "fawad-test",
+                    "is_sort_by_service": true,
+                    "is_authorized_bucket": false,
+                    "file_prefix_name": "",
+                    "bucket_lifecycle": 0
+                },
+                "management_event_selector": {},
+                "is_organization_tracker": false,
+                "is_support_validate": false,
+                "lts": {
+                    "log_group_name": "CTS",
+                    "is_lts_enabled": true,
+                    "log_topic_name": "system-trace"
+                },
+                "tracker_type": "system",
+                "status": "enabled"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "7c151122c82f4e29bef303a1cad84714",
+            "name": "policy_block_obs",
+            "provider": "iam",
+            "type": "roles",
+            "region_id": "global",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "d551e34ef156be51457cb8cdc721a2129c6ac0796308c24e06edc229f32594b4",
+            "created": "",
+            "updated": "",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "role_document": "{\"Version\":\"1.1\",\"Statement\":[{\"Action\":[\"OBS:*:*\"],\"Effect\":\"Deny\"}]}",
+                "catalog": "CUSTOMED",
+                "description": "",
+                "display_name": "policy_block_obs",
+                "type": "AX"
+            },
+            "state": "Normal"
+        },
+        {
+            "id": "7d30a8c8b7374caf9de936f3b319ef9e",
+            "name": "python_ddemo_test-pipeline",
+            "provider": "codeartspipeline",
+            "type": "pipelines",
+            "region_id": "ap-southeast-3",
+            "project_id": "",
+            "project_name": "",
+            "ep_id": "0",
+            "ep_name": "default",
+            "checksum": "529588b40661bad2548831966b3fa7e97d58154da07aa6270ad11129c5a77208",
+            "created": "2023-01-26T08:43:52.000Z",
+            "updated": "2023-07-03T06:06:12.000Z",
+            "provisioning_state": "Succeeded",
+            "tags": {},
+            "properties": {
+                "from_source": 0,
+                "subject_id": "7d30a8c8b7374caf9de936f3b319ef9e",
+                "is_collect": false,
+                "creator_id": "d0637be66122489b83317f41fb0dad2e",
+                "manifest_version": "3.0",
+                "description": "",
+                "definition": "{\"stages\":[{\"name\":\"Build\",\"identifier\":\"state_1\",\"type\":\"未命名阶段\",\"sequence\":0,\"parallel\":true,\"pre\":[{\"name\":\"state_1_CONVERT_USE_ONLY_autoExecution\",\"task\":\"official_devcloud_autoTrigger\",\"sequence\":0,\"multi_step_editable\":0}],\"jobs\":[{\"name\":\"python_ddemo_test-cloudbuild\",\"async\":false,\"identifier\":\"Task_1\",\"sequence\":0,\"steps\":[{\"name\":\"python_ddemo_test-cloudbuild\",\"task\":\"official_devcloud_cloudBuild\",\"business_type\":\"Build\",\"inputs\":[{\"key\":\"__repository__\",\"value\":\"python_ddemo_test\"},{\"key\":\"jobId\",\"value\":\"69ffa3baf65f4b9ab65c00de87e75e1d\"}],\"sequence\":0,\"identifier\":\"Task_1_0\",\"multi_step_editable\":0}],\"exec_type\":\"OCTOPUS_JOB\",\"depends_on\":[]},{\"name\":\"python_ddemo_test-codecheck\",\"async\":false,\"identifier\":\"Task_2\",\"sequence\":1,\"steps\":[{\"name\":\"python_ddemo_test-codecheck\",\"task\":\"official_devcloud_codeCheck\",\"business_type\":\"Gate\",\"inputs\":[{\"key\":\"repository_readonly\",\"value\":\"python_ddemo_test\"},{\"key\":\"checkMode\",\"value\":\"full\"},{\"key\":\"codeBranch\",\"value\":\"\"},{\"key\":\"jobId\",\"value\":\"97a89d234d33446aa1ee025d2a7d38fe\"}],\"sequence\":0,\"identifier\":\"Task_2_0\",\"multi_step_editable\":0}],\"exec_type\":\"OCTOPUS_JOB\",\"depends_on\":[]}],\"run_always\":false}]}"
+            },
+            "state": "Normal"
+        }
+    ],
+    "page_info": {
+        "current_count": 100,
+        "next_marker": "CAESIgogN2QzMGE4YzhiNzM3NGNhZjlkZTkzNmYzYjMxOWVmOWUaBAHzuwY"
+    }
+}

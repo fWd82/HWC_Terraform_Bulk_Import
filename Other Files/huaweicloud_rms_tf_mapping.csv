@@ -1,0 +1,234 @@
+rms_full,rms_provider,rms_type,display_name,category,track,tf_resource,confidence
+ecs.cloudservers,ecs,cloudservers,ECSs,Computing,tracked,huaweicloud_compute_instance,manual
+rds.instances,rds,instances,Instances,Database,tracked,huaweicloud_rds_instance,manual
+rds.nodes,rds,nodes,Nodes,Database,tracked,huaweicloud_rds_instance,manual
+rds.proxies,rds,proxies,Proxies,Database,tracked,huaweicloud_rds_read_replica_instance,manual
+rds.proxynodes,rds,proxynodes,Proxy Nodes,Database,tracked,huaweicloud_rds_read_replica_instance,manual
+as.scalingGroups,as,scalingGroups,AS Groups,Computing,tracked,huaweicloud_as_group,manual
+bms.servers,bms,servers,BMSs,Computing,tracked,huaweicloud_bms_instance,manual
+evs.volumes,evs,volumes,Disks,Storage,tracked,huaweicloud_evs_volume,manual
+cbr.vault,cbr,vault,Vaults,Storage,tracked,huaweicloud_cbr_vault,manual
+cbr.backup,cbr,backup,Backup,Storage,untracked,huaweicloud_cbr_backup,manual
+cbr.policy,cbr,policy,Policy,Storage,untracked,huaweicloud_cbr_policy,manual
+vpc.vpcs,vpc,vpcs,VPCs,Network,tracked,huaweicloud_vpc,manual
+vpc.securityGroups,vpc,securityGroups,Security Groups,Network,tracked,huaweicloud_networking_secgroup,manual
+vpc.publicips,vpc,publicips,EIPs,Network,tracked,huaweicloud_vpc_eip,manual
+vpc.bandwidths,vpc,bandwidths,Bandwidths,Network,tracked,huaweicloud_vpc_bandwidth,manual
+vpc.global-eips,vpc,global-eips,Global EIPs,Network,tracked,huaweicloud_global_eip,manual
+vpc.geipSegment,vpc,geipSegment,Global EIP Ranges,Network,tracked,huaweicloud_global_eip_segment,manual
+vpc.internet-bandwidths,vpc,internet-bandwidths,Global Internet Bandwidths,Network,tracked,huaweicloud_global_internet_bandwidth,manual
+vpc.flowLogs,vpc,flowLogs,Flow Logs,Network,untracked,huaweicloud_vpc_flow_log,manual
+vpc.firewallGroups,vpc,firewallGroups,Network ACLs,Network,untracked,huaweicloud_network_acl,manual
+vpc.ports,vpc,ports,Ports,Network,untracked,huaweicloud_networking_port,manual
+vpc.addressGroups,vpc,addressGroups,Address Groups,Network,untracked,huaweicloud_vpc_address_group,manual
+vpc.routeTables,vpc,routeTables,Route Tables,Network,untracked,huaweicloud_vpc_route_table,manual
+vpc.peerings,vpc,peerings,Peerings,Network,untracked,huaweicloud_vpc_peering_connection,manual
+vpc.networks,vpc,networks,Subnets,Network,untracked,huaweicloud_vpc_subnet,manual
+elb.loadbalancers,elb,loadbalancers,Load Balancers,Network,tracked,huaweicloud_elb_loadbalancer,manual
+elb.listeners,elb,listeners,Listeners,Network,tracked,huaweicloud_elb_listener,manual
+elb.l7policies,elb,l7policies,L7Policies,Network,untracked,huaweicloud_elb_l7policy,manual
+elb.pools,elb,pools,Pools,Network,untracked,huaweicloud_elb_pool,manual
+elb.masterSlavePools,elb,masterSlavePools,Master-Slave Pools,Network,untracked,huaweicloud_elb_master_slave_pool,manual
+elb.members,elb,members,Members,Network,untracked,huaweicloud_elb_member,manual
+elb.ipgroups,elb,ipgroups,IpGroups,Network,untracked,huaweicloud_elb_ipgroup,manual
+dns.publiczones,dns,publiczones,Public Zones,Network,tracked,huaweicloud_dns_zone,manual
+dns.privatezones,dns,privatezones,Private Zones,Network,tracked,huaweicloud_dns_zone,manual
+ims.images,ims,images,Images,Computing,tracked,huaweicloud_images_image,manual
+dds.instances,dds,instances,Instances,Database,tracked,huaweicloud_dds_instance,manual
+dds.nodes,dds,nodes,Nodes,Database,tracked,huaweicloud_dds_instance,manual
+nat.natGateways,nat,natGateways,Public NAT Gateways,Network,tracked,huaweicloud_nat_gateway,manual
+nat.privateNatGateways,nat,privateNatGateways,Private NAT Gateways,Network,tracked,huaweicloud_nat_private_gateway,manual
+cdn.domains,cdn,domains,Domain Names,Storage,tracked,huaweicloud_cdn_domain,manual
+cts.trackers,cts,trackers,Trackers,Management & Deployment,tracked,huaweicloud_cts_tracker,manual
+asm.meshes,asm,meshes,Meshes,Container,tracked,huaweicloud_asm_mesh,manual
+aad.instances,aad,instances,Instances,Security,tracked,huaweicloud_aad_domain,manual
+accessanalyzer.analyzer,accessanalyzer,analyzer,Analyzer,Security,untracked,huaweicloud_access_analyzer,manual
+anc.ancs,anc,ancs,Ancs,Network,untracked,,unmapped
+anc.services,anc,services,Services,Network,untracked,,unmapped
+anc.member-groups,anc,member-groups,Member Groups,Network,untracked,,unmapped
+aom.alarmRule,aom,alarmRule,alarmRule,Application,tracked,huaweicloud_aom_alarm_rule,manual
+apig.instances,apig,instances,Gateways,Application,tracked,huaweicloud_apig_instance,manual
+appstage.appstage,appstage,appstage,Application Stage,Application,untracked,,unmapped
+astrocanvas.instances,astrocanvas,instances,instances,DevCloud,untracked,,unmapped
+astroflow.instances,astroflow,instances,instances,DevCloud,untracked,,unmapped
+astropro.instances,astropro,instances,instances,DevCloud,untracked,,unmapped
+astrozero.instances,astrozero,instances,Instances,Developer Services,untracked,,unmapped
+bcs.huaweicloudchain,bcs,huaweicloudchain,HBS Instances,Application,tracked,,unmapped
+cae.environments,cae,environments,environments,Management & Deployment,tracked,huaweicloud_cae_environment,manual
+cbh.instance,cbh,instance,CBH Instances,Security,tracked,huaweicloud_cbh_instance,manual
+ccaas.cloud-connections,ccaas,cloud-connections,Cloud Connections,Network,tracked,huaweicloud_cc_connection,manual
+ccaas.bandwidth-packages,ccaas,bandwidth-packages,Bandwidth Packages,Network,tracked,huaweicloud_cc_bandwidth_package,manual
+ccaas.globalConnectionBandwidth,ccaas,globalConnectionBandwidth,Global Connection Bandwidth,Network,tracked,huaweicloud_cc_global_connection_bandwidth,manual
+cce.clusters,cce,clusters,Clusters,Computing,tracked,huaweicloud_cce_cluster,manual
+cce.nodes,cce,nodes,Nodes,Computing,tracked,huaweicloud_cce_node,manual
+cci.pods,cci,pods,Pods,Computing,tracked,huaweicloud_cci_namespace,manual
+cdm.clusters,cdm,clusters,Clusters,Migration,tracked,huaweicloud_cdm_cluster,manual
+ces.alarms,ces,alarms,Alarm Rules,Management & Deployment,untracked,huaweicloud_ces_alarmrule,manual
+cfw.cfw_instance,cfw,cfw_instance,Cloud Firewall Instances,Security,tracked,huaweicloud_cfw_firewall,manual
+clouddc.imetal,clouddc,imetal,clouddcserver,Computing,untracked,,unmapped
+clouddc.irack,clouddc,irack,iracks,Computing,untracked,,unmapped
+cloudmatrix.hyperinstanceClusters,cloudmatrix,hyperinstanceClusters,Hyperinstance Clusters,Computing,untracked,,unmapped
+cloudmatrix.hyperinstances,cloudmatrix,hyperinstances,Hyperinstances,Computing,untracked,,unmapped
+cloudmatrix.hyperinstanceNodes,cloudmatrix,hyperinstanceNodes,Hyperinstance Nodes,Computing,untracked,,unmapped
+cloudsite.sites,cloudsite,sites,Sites,Domain & Website,tracked,,unmapped
+cloudtable.doris,cloudtable,doris,doris,EI Enterprise,untracked,,unmapped
+cloudtable.hbase,cloudtable,hbase,hbase,EI Enterprise,untracked,,unmapped
+cloudtable.clickhouse,cloudtable,clickhouse,clickhouse,EI Enterprise,untracked,,unmapped
+cloudtable.starrocks,cloudtable,starrocks,starrocks,EI Enterprise,untracked,,unmapped
+cms.pack,cms,pack,pack,Management & Deployment,tracked,,unmapped
+cms.script,cms,script,script,Management & Deployment,tracked,,unmapped
+cms.workflow,cms,workflow,workflow,Management & Deployment,tracked,,unmapped
+cnad.instances,cnad,instances,Instances,Security,untracked,,unmapped
+codeartsbuild.CloudBuildServer,codeartsbuild,CloudBuildServer,Build Parameters,DevCloud,untracked,,unmapped
+codeartsdeploy.host-cluster,codeartsdeploy,host-cluster,Host Clusters,DevCloud,untracked,,unmapped
+codeartspipeline.pipelines,codeartspipeline,pipelines,Pipelines,DevCloud,untracked,,unmapped
+config.trackers,config,trackers,Trackers,Management & Deployment,tracked,huaweicloud_rms_resource_recorder,manual
+config.policyAssignments,config,policyAssignments,PolicyAssignments,Management & Deployment,tracked,huaweicloud_rms_policy_assignment,manual
+config.conformancePacks,config,conformancePacks,ConformancePacks,Management & Deployment,tracked,,unmapped
+cph.cloudphoneservers,cph,cloudphoneservers,Cloud Phone Servers,Computing,tracked,huaweicloud_cph_server,manual
+cph.elasticcloudphones,cph,elasticcloudphones,Elastic Cloud Phone,Computing,untracked,,unmapped
+craftartssim.simSpace,craftartssim,simSpace,SimSpace,Industrial Software,untracked,,unmapped
+craftartssim.simStudio,craftartssim,simStudio,SimStudio,Industrial Software,untracked,,unmapped
+craftartssim.cpuUnit,craftartssim,cpuUnit,CPU Computing,Industrial Software,untracked,,unmapped
+craftartssim.guiUnit,craftartssim,guiUnit,GUI Computing,Industrial Software,untracked,,unmapped
+csms.secrets,csms,secrets,Secrets,Security,untracked,huaweicloud_smn_topic,manual
+css.clusters,css,clusters,Clusters,EI Enterprise,tracked,huaweicloud_css_cluster,manual
+das.enterprises,das,enterprises,Enterprise Instances,Database,tracked,,unmapped
+dayu.instances,dayu,instances,Instances,EI Enterprise,tracked,huaweicloud_dataarts_studio_instance,manual
+dayu.cdmClusters,dayu,cdmClusters,CDM Clusters,EI Enterprise,tracked,huaweicloud_cdm_cluster,manual
+dayu.disStreams,dayu,disStreams,DIS Streams,EI Enterprise,tracked,,unmapped
+dayu.workspaces,dayu,workspaces,Workspaces,EI Enterprise,tracked,huaweicloud_dataarts_studio_instance,manual
+dayu.dlmClusters,dayu,dlmClusters,DataService Clusters,EI Enterprise,tracked,,unmapped
+dbss.cloudservers,dbss,cloudservers,Instances,Security,tracked,huaweicloud_dbss_instance,manual
+dcaas.directConnect,dcaas,directConnect,Direct Connects,Network,tracked,huaweicloud_dc_virtual_gateway,manual
+dcaas.vgw,dcaas,vgw,Virtual Gateways,Network,tracked,huaweicloud_dc_virtual_gateway,manual
+dcaas.lag,dcaas,lag,LAGs,Network,tracked,huaweicloud_dc_virtual_gateway,manual
+dcaas.vif,dcaas,vif,Virtual Interfaces,Network,tracked,huaweicloud_dc_virtual_interface,manual
+dcs.redis,dcs,redis,Redis Instances,Application,tracked,huaweicloud_dcs_instance,manual
+dcs.memcached,dcs,memcached,Memcached Instances,Application,tracked,huaweicloud_dcs_instance,manual
+dcs.node,dcs,node,Instance Nodes,Application,tracked,huaweicloud_dcs_instance,manual
+ddm.instances,ddm,instances,Instances,Database,tracked,huaweicloud_ddm_instance,manual
+ddm.nodes,ddm,nodes,Nodes,Database,tracked,huaweicloud_ddm_instance,manual
+deh.dedicatedhosts,deh,dedicatedhosts,DeHs,Computing,tracked,huaweicloud_deh_host,manual
+devcloud.package,devcloud,package,Pay-per-use Packages,DevCloud,tracked,,unmapped
+devcloud.devcloud_package,devcloud,devcloud_package,Yearly or Monthly Packages,DevCloud,tracked,,unmapped
+devcloud.projectman,devcloud,projectman,CodeArts Req,DevCloud,tracked,,unmapped
+devcloud.codehub,devcloud,codehub,CodeArts Repo,DevCloud,tracked,,unmapped
+devcloud.codecheck,devcloud,codecheck,CodeArts Check,DevCloud,tracked,,unmapped
+devcloud.codeci,devcloud,codeci,CodeArts Build,DevCloud,tracked,,unmapped
+devcloud.cloudide,devcloud,cloudide,CodeArts IDE Online,DevCloud,tracked,,unmapped
+devcloud.releaseman,devcloud,releaseman,CodeArts Artifact,DevCloud,tracked,,unmapped
+devcloud.testman,devcloud,testman,CodeArts TestPlan,DevCloud,tracked,,unmapped
+devcloud.apitest,devcloud,apitest,APITest,DevCloud,tracked,,unmapped
+devcloud.codearts_combo,devcloud,codearts_combo,CodeArts Combo,DevCloud,untracked,,unmapped
+devcloud.codearts_extension,devcloud,codearts_extension,CodeArts Resource Extension,DevCloud,untracked,,unmapped
+devcloud.codearts_feature,devcloud,codearts_feature,CodeArts Value-added Features,DevCloud,untracked,,unmapped
+dli.queues,dli,queues,Queues,EI Enterprise,tracked,huaweicloud_dli_queue,manual
+dli.elasticresourcepool,dli,elasticresourcepool,Elastic Resource Pools,EI Enterprise,tracked,huaweicloud_dli_elastic_resource_pool,manual
+dlv.workspaces,dlv,workspaces,Workspaces,EI Enterprise,tracked,,unmapped
+dlv.instances,dlv,instances,Instances,EI Enterprise,tracked,,unmapped
+dms.kafkas,dms,kafkas,Kafka Instances,Application,tracked,huaweicloud_dms_kafka_instance,manual
+dms.rabbitmqs,dms,rabbitmqs,RabbitMQ Instances,Application,tracked,huaweicloud_dms_rabbitmq_instance,manual
+dms.reliabilitys,dms,reliabilitys,RocketMQ Instances,Application,tracked,huaweicloud_dms_rocketmq_instance,manual
+dms.kafka_nodes,dms,kafka_nodes,Kafka Brokers,Application,tracked,huaweicloud_dms_kafka_instance,manual
+dms.rabbitmq_nodes,dms,rabbitmq_nodes,RabbitMQ Brokers,Application,tracked,huaweicloud_dms_rabbitmq_instance,manual
+dms.rocketmq_nodes,dms,rocketmq_nodes,Rocketmq Brokers,Application,tracked,huaweicloud_dms_rocketmq_instance,manual
+domains.domain,domains,domain,domain,Domain & Website,tracked,,unmapped
+drs.migrationJob,drs,migrationJob,Online Migration Tasks,Database,tracked,huaweicloud_drs_job,manual
+drs.synchronizationJob,drs,synchronizationJob,Data Synchronization Tasks,Database,tracked,huaweicloud_drs_job,manual
+drs.dataGuardJob,drs,dataGuardJob,Disaster Recovery Tasks,Database,tracked,huaweicloud_drs_job,manual
+drs.subscriptionJob,drs,subscriptionJob,Data Subscription Tasks,Database,tracked,huaweicloud_drs_job,manual
+drs.backupMigrationJob,drs,backupMigrationJob,Backup Migration Tasks,Database,tracked,huaweicloud_drs_job,manual
+dss.dsspools,dss,dsspools,StoragePools,Storage,tracked,huaweicloud_dss_storage_pool,manual
+dss.volumes,dss,volumes,volumes,Storage,tracked,huaweicloud_dss_volume,manual
+dws.clusters,dws,clusters,Clusters,EI Enterprise,tracked,huaweicloud_dws_cluster,manual
+ec.ecn,ec,ecn,ecn,Enterprise Application,tracked,,unmapped
+ec.ieg,ec,ieg,ieg,Enterprise Application,tracked,,unmapped
+ec.iegEquipment,ec,iegEquipment,iegEquipment,Enterprise Application,tracked,,unmapped
+eg.channels,eg,channels,Channels,Application,untracked,huaweicloud_eg_custom_event_channel,manual
+eg.sources,eg,sources,Sources,Application,untracked,huaweicloud_eg_custom_event_source,manual
+eg.subscriptions,eg,subscriptions,Subscriptions,Application,untracked,huaweicloud_eg_event_subscription,manual
+eg.streamings,eg,streamings,Streamings,Application,untracked,huaweicloud_eg_event_stream,manual
+er.instances,er,instances,Enterprise Routers,Network,tracked,huaweicloud_er_instance,manual
+er.attachments,er,attachments,Attachments,Network,tracked,huaweicloud_er_vpc_attachment,manual
+esw.l2cg-instances,esw,l2cg-instances,Enterprise Switches,Network,tracked,,unmapped
+fabric.workspace,fabric,workspace,workspace,EI Enterprise,untracked,,unmapped
+fgs.functions,fgs,functions,Functions,Computing,tracked,huaweicloud_fgs_function,manual
+flexusrds.instances,flexusrds,instances,Instances,Database,tracked,huaweicloud_rds_instance,manual
+flexusrds.nodes,flexusrds,nodes,Nodes,Database,tracked,,unmapped
+ga.accelerators,ga,accelerators,Accelerators,Network,tracked,huaweicloud_ga_accelerator,manual
+gaussdb.instance,gaussdb,instance,Instances,Database,tracked,huaweicloud_gaussdb_opengauss_instance,manual
+gaussdb.nodes,gaussdb,nodes,Nodes,Database,tracked,huaweicloud_gaussdb_opengauss_instance,manual
+gaussdbformysql.instance,gaussdbformysql,instance,Instances,Database,tracked,huaweicloud_gaussdb_mysql_instance,manual
+gaussdbformysql.nodes,gaussdbformysql,nodes,Nodes,Database,tracked,huaweicloud_gaussdb_mysql_instance,manual
+gaussdbformysql.proxies,gaussdbformysql,proxies,Proxies,Database,tracked,huaweicloud_gaussdb_mysql_proxy,manual
+gaussdbformysql.proxynodes,gaussdbformysql,proxynodes,Proxy Nodes,Database,tracked,huaweicloud_gaussdb_mysql_proxy,manual
+ges.graphs,ges,graphs,Graphs,EI Enterprise,tracked,huaweicloud_ges_graph,manual
+hcss.l-instance,hcss,l-instance,L-instance,Huawei Cloud Flexus,tracked,,unmapped
+hecs.hcloudservers,hecs,hcloudservers,HECSs,Computing,tracked,huaweicloud_compute_instance,manual
+hilens.commission_skill,hilens,commission_skill,Skills,EI Enterprise,tracked,,unmapped
+hss.agents,hss,agents,Agents,Security,tracked,huaweicloud_hss_host_protection,manual
+iam.users,iam,users,Users,Management & Deployment,untracked,huaweicloud_identity_user,manual
+iam.groups,iam,groups,Groups,Management & Deployment,untracked,huaweicloud_identity_group,manual
+iam.agencies,iam,agencies,Agencies,Management & Deployment,untracked,huaweicloud_identity_agency,manual
+iam.roles,iam,roles,Roles,Management & Deployment,untracked,huaweicloud_identity_role,manual
+iam.policies,iam,policies,Policies,Management & Deployment,untracked,huaweicloud_identity_role,manual
+idee.idee,idee,idee,Industrial Data ExchangeEngine Service,Industrial Software,untracked,,unmapped
+identitycenter.instances,identitycenter,instances,Instances,Management & Deployment,untracked,,unmapped
+identitycenter.idp,identitycenter,idp,idp,Management & Deployment,untracked,,unmapped
+identitycenter.scim,identitycenter,scim,scim,Management & Deployment,untracked,,unmapped
+idme.runtime,idme,runtime,Runtime,Industrial Software,tracked,,unmapped
+idme.studio,idme,studio,Studio,Industrial Software,tracked,,unmapped
+idme.linkx-f,idme,linkx-f,Linkx-f,Industrial Software,untracked,,unmapped
+ief.appinstances,ief,appinstances,Containerized Applications,IOT,tracked,,unmapped
+iotda.iotda,iotda,iotda,Basic Instances,IOT,tracked,,unmapped
+iotda.iotda_instance,iotda,iotda_instance,Enterprise Instances,IOT,tracked,huaweicloud_iotda_space,manual
+iotda.iotda_standardinstance,iotda,iotda_standardinstance,Standard Instances,IOT,tracked,,unmapped
+ipdcenter.envs,ipdcenter,envs,DigitalProductServices,Industrial Software,untracked,,unmapped
+kms.keys,kms,keys,Keys,Security,tracked,huaweicloud_kms_key,manual
+koodrive.instance,koodrive,instance,KooDrive,Computing,untracked,,unmapped
+kps.keypairs,kps,keypairs,Key Pairs,Security,tracked,huaweicloud_kps_keypair,manual
+lakeformation.instance,lakeformation,instance,instance,EI Enterprise,tracked,huaweicloud_lakeformation_instance,manual
+live.domain,live,domain,Domain Names,Video,tracked,huaweicloud_live_domain,manual
+lts.topics,lts,topics,Log Streams,Management & Deployment,tracked,huaweicloud_lts_stream,manual
+modelarts.service,modelarts,service,Services,EI Enterprise,tracked,huaweicloud_modelarts_service,manual
+modelarts.nodeservice,modelarts,nodeservice,Edge Services,EI Enterprise,tracked,,unmapped
+modelarts.model,modelarts,model,Models,EI Enterprise,tracked,huaweicloud_modelarts_model,manual
+modelarts.inferpool,modelarts,inferpool,Resource Pools for Inference,EI Enterprise,tracked,huaweicloud_modelarts_resource_pool,manual
+modelarts.trainpool,modelarts,trainpool,Resource Pools for Training,EI Enterprise,tracked,,unmapped
+modelarts.notebook,modelarts,notebook,Notebook Instances,EI Enterprise,tracked,huaweicloud_modelarts_notebook,manual
+modelarts.pools,modelarts,pools,Resource Pool,EI Enterprise,untracked,huaweicloud_modelarts_resource_pool,manual
+mrs.mrs,mrs,mrs,Clusters,EI Enterprise,tracked,huaweicloud_mrs_cluster,manual
+mssi.flow,mssi,flow,Flows,Application,tracked,huaweicloud_mssi_flow,manual
+nosql.instances,nosql,instances,Instances,Database,tracked,huaweicloud_gaussdb_cassandra_instance,manual
+nosql.nodes,nosql,nodes,Nodes,Database,tracked,huaweicloud_gaussdb_cassandra_instance,manual
+obs.buckets,obs,buckets,Buckets,Storage,tracked,huaweicloud_obs_bucket,manual
+organizations.account,organizations,account,Accounts,Management & Deployment,untracked,huaweicloud_organizations_account,manual
+pca.ca,pca,ca,Certificate Authority,Security,tracked,huaweicloud_ccm_private_ca,manual
+pca.cert,pca,cert,Certificates,Security,tracked,huaweicloud_ccm_private_certificate,manual
+peda.instances,peda,instances,Instances,Industrial Software,untracked,,unmapped
+res.datasources,res,datasources,Data Sources,EI Enterprise,tracked,,unmapped
+res.scenes,res,scenes,Scenes,EI Enterprise,tracked,,unmapped
+rf.stack,rf,stack,Stacks,Management & Deployment,tracked,huaweicloud_rf_stack,manual
+roma.instances,roma,instances,Instances,Enterprise Application,tracked,huaweicloud_roma_connect_instance,manual
+scm.cert,scm,cert,Certificates,Security,tracked,huaweicloud_scm_cert,manual
+sfsturbo.shares,sfsturbo,shares,File Systems,Storage,tracked,huaweicloud_sfs_turbo,manual
+smn.topic,smn,topic,Topics,Computing,tracked,huaweicloud_smn_topic,manual
+swr.instances,swr,instances,Enterprise Edition Instances,Computing,untracked,huaweicloud_swr_repository,manual
+swr.repositories,swr,repositories,Enterprise Edition Repositories,Computing,untracked,huaweicloud_swr_repository,manual
+ugo.evaluationJob,ugo,evaluationJob,Object Evaluation Projects,Database,tracked,,unmapped
+ugo.migrationJob,ugo,migrationJob,Object Migration Projects,Database,tracked,,unmapped
+vpcep.endpoints,vpcep,endpoints,VPC Endpoints,Network,tracked,huaweicloud_vpcep_endpoint,manual
+vpcep.endpointServices,vpcep,endpointServices,VPC Endpoint Services,Network,tracked,huaweicloud_vpcep_service,manual
+vpnaas.vpnConnections,vpnaas,vpnConnections,Shared VPN Connections,Network,tracked,huaweicloud_vpn_connection,manual
+vpnaas.vpnGateways,vpnaas,vpnGateways,Shared VPN Gateways,Network,tracked,huaweicloud_vpn_gateway,manual
+vpnaas.p2c-vpn-gateways,vpnaas,p2c-vpn-gateways,p2c-vpn-gateways,Network,tracked,huaweicloud_vpn_gateway,manual
+vpnaas.vpnservices,vpnaas,vpnservices,Classic VPN Gateways,Network,tracked,huaweicloud_vpn_gateway,manual
+vpnaas.ipsec-site-connections,vpnaas,ipsec-site-connections,Classic VPN Connections,Network,tracked,huaweicloud_vpn_connection,manual
+waf.policy,waf,policy,Policies,Security,tracked,huaweicloud_waf_policy,manual
+waf.instance,waf,instance,Instances,Security,tracked,huaweicloud_waf_dedicated_instance,manual
+waf.certificate,waf,certificate,Certificates,Security,tracked,huaweicloud_waf_certificate,manual
+workspace.desktops,workspace,desktops,desktops,Application,untracked,huaweicloud_workspace_desktop,manual
+workspace.wdh,workspace,wdh,workspace dedicated host,Application,untracked,,unmapped
+workspace.exclusive-hosts,workspace,exclusive-hosts,exclusive hosts,Application,untracked,,unmapped
+workspace.servers,workspace,servers,Servers,Application,untracked,huaweicloud_workspace_app_server_group,manual

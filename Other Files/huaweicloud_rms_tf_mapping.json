@@ -1,0 +1,2332 @@
+[
+  {
+    "rms_provider": "ecs",
+    "rms_type": "cloudservers",
+    "rms_full": "ecs.cloudservers",
+    "display_name": "ECSs",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_compute_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "rds",
+    "rms_type": "instances",
+    "rms_full": "rds.instances",
+    "display_name": "Instances",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_rds_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "rds",
+    "rms_type": "nodes",
+    "rms_full": "rds.nodes",
+    "display_name": "Nodes",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_rds_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "rds",
+    "rms_type": "proxies",
+    "rms_full": "rds.proxies",
+    "display_name": "Proxies",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_rds_read_replica_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "rds",
+    "rms_type": "proxynodes",
+    "rms_full": "rds.proxynodes",
+    "display_name": "Proxy Nodes",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_rds_read_replica_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "as",
+    "rms_type": "scalingGroups",
+    "rms_full": "as.scalingGroups",
+    "display_name": "AS Groups",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_as_group",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "bms",
+    "rms_type": "servers",
+    "rms_full": "bms.servers",
+    "display_name": "BMSs",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_bms_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "evs",
+    "rms_type": "volumes",
+    "rms_full": "evs.volumes",
+    "display_name": "Disks",
+    "category": "Storage",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_evs_volume",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cbr",
+    "rms_type": "vault",
+    "rms_full": "cbr.vault",
+    "display_name": "Vaults",
+    "category": "Storage",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cbr_vault",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cbr",
+    "rms_type": "backup",
+    "rms_full": "cbr.backup",
+    "display_name": "Backup",
+    "category": "Storage",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_cbr_backup",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cbr",
+    "rms_type": "policy",
+    "rms_full": "cbr.policy",
+    "display_name": "Policy",
+    "category": "Storage",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_cbr_policy",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "vpcs",
+    "rms_full": "vpc.vpcs",
+    "display_name": "VPCs",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpc",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "securityGroups",
+    "rms_full": "vpc.securityGroups",
+    "display_name": "Security Groups",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_networking_secgroup",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "publicips",
+    "rms_full": "vpc.publicips",
+    "display_name": "EIPs",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpc_eip",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "bandwidths",
+    "rms_full": "vpc.bandwidths",
+    "display_name": "Bandwidths",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpc_bandwidth",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "global-eips",
+    "rms_full": "vpc.global-eips",
+    "display_name": "Global EIPs",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_global_eip",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "geipSegment",
+    "rms_full": "vpc.geipSegment",
+    "display_name": "Global EIP Ranges",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_global_eip_segment",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "internet-bandwidths",
+    "rms_full": "vpc.internet-bandwidths",
+    "display_name": "Global Internet Bandwidths",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_global_internet_bandwidth",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "flowLogs",
+    "rms_full": "vpc.flowLogs",
+    "display_name": "Flow Logs",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_vpc_flow_log",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "firewallGroups",
+    "rms_full": "vpc.firewallGroups",
+    "display_name": "Network ACLs",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_network_acl",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "ports",
+    "rms_full": "vpc.ports",
+    "display_name": "Ports",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_networking_port",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "addressGroups",
+    "rms_full": "vpc.addressGroups",
+    "display_name": "Address Groups",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_vpc_address_group",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "routeTables",
+    "rms_full": "vpc.routeTables",
+    "display_name": "Route Tables",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_vpc_route_table",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "peerings",
+    "rms_full": "vpc.peerings",
+    "display_name": "Peerings",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_vpc_peering_connection",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpc",
+    "rms_type": "networks",
+    "rms_full": "vpc.networks",
+    "display_name": "Subnets",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_vpc_subnet",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "elb",
+    "rms_type": "loadbalancers",
+    "rms_full": "elb.loadbalancers",
+    "display_name": "Load Balancers",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_elb_loadbalancer",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "elb",
+    "rms_type": "listeners",
+    "rms_full": "elb.listeners",
+    "display_name": "Listeners",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_elb_listener",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "elb",
+    "rms_type": "l7policies",
+    "rms_full": "elb.l7policies",
+    "display_name": "L7Policies",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_elb_l7policy",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "elb",
+    "rms_type": "pools",
+    "rms_full": "elb.pools",
+    "display_name": "Pools",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_elb_pool",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "elb",
+    "rms_type": "masterSlavePools",
+    "rms_full": "elb.masterSlavePools",
+    "display_name": "Master-Slave Pools",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_elb_master_slave_pool",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "elb",
+    "rms_type": "members",
+    "rms_full": "elb.members",
+    "display_name": "Members",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_elb_member",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "elb",
+    "rms_type": "ipgroups",
+    "rms_full": "elb.ipgroups",
+    "display_name": "IpGroups",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_elb_ipgroup",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dns",
+    "rms_type": "publiczones",
+    "rms_full": "dns.publiczones",
+    "display_name": "Public Zones",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dns_zone",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dns",
+    "rms_type": "privatezones",
+    "rms_full": "dns.privatezones",
+    "display_name": "Private Zones",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dns_zone",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ims",
+    "rms_type": "images",
+    "rms_full": "ims.images",
+    "display_name": "Images",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_images_image",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dds",
+    "rms_type": "instances",
+    "rms_full": "dds.instances",
+    "display_name": "Instances",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dds_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dds",
+    "rms_type": "nodes",
+    "rms_full": "dds.nodes",
+    "display_name": "Nodes",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dds_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "nat",
+    "rms_type": "natGateways",
+    "rms_full": "nat.natGateways",
+    "display_name": "Public NAT Gateways",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_nat_gateway",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "nat",
+    "rms_type": "privateNatGateways",
+    "rms_full": "nat.privateNatGateways",
+    "display_name": "Private NAT Gateways",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_nat_private_gateway",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cdn",
+    "rms_type": "domains",
+    "rms_full": "cdn.domains",
+    "display_name": "Domain Names",
+    "category": "Storage",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cdn_domain",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cts",
+    "rms_type": "trackers",
+    "rms_full": "cts.trackers",
+    "display_name": "Trackers",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cts_tracker",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "asm",
+    "rms_type": "meshes",
+    "rms_full": "asm.meshes",
+    "display_name": "Meshes",
+    "category": "Container",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_asm_mesh",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "aad",
+    "rms_type": "instances",
+    "rms_full": "aad.instances",
+    "display_name": "Instances",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_aad_domain",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "accessanalyzer",
+    "rms_type": "analyzer",
+    "rms_full": "accessanalyzer.analyzer",
+    "display_name": "Analyzer",
+    "category": "Security",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_access_analyzer",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "anc",
+    "rms_type": "ancs",
+    "rms_full": "anc.ancs",
+    "display_name": "Ancs",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "anc",
+    "rms_type": "services",
+    "rms_full": "anc.services",
+    "display_name": "Services",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "anc",
+    "rms_type": "member-groups",
+    "rms_full": "anc.member-groups",
+    "display_name": "Member Groups",
+    "category": "Network",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "aom",
+    "rms_type": "alarmRule",
+    "rms_full": "aom.alarmRule",
+    "display_name": "alarmRule",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_aom_alarm_rule",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "apig",
+    "rms_type": "instances",
+    "rms_full": "apig.instances",
+    "display_name": "Gateways",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_apig_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "appstage",
+    "rms_type": "appstage",
+    "rms_full": "appstage.appstage",
+    "display_name": "Application Stage",
+    "category": "Application",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "astrocanvas",
+    "rms_type": "instances",
+    "rms_full": "astrocanvas.instances",
+    "display_name": "instances",
+    "category": "DevCloud",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "astroflow",
+    "rms_type": "instances",
+    "rms_full": "astroflow.instances",
+    "display_name": "instances",
+    "category": "DevCloud",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "astropro",
+    "rms_type": "instances",
+    "rms_full": "astropro.instances",
+    "display_name": "instances",
+    "category": "DevCloud",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "astrozero",
+    "rms_type": "instances",
+    "rms_full": "astrozero.instances",
+    "display_name": "Instances",
+    "category": "Developer Services",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "bcs",
+    "rms_type": "huaweicloudchain",
+    "rms_full": "bcs.huaweicloudchain",
+    "display_name": "HBS Instances",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cae",
+    "rms_type": "environments",
+    "rms_full": "cae.environments",
+    "display_name": "environments",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cae_environment",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cbh",
+    "rms_type": "instance",
+    "rms_full": "cbh.instance",
+    "display_name": "CBH Instances",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cbh_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ccaas",
+    "rms_type": "cloud-connections",
+    "rms_full": "ccaas.cloud-connections",
+    "display_name": "Cloud Connections",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cc_connection",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ccaas",
+    "rms_type": "bandwidth-packages",
+    "rms_full": "ccaas.bandwidth-packages",
+    "display_name": "Bandwidth Packages",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cc_bandwidth_package",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ccaas",
+    "rms_type": "globalConnectionBandwidth",
+    "rms_full": "ccaas.globalConnectionBandwidth",
+    "display_name": "Global Connection Bandwidth",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cc_global_connection_bandwidth",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cce",
+    "rms_type": "clusters",
+    "rms_full": "cce.clusters",
+    "display_name": "Clusters",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cce_cluster",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cce",
+    "rms_type": "nodes",
+    "rms_full": "cce.nodes",
+    "display_name": "Nodes",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cce_node",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cci",
+    "rms_type": "pods",
+    "rms_full": "cci.pods",
+    "display_name": "Pods",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cci_namespace",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cdm",
+    "rms_type": "clusters",
+    "rms_full": "cdm.clusters",
+    "display_name": "Clusters",
+    "category": "Migration",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cdm_cluster",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ces",
+    "rms_type": "alarms",
+    "rms_full": "ces.alarms",
+    "display_name": "Alarm Rules",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_ces_alarmrule",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cfw",
+    "rms_type": "cfw_instance",
+    "rms_full": "cfw.cfw_instance",
+    "display_name": "Cloud Firewall Instances",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cfw_firewall",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "clouddc",
+    "rms_type": "imetal",
+    "rms_full": "clouddc.imetal",
+    "display_name": "clouddcserver",
+    "category": "Computing",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "clouddc",
+    "rms_type": "irack",
+    "rms_full": "clouddc.irack",
+    "display_name": "iracks",
+    "category": "Computing",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cloudmatrix",
+    "rms_type": "hyperinstanceClusters",
+    "rms_full": "cloudmatrix.hyperinstanceClusters",
+    "display_name": "Hyperinstance Clusters",
+    "category": "Computing",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cloudmatrix",
+    "rms_type": "hyperinstances",
+    "rms_full": "cloudmatrix.hyperinstances",
+    "display_name": "Hyperinstances",
+    "category": "Computing",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cloudmatrix",
+    "rms_type": "hyperinstanceNodes",
+    "rms_full": "cloudmatrix.hyperinstanceNodes",
+    "display_name": "Hyperinstance Nodes",
+    "category": "Computing",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cloudsite",
+    "rms_type": "sites",
+    "rms_full": "cloudsite.sites",
+    "display_name": "Sites",
+    "category": "Domain & Website",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cloudtable",
+    "rms_type": "doris",
+    "rms_full": "cloudtable.doris",
+    "display_name": "doris",
+    "category": "EI Enterprise",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cloudtable",
+    "rms_type": "hbase",
+    "rms_full": "cloudtable.hbase",
+    "display_name": "hbase",
+    "category": "EI Enterprise",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cloudtable",
+    "rms_type": "clickhouse",
+    "rms_full": "cloudtable.clickhouse",
+    "display_name": "clickhouse",
+    "category": "EI Enterprise",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cloudtable",
+    "rms_type": "starrocks",
+    "rms_full": "cloudtable.starrocks",
+    "display_name": "starrocks",
+    "category": "EI Enterprise",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cms",
+    "rms_type": "pack",
+    "rms_full": "cms.pack",
+    "display_name": "pack",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cms",
+    "rms_type": "script",
+    "rms_full": "cms.script",
+    "display_name": "script",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cms",
+    "rms_type": "workflow",
+    "rms_full": "cms.workflow",
+    "display_name": "workflow",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cnad",
+    "rms_type": "instances",
+    "rms_full": "cnad.instances",
+    "display_name": "Instances",
+    "category": "Security",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "codeartsbuild",
+    "rms_type": "CloudBuildServer",
+    "rms_full": "codeartsbuild.CloudBuildServer",
+    "display_name": "Build Parameters",
+    "category": "DevCloud",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "codeartsdeploy",
+    "rms_type": "host-cluster",
+    "rms_full": "codeartsdeploy.host-cluster",
+    "display_name": "Host Clusters",
+    "category": "DevCloud",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "codeartspipeline",
+    "rms_type": "pipelines",
+    "rms_full": "codeartspipeline.pipelines",
+    "display_name": "Pipelines",
+    "category": "DevCloud",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "config",
+    "rms_type": "trackers",
+    "rms_full": "config.trackers",
+    "display_name": "Trackers",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_rms_resource_recorder",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "config",
+    "rms_type": "policyAssignments",
+    "rms_full": "config.policyAssignments",
+    "display_name": "PolicyAssignments",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_rms_policy_assignment",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "config",
+    "rms_type": "conformancePacks",
+    "rms_full": "config.conformancePacks",
+    "display_name": "ConformancePacks",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "cph",
+    "rms_type": "cloudphoneservers",
+    "rms_full": "cph.cloudphoneservers",
+    "display_name": "Cloud Phone Servers",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cph_server",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "cph",
+    "rms_type": "elasticcloudphones",
+    "rms_full": "cph.elasticcloudphones",
+    "display_name": "Elastic Cloud Phone",
+    "category": "Computing",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "craftartssim",
+    "rms_type": "simSpace",
+    "rms_full": "craftartssim.simSpace",
+    "display_name": "SimSpace",
+    "category": "Industrial Software",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "craftartssim",
+    "rms_type": "simStudio",
+    "rms_full": "craftartssim.simStudio",
+    "display_name": "SimStudio",
+    "category": "Industrial Software",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "craftartssim",
+    "rms_type": "cpuUnit",
+    "rms_full": "craftartssim.cpuUnit",
+    "display_name": "CPU Computing",
+    "category": "Industrial Software",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "craftartssim",
+    "rms_type": "guiUnit",
+    "rms_full": "craftartssim.guiUnit",
+    "display_name": "GUI Computing",
+    "category": "Industrial Software",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "csms",
+    "rms_type": "secrets",
+    "rms_full": "csms.secrets",
+    "display_name": "Secrets",
+    "category": "Security",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_smn_topic",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "css",
+    "rms_type": "clusters",
+    "rms_full": "css.clusters",
+    "display_name": "Clusters",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_css_cluster",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "das",
+    "rms_type": "enterprises",
+    "rms_full": "das.enterprises",
+    "display_name": "Enterprise Instances",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "dayu",
+    "rms_type": "instances",
+    "rms_full": "dayu.instances",
+    "display_name": "Instances",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dataarts_studio_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dayu",
+    "rms_type": "cdmClusters",
+    "rms_full": "dayu.cdmClusters",
+    "display_name": "CDM Clusters",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_cdm_cluster",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dayu",
+    "rms_type": "disStreams",
+    "rms_full": "dayu.disStreams",
+    "display_name": "DIS Streams",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "dayu",
+    "rms_type": "workspaces",
+    "rms_full": "dayu.workspaces",
+    "display_name": "Workspaces",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dataarts_studio_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dayu",
+    "rms_type": "dlmClusters",
+    "rms_full": "dayu.dlmClusters",
+    "display_name": "DataService Clusters",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "dbss",
+    "rms_type": "cloudservers",
+    "rms_full": "dbss.cloudservers",
+    "display_name": "Instances",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dbss_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dcaas",
+    "rms_type": "directConnect",
+    "rms_full": "dcaas.directConnect",
+    "display_name": "Direct Connects",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dc_virtual_gateway",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dcaas",
+    "rms_type": "vgw",
+    "rms_full": "dcaas.vgw",
+    "display_name": "Virtual Gateways",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dc_virtual_gateway",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dcaas",
+    "rms_type": "lag",
+    "rms_full": "dcaas.lag",
+    "display_name": "LAGs",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dc_virtual_gateway",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dcaas",
+    "rms_type": "vif",
+    "rms_full": "dcaas.vif",
+    "display_name": "Virtual Interfaces",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dc_virtual_interface",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dcs",
+    "rms_type": "redis",
+    "rms_full": "dcs.redis",
+    "display_name": "Redis Instances",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dcs_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dcs",
+    "rms_type": "memcached",
+    "rms_full": "dcs.memcached",
+    "display_name": "Memcached Instances",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dcs_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dcs",
+    "rms_type": "node",
+    "rms_full": "dcs.node",
+    "display_name": "Instance Nodes",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dcs_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ddm",
+    "rms_type": "instances",
+    "rms_full": "ddm.instances",
+    "display_name": "Instances",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_ddm_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ddm",
+    "rms_type": "nodes",
+    "rms_full": "ddm.nodes",
+    "display_name": "Nodes",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_ddm_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "deh",
+    "rms_type": "dedicatedhosts",
+    "rms_full": "deh.dedicatedhosts",
+    "display_name": "DeHs",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_deh_host",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "package",
+    "rms_full": "devcloud.package",
+    "display_name": "Pay-per-use Packages",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "devcloud_package",
+    "rms_full": "devcloud.devcloud_package",
+    "display_name": "Yearly or Monthly Packages",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "projectman",
+    "rms_full": "devcloud.projectman",
+    "display_name": "CodeArts Req",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "codehub",
+    "rms_full": "devcloud.codehub",
+    "display_name": "CodeArts Repo",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "codecheck",
+    "rms_full": "devcloud.codecheck",
+    "display_name": "CodeArts Check",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "codeci",
+    "rms_full": "devcloud.codeci",
+    "display_name": "CodeArts Build",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "cloudide",
+    "rms_full": "devcloud.cloudide",
+    "display_name": "CodeArts IDE Online",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "releaseman",
+    "rms_full": "devcloud.releaseman",
+    "display_name": "CodeArts Artifact",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "testman",
+    "rms_full": "devcloud.testman",
+    "display_name": "CodeArts TestPlan",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "apitest",
+    "rms_full": "devcloud.apitest",
+    "display_name": "APITest",
+    "category": "DevCloud",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "codearts_combo",
+    "rms_full": "devcloud.codearts_combo",
+    "display_name": "CodeArts Combo",
+    "category": "DevCloud",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "codearts_extension",
+    "rms_full": "devcloud.codearts_extension",
+    "display_name": "CodeArts Resource Extension",
+    "category": "DevCloud",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "devcloud",
+    "rms_type": "codearts_feature",
+    "rms_full": "devcloud.codearts_feature",
+    "display_name": "CodeArts Value-added Features",
+    "category": "DevCloud",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "dli",
+    "rms_type": "queues",
+    "rms_full": "dli.queues",
+    "display_name": "Queues",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dli_queue",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dli",
+    "rms_type": "elasticresourcepool",
+    "rms_full": "dli.elasticresourcepool",
+    "display_name": "Elastic Resource Pools",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dli_elastic_resource_pool",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dlv",
+    "rms_type": "workspaces",
+    "rms_full": "dlv.workspaces",
+    "display_name": "Workspaces",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "dlv",
+    "rms_type": "instances",
+    "rms_full": "dlv.instances",
+    "display_name": "Instances",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "dms",
+    "rms_type": "kafkas",
+    "rms_full": "dms.kafkas",
+    "display_name": "Kafka Instances",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dms_kafka_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dms",
+    "rms_type": "rabbitmqs",
+    "rms_full": "dms.rabbitmqs",
+    "display_name": "RabbitMQ Instances",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dms_rabbitmq_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dms",
+    "rms_type": "reliabilitys",
+    "rms_full": "dms.reliabilitys",
+    "display_name": "RocketMQ Instances",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dms_rocketmq_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dms",
+    "rms_type": "kafka_nodes",
+    "rms_full": "dms.kafka_nodes",
+    "display_name": "Kafka Brokers",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dms_kafka_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dms",
+    "rms_type": "rabbitmq_nodes",
+    "rms_full": "dms.rabbitmq_nodes",
+    "display_name": "RabbitMQ Brokers",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dms_rabbitmq_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dms",
+    "rms_type": "rocketmq_nodes",
+    "rms_full": "dms.rocketmq_nodes",
+    "display_name": "Rocketmq Brokers",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dms_rocketmq_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "domains",
+    "rms_type": "domain",
+    "rms_full": "domains.domain",
+    "display_name": "domain",
+    "category": "Domain & Website",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "drs",
+    "rms_type": "migrationJob",
+    "rms_full": "drs.migrationJob",
+    "display_name": "Online Migration Tasks",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_drs_job",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "drs",
+    "rms_type": "synchronizationJob",
+    "rms_full": "drs.synchronizationJob",
+    "display_name": "Data Synchronization Tasks",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_drs_job",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "drs",
+    "rms_type": "dataGuardJob",
+    "rms_full": "drs.dataGuardJob",
+    "display_name": "Disaster Recovery Tasks",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_drs_job",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "drs",
+    "rms_type": "subscriptionJob",
+    "rms_full": "drs.subscriptionJob",
+    "display_name": "Data Subscription Tasks",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_drs_job",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "drs",
+    "rms_type": "backupMigrationJob",
+    "rms_full": "drs.backupMigrationJob",
+    "display_name": "Backup Migration Tasks",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_drs_job",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dss",
+    "rms_type": "dsspools",
+    "rms_full": "dss.dsspools",
+    "display_name": "StoragePools",
+    "category": "Storage",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dss_storage_pool",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dss",
+    "rms_type": "volumes",
+    "rms_full": "dss.volumes",
+    "display_name": "volumes",
+    "category": "Storage",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dss_volume",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "dws",
+    "rms_type": "clusters",
+    "rms_full": "dws.clusters",
+    "display_name": "Clusters",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_dws_cluster",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ec",
+    "rms_type": "ecn",
+    "rms_full": "ec.ecn",
+    "display_name": "ecn",
+    "category": "Enterprise Application",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "ec",
+    "rms_type": "ieg",
+    "rms_full": "ec.ieg",
+    "display_name": "ieg",
+    "category": "Enterprise Application",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "ec",
+    "rms_type": "iegEquipment",
+    "rms_full": "ec.iegEquipment",
+    "display_name": "iegEquipment",
+    "category": "Enterprise Application",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "eg",
+    "rms_type": "channels",
+    "rms_full": "eg.channels",
+    "display_name": "Channels",
+    "category": "Application",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_eg_custom_event_channel",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "eg",
+    "rms_type": "sources",
+    "rms_full": "eg.sources",
+    "display_name": "Sources",
+    "category": "Application",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_eg_custom_event_source",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "eg",
+    "rms_type": "subscriptions",
+    "rms_full": "eg.subscriptions",
+    "display_name": "Subscriptions",
+    "category": "Application",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_eg_event_subscription",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "eg",
+    "rms_type": "streamings",
+    "rms_full": "eg.streamings",
+    "display_name": "Streamings",
+    "category": "Application",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_eg_event_stream",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "er",
+    "rms_type": "instances",
+    "rms_full": "er.instances",
+    "display_name": "Enterprise Routers",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_er_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "er",
+    "rms_type": "attachments",
+    "rms_full": "er.attachments",
+    "display_name": "Attachments",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_er_vpc_attachment",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "esw",
+    "rms_type": "l2cg-instances",
+    "rms_full": "esw.l2cg-instances",
+    "display_name": "Enterprise Switches",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "fabric",
+    "rms_type": "workspace",
+    "rms_full": "fabric.workspace",
+    "display_name": "workspace",
+    "category": "EI Enterprise",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "fgs",
+    "rms_type": "functions",
+    "rms_full": "fgs.functions",
+    "display_name": "Functions",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_fgs_function",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "flexusrds",
+    "rms_type": "instances",
+    "rms_full": "flexusrds.instances",
+    "display_name": "Instances",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_rds_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "flexusrds",
+    "rms_type": "nodes",
+    "rms_full": "flexusrds.nodes",
+    "display_name": "Nodes",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "ga",
+    "rms_type": "accelerators",
+    "rms_full": "ga.accelerators",
+    "display_name": "Accelerators",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_ga_accelerator",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "gaussdb",
+    "rms_type": "instance",
+    "rms_full": "gaussdb.instance",
+    "display_name": "Instances",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_gaussdb_opengauss_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "gaussdb",
+    "rms_type": "nodes",
+    "rms_full": "gaussdb.nodes",
+    "display_name": "Nodes",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_gaussdb_opengauss_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "gaussdbformysql",
+    "rms_type": "instance",
+    "rms_full": "gaussdbformysql.instance",
+    "display_name": "Instances",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_gaussdb_mysql_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "gaussdbformysql",
+    "rms_type": "nodes",
+    "rms_full": "gaussdbformysql.nodes",
+    "display_name": "Nodes",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_gaussdb_mysql_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "gaussdbformysql",
+    "rms_type": "proxies",
+    "rms_full": "gaussdbformysql.proxies",
+    "display_name": "Proxies",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_gaussdb_mysql_proxy",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "gaussdbformysql",
+    "rms_type": "proxynodes",
+    "rms_full": "gaussdbformysql.proxynodes",
+    "display_name": "Proxy Nodes",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_gaussdb_mysql_proxy",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ges",
+    "rms_type": "graphs",
+    "rms_full": "ges.graphs",
+    "display_name": "Graphs",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_ges_graph",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "hcss",
+    "rms_type": "l-instance",
+    "rms_full": "hcss.l-instance",
+    "display_name": "L-instance",
+    "category": "Huawei Cloud Flexus",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "hecs",
+    "rms_type": "hcloudservers",
+    "rms_full": "hecs.hcloudservers",
+    "display_name": "HECSs",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_compute_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "hilens",
+    "rms_type": "commission_skill",
+    "rms_full": "hilens.commission_skill",
+    "display_name": "Skills",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "hss",
+    "rms_type": "agents",
+    "rms_full": "hss.agents",
+    "display_name": "Agents",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_hss_host_protection",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "iam",
+    "rms_type": "users",
+    "rms_full": "iam.users",
+    "display_name": "Users",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_identity_user",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "iam",
+    "rms_type": "groups",
+    "rms_full": "iam.groups",
+    "display_name": "Groups",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_identity_group",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "iam",
+    "rms_type": "agencies",
+    "rms_full": "iam.agencies",
+    "display_name": "Agencies",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_identity_agency",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "iam",
+    "rms_type": "roles",
+    "rms_full": "iam.roles",
+    "display_name": "Roles",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_identity_role",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "iam",
+    "rms_type": "policies",
+    "rms_full": "iam.policies",
+    "display_name": "Policies",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_identity_role",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "idee",
+    "rms_type": "idee",
+    "rms_full": "idee.idee",
+    "display_name": "Industrial Data ExchangeEngine Service",
+    "category": "Industrial Software",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "identitycenter",
+    "rms_type": "instances",
+    "rms_full": "identitycenter.instances",
+    "display_name": "Instances",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "identitycenter",
+    "rms_type": "idp",
+    "rms_full": "identitycenter.idp",
+    "display_name": "idp",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "identitycenter",
+    "rms_type": "scim",
+    "rms_full": "identitycenter.scim",
+    "display_name": "scim",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "idme",
+    "rms_type": "runtime",
+    "rms_full": "idme.runtime",
+    "display_name": "Runtime",
+    "category": "Industrial Software",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "idme",
+    "rms_type": "studio",
+    "rms_full": "idme.studio",
+    "display_name": "Studio",
+    "category": "Industrial Software",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "idme",
+    "rms_type": "linkx-f",
+    "rms_full": "idme.linkx-f",
+    "display_name": "Linkx-f",
+    "category": "Industrial Software",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "ief",
+    "rms_type": "appinstances",
+    "rms_full": "ief.appinstances",
+    "display_name": "Containerized Applications",
+    "category": "IOT",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "iotda",
+    "rms_type": "iotda",
+    "rms_full": "iotda.iotda",
+    "display_name": "Basic Instances",
+    "category": "IOT",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "iotda",
+    "rms_type": "iotda_instance",
+    "rms_full": "iotda.iotda_instance",
+    "display_name": "Enterprise Instances",
+    "category": "IOT",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_iotda_space",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "iotda",
+    "rms_type": "iotda_standardinstance",
+    "rms_full": "iotda.iotda_standardinstance",
+    "display_name": "Standard Instances",
+    "category": "IOT",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "ipdcenter",
+    "rms_type": "envs",
+    "rms_full": "ipdcenter.envs",
+    "display_name": "DigitalProductServices",
+    "category": "Industrial Software",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "kms",
+    "rms_type": "keys",
+    "rms_full": "kms.keys",
+    "display_name": "Keys",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_kms_key",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "koodrive",
+    "rms_type": "instance",
+    "rms_full": "koodrive.instance",
+    "display_name": "KooDrive",
+    "category": "Computing",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "kps",
+    "rms_type": "keypairs",
+    "rms_full": "kps.keypairs",
+    "display_name": "Key Pairs",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_kps_keypair",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "lakeformation",
+    "rms_type": "instance",
+    "rms_full": "lakeformation.instance",
+    "display_name": "instance",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_lakeformation_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "live",
+    "rms_type": "domain",
+    "rms_full": "live.domain",
+    "display_name": "Domain Names",
+    "category": "Video",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_live_domain",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "lts",
+    "rms_type": "topics",
+    "rms_full": "lts.topics",
+    "display_name": "Log Streams",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_lts_stream",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "modelarts",
+    "rms_type": "service",
+    "rms_full": "modelarts.service",
+    "display_name": "Services",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_modelarts_service",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "modelarts",
+    "rms_type": "nodeservice",
+    "rms_full": "modelarts.nodeservice",
+    "display_name": "Edge Services",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "modelarts",
+    "rms_type": "model",
+    "rms_full": "modelarts.model",
+    "display_name": "Models",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_modelarts_model",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "modelarts",
+    "rms_type": "inferpool",
+    "rms_full": "modelarts.inferpool",
+    "display_name": "Resource Pools for Inference",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_modelarts_resource_pool",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "modelarts",
+    "rms_type": "trainpool",
+    "rms_full": "modelarts.trainpool",
+    "display_name": "Resource Pools for Training",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "modelarts",
+    "rms_type": "notebook",
+    "rms_full": "modelarts.notebook",
+    "display_name": "Notebook Instances",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_modelarts_notebook",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "modelarts",
+    "rms_type": "pools",
+    "rms_full": "modelarts.pools",
+    "display_name": "Resource Pool",
+    "category": "EI Enterprise",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_modelarts_resource_pool",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "mrs",
+    "rms_type": "mrs",
+    "rms_full": "mrs.mrs",
+    "display_name": "Clusters",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_mrs_cluster",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "mssi",
+    "rms_type": "flow",
+    "rms_full": "mssi.flow",
+    "display_name": "Flows",
+    "category": "Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_mssi_flow",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "nosql",
+    "rms_type": "instances",
+    "rms_full": "nosql.instances",
+    "display_name": "Instances",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_gaussdb_cassandra_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "nosql",
+    "rms_type": "nodes",
+    "rms_full": "nosql.nodes",
+    "display_name": "Nodes",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_gaussdb_cassandra_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "obs",
+    "rms_type": "buckets",
+    "rms_full": "obs.buckets",
+    "display_name": "Buckets",
+    "category": "Storage",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_obs_bucket",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "organizations",
+    "rms_type": "account",
+    "rms_full": "organizations.account",
+    "display_name": "Accounts",
+    "category": "Management & Deployment",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_organizations_account",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "pca",
+    "rms_type": "ca",
+    "rms_full": "pca.ca",
+    "display_name": "Certificate Authority",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_ccm_private_ca",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "pca",
+    "rms_type": "cert",
+    "rms_full": "pca.cert",
+    "display_name": "Certificates",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_ccm_private_certificate",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "peda",
+    "rms_type": "instances",
+    "rms_full": "peda.instances",
+    "display_name": "Instances",
+    "category": "Industrial Software",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "res",
+    "rms_type": "datasources",
+    "rms_full": "res.datasources",
+    "display_name": "Data Sources",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "res",
+    "rms_type": "scenes",
+    "rms_full": "res.scenes",
+    "display_name": "Scenes",
+    "category": "EI Enterprise",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "rf",
+    "rms_type": "stack",
+    "rms_full": "rf.stack",
+    "display_name": "Stacks",
+    "category": "Management & Deployment",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_rf_stack",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "roma",
+    "rms_type": "instances",
+    "rms_full": "roma.instances",
+    "display_name": "Instances",
+    "category": "Enterprise Application",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_roma_connect_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "scm",
+    "rms_type": "cert",
+    "rms_full": "scm.cert",
+    "display_name": "Certificates",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_scm_cert",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "sfsturbo",
+    "rms_type": "shares",
+    "rms_full": "sfsturbo.shares",
+    "display_name": "File Systems",
+    "category": "Storage",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_sfs_turbo",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "smn",
+    "rms_type": "topic",
+    "rms_full": "smn.topic",
+    "display_name": "Topics",
+    "category": "Computing",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_smn_topic",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "swr",
+    "rms_type": "instances",
+    "rms_full": "swr.instances",
+    "display_name": "Enterprise Edition Instances",
+    "category": "Computing",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_swr_repository",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "swr",
+    "rms_type": "repositories",
+    "rms_full": "swr.repositories",
+    "display_name": "Enterprise Edition Repositories",
+    "category": "Computing",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_swr_repository",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "ugo",
+    "rms_type": "evaluationJob",
+    "rms_full": "ugo.evaluationJob",
+    "display_name": "Object Evaluation Projects",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "ugo",
+    "rms_type": "migrationJob",
+    "rms_full": "ugo.migrationJob",
+    "display_name": "Object Migration Projects",
+    "category": "Database",
+    "track": "tracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "vpcep",
+    "rms_type": "endpoints",
+    "rms_full": "vpcep.endpoints",
+    "display_name": "VPC Endpoints",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpcep_endpoint",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpcep",
+    "rms_type": "endpointServices",
+    "rms_full": "vpcep.endpointServices",
+    "display_name": "VPC Endpoint Services",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpcep_service",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpnaas",
+    "rms_type": "vpnConnections",
+    "rms_full": "vpnaas.vpnConnections",
+    "display_name": "Shared VPN Connections",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpn_connection",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpnaas",
+    "rms_type": "vpnGateways",
+    "rms_full": "vpnaas.vpnGateways",
+    "display_name": "Shared VPN Gateways",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpn_gateway",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpnaas",
+    "rms_type": "p2c-vpn-gateways",
+    "rms_full": "vpnaas.p2c-vpn-gateways",
+    "display_name": "p2c-vpn-gateways",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpn_gateway",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpnaas",
+    "rms_type": "vpnservices",
+    "rms_full": "vpnaas.vpnservices",
+    "display_name": "Classic VPN Gateways",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpn_gateway",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "vpnaas",
+    "rms_type": "ipsec-site-connections",
+    "rms_full": "vpnaas.ipsec-site-connections",
+    "display_name": "Classic VPN Connections",
+    "category": "Network",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_vpn_connection",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "waf",
+    "rms_type": "policy",
+    "rms_full": "waf.policy",
+    "display_name": "Policies",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_waf_policy",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "waf",
+    "rms_type": "instance",
+    "rms_full": "waf.instance",
+    "display_name": "Instances",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_waf_dedicated_instance",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "waf",
+    "rms_type": "certificate",
+    "rms_full": "waf.certificate",
+    "display_name": "Certificates",
+    "category": "Security",
+    "track": "tracked",
+    "tf_resource": "huaweicloud_waf_certificate",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "workspace",
+    "rms_type": "desktops",
+    "rms_full": "workspace.desktops",
+    "display_name": "desktops",
+    "category": "Application",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_workspace_desktop",
+    "confidence": "manual"
+  },
+  {
+    "rms_provider": "workspace",
+    "rms_type": "wdh",
+    "rms_full": "workspace.wdh",
+    "display_name": "workspace dedicated host",
+    "category": "Application",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "workspace",
+    "rms_type": "exclusive-hosts",
+    "rms_full": "workspace.exclusive-hosts",
+    "display_name": "exclusive hosts",
+    "category": "Application",
+    "track": "untracked",
+    "tf_resource": "",
+    "confidence": "unmapped"
+  },
+  {
+    "rms_provider": "workspace",
+    "rms_type": "servers",
+    "rms_full": "workspace.servers",
+    "display_name": "Servers",
+    "category": "Application",
+    "track": "untracked",
+    "tf_resource": "huaweicloud_workspace_app_server_group",
+    "confidence": "manual"
+  }
+]

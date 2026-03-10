@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuaweiCloud → Terraform Importer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d0f12;
+            --container-bg: #161a1f;
+            --accent-amber: #f0a500;
+            --accent-green: #39d353;
+            --accent-red: #ff4d4d;
+            --text-main: #e0e6ed;
+            --text-muted: #94a3b8;
+            --terminal-bg: #05070a;
+            --border-color: #2d333b;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --font-sans: 'DM Sans', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3BaseFilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/baseFilter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-blend-mode: overlay;
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            width: 100%;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--accent-amber), #ffc107);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        p.subtitle a {
+            color: var(--accent-amber);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(240, 165, 0, 0.3);
+            transition: all 0.2s;
+        }
+
+        p.subtitle a:hover {
+            color: #ffc107;
+            border-bottom-color: var(--accent-amber);
+        }
+
+        /* Instructions Section */
+        .instructions-container {
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .instructions-header {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.3s;
+        }
+
+        .instructions-header:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .instructions-header h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-amber);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .instructions-content {
+            padding: 0;
+            max-height: 0;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s;
+            opacity: 0;
+        }
+
+        .instructions-container.open .instructions-content {
+            padding: 1.5rem;
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        .instructions-content ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .instructions-content li {
+            margin-bottom: 0.75rem;
+        }
+
+        .instructions-content code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            color: var(--accent-green);
+            font-size: 0.9rem;
+        }
+
+        /* Input Section */
+        .input-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .textarea-wrapper {
+            position: relative;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            padding: 1rem;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        textarea:focus {
+            border-color: var(--accent-amber);
+            box-shadow: 0 0 0 2px rgba(240, 165, 0, 0.1);
+        }
+
+        .command-hint {
+            margin-top: 1rem;
+            background: #05070a;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .command-hint code {
+            color: var(--accent-green);
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background: var(--accent-amber);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: #ffb733;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(240, 165, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--text-muted);
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Output Section */
+        .output-section {
+            margin-top: 2rem;
+            display: none;
+        }
+
+        .summary-bar {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--accent-green);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .terminal {
+            background: var(--terminal-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .terminal-header {
+            background: #1a1e23;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red {
+            background: #ff5f56;
+        }
+
+        .dot-yellow {
+            background: #ffbd2e;
+        }
+
+        .dot-green {
+            background: #27c93f;
+        }
+
+        .terminal-title {
+            margin-left: 0.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .terminal-body {
+            padding: 1.5rem;
+            height: 450px;
+            overflow-y: auto;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            white-space: pre;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border-color) transparent;
+        }
+
+        .terminal-body::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 10px;
+        }
+
+        .hcl-keyword {
+            color: var(--accent-amber);
+        }
+
+        .hcl-property {
+            color: #82aaff;
+        }
+
+        .hcl-value {
+            color: var(--accent-green);
+        }
+
+        .hcl-comment {
+            color: #545862;
+            font-style: italic;
+        }
+
+        .hcl-string {
+            color: #c3e88d;
+        }
+
+        .output-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Error/Warning States */
+        .message {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            display: none;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+        }
+
+        .error {
+            color: var(--accent-red);
+            background: rgba(255, 77, 77, 0.1);
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            display: block;
+        }
+
+        .warning {
+            color: var(--accent-amber);
+            background: rgba(240, 165, 0, 0.1);
+            border: 1px solid rgba(240, 165, 0, 0.2);
+            display: block;
+        }
+
+        /* Resource List Section */
+        .selection-section {
+            margin-top: 2rem;
+            display: none;
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .selection-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .resource-table-container {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.2);
+            scrollbar-width: thin;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        th {
+            background: #1a1e23;
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            color: var(--accent-amber);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .col-check {
+            width: 40px;
+            text-align: center;
+        }
+
+        .col-name {
+            font-weight: 500;
+            min-width: 150px;
+        }
+
+        .col-type {
+            width: 140px;
+        }
+
+        .col-provider {
+            width: 100px;
+        }
+
+        .col-region {
+            width: 110px;
+        }
+
+        .col-id {
+            width: 140px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* Custom Checkbox */
+        .custom-check {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--accent-amber);
+        }
+
+        .filter-groups {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .filter-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-amber);
+            font-weight: 700;
+            min-width: 80px;
+        }
+
+        .filter-chip {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-chip:hover {
+            border-color: var(--accent-amber);
+            background: rgba(240, 165, 0, 0.05);
+        }
+
+        .filter-chip input {
+            cursor: pointer;
+        }
+
+        .selection-actions {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .output-actions {
+                flex-direction: column;
+            }
+
+            .col-provider,
+            .col-type {
+                display: none;
+            }
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 2.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.open .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-header h2 {
+            font-size: 1.5rem;
+            color: var(--accent-amber);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .modal-body h3 {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .modal-body p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .modal-body pre {
+            background: #05070a;
+            padding: 1rem;
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-green);
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+        }
+
+        .modal-body ul {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .modal-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid transparent;
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .btn-ghost:hover {
+            color: var(--accent-amber);
+            background: rgba(240, 165, 0, 0.05);
+            border-color: rgba(240, 165, 0, 0.2);
+        }
+
+        .btn-ghost svg {
+            opacity: 0.7;
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 5rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .heart {
+            color: var(--accent-red);
+            display: inline-block;
+            animation: heartBeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartBeat {
+            0% {
+                transform: scale(1);
+            }
+
+            14% {
+                transform: scale(1.1);
+            }
+
+            28% {
+                transform: scale(1);
+            }
+
+            42% {
+                transform: scale(1.1);
+            }
+
+            70% {
+                transform: scale(1);
+            }
+        }
+
+        .footer-tagline {
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-amber);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>HuaweiCloud → Terraform Importer</h1>
+            <p class="subtitle">Bulk generate <a href="https://developer.hashicorp.com/terraform/language/import"
+                    target="_blank">HCL import</a> blocks from <a
+                    href="https://support.huaweicloud.com/intl/en-us/api-rms/rms_04_0104.html" target="_blank">RMS API
+                    responses</a></p>
+        </header>
+
+        <div class="top-nav">
+            <a href="https://fawadiqbal.com/hi/" target="_blank" style="text-decoration: none;">
+                <button class="btn-ghost" title="Submit bug or feedback">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Report a bug or feedback
+                </button>
+            </a>
+            <button class="btn-ghost" onclick="openModal()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                How it works
+            </button>
+        </div>
+
+        <section class="instructions-container" id="instructions">
+            <div class="instructions-header" onclick="toggleInstructions()">
+                <h2><span style="font-size: 1.2rem;">ⓘ</span> How to use</h2>
+                <span id="chevron">▼</span>
+            </div>
+            <div class="instructions-content">
+                <ol>
+                    <li>Go to <a
+                            href="https://console-intl.huaweicloud.com/apiexplorer/#/openapi/RMS/debug?api=ListAllResources"
+                            target="_blank" style="color: var(--accent-amber);">HuaweiCloud API Explorer</a></li>
+                    <li>Authenticate and call the <code>ListAllResources</code> API.</li>
+                    <li>Copy the full JSON response body.</li>
+                    <li>Paste it into the textarea below <strong>or</strong> upload the saved <code>.json</code> file.
+                    </li>
+                    <li>Click <strong>"Parse Resources"</strong> to see the list.</li>
+                    <li>Select the resources you want to import.</li>
+                    <li>Click <strong>"Generate Import Blocks"</strong>.</li>
+                    <li>Copy the generated code into a <code>.tf</code> file and run:
+                        <div style="margin-top: 0.5rem;">
+                            <code
+                                style="color: var(--accent-green);">terraform plan -generate-config-out="generated.tf"</code>
+                        </div>
+                    </li>
+                </ol>
+                <div
+                    style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 6px; border-left: 3px solid var(--accent-amber);">
+                    <p
+                        style="font-size: 0.85rem; color: var(--accent-amber); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                        HCL IMPORT BLOCK TEMPLATE:</p>
+                    <pre
+                        style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; display: block; margin-top: 1rem;">import {
+  to = &lt;resource_type&gt;.&lt;your_resource_name&gt;
+  id = "&lt;resource_id&gt;"
+}</pre>
+                </div>
+
+                <div
+                    style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 6px; border-left: 3px solid var(--accent-amber);">
+                    <p
+                        style="font-size: 0.85rem; color: var(--accent-amber); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                        HCL IMPORT BLOCK EXAMPLE:</p>
+                    <pre
+                        style="font-family: var(--font-mono); font-size: 0.85rem; color: #82aaff; line-height: 1.6; display: block; margin-top: 1rem;"><span style="color: #545862; font-style: italic;"># Import the existing ECS instance</span>
+
+import {
+  to = <span style="color: var(--accent-amber);">huaweicloud_compute_instance.ecs_69ef_8511</span>
+  id = <span style="color: var(--accent-green);">"7e2fa39b-e06e-43bc-ac9f-037af822e5bc"</span>
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="input-section">
+            <div class="textarea-wrapper">
+                <textarea id="jsonInput" placeholder='Paste your HuaweiCloud API response JSON here...'></textarea>
+                <div id="errorMessage" class="message"></div>
+            </div>
+
+            <div class="actions">
+                <input type="file" id="fileInput" accept=".json">
+                <button class="btn-secondary" onclick="document.getElementById('fileInput').click()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    Upload JSON File
+                </button>
+                <button class="btn-primary" onclick="listResources()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="8" y1="6" x2="21" y2="6"></line>
+                        <line x1="8" y1="12" x2="21" y2="12"></line>
+                        <line x1="8" y1="18" x2="21" y2="18"></line>
+                        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                    </svg>
+                    Parse Resources
+                </button>
+            </div>
+        </section>
+
+        <section id="selectionSection" class="selection-section">
+            <div class="selection-header">
+                <h2 style="font-size: 1.2rem; color: var(--accent-amber);">Resource Explorer</h2>
+                <div style="font-size: 0.9rem; color: var(--text-muted);" id="selectionSummary">0 resources selected
+                </div>
+            </div>
+
+            <div class="filter-groups">
+                <div class="filter-group" id="providerFilters">
+                    <span class="filter-label">Providers:</span>
+                    <!-- Dynamic chips -->
+                </div>
+                <div class="filter-group" id="regionFilters">
+                    <span class="filter-label">Regions:</span>
+                    <!-- Dynamic chips -->
+                </div>
+            </div>
+
+            <div class="resource-table-container">
+                <table id="resourceTable">
+                    <thead>
+                        <tr>
+                            <th class="col-check"><input type="checkbox" id="selectAll" class="custom-check"
+                                    onclick="toggleAll(this.checked)"></th>
+                            <th class="col-name">Name</th>
+                            <th class="col-type">Type</th>
+                            <th class="col-provider">Provider</th>
+                            <th class="col-region">Region</th>
+                            <th class="col-id">Resource ID</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resourceListBody"></tbody>
+                </table>
+            </div>
+
+            <div class="selection-actions">
+                <button class="btn-primary" onclick="generateHcl()">
+                    Generate Import Blocks
+                </button>
+            </div>
+        </section>
+
+        <section id="outputSection" class="output-section">
+            <div id="summaryBar" class="summary-bar"></div>
+
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <span class="terminal-title">Import_Blocks.tf</span>
+                </div>
+                <div id="terminalBody" class="terminal-body"></div>
+            </div>
+
+            <div class="command-hint" style="margin-top: 2rem;">
+                <span>$</span>
+                <code>terraform plan -generate-config-out="generated.tf"</code>
+            </div>
+
+            <div class="output-actions">
+                <button class="btn-primary" id="copyBtn" onclick="copyToClipboard()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy to Clipboard
+                </button>
+                <button class="btn-secondary" onclick="downloadTfFile()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download as .tf file
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-tagline">Open Source Project</div>
+                <p>Built with <span class="heart">❤</span> by <strong>Fawad Iqbal</strong> (f00928374)</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Modal logic
+        function openModal() {
+            const modal = document.getElementById('methodologyModal');
+            modal.style.display = 'flex';
+            setTimeout(() => modal.classList.add('open'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('methodologyModal');
+            modal.classList.remove('open');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('methodologyModal');
+            if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
+                closeModal();
+            }
+        });
+
+        // Collapsible instructions
+        function toggleInstructions() {
+            const container = document.getElementById('instructions');
+            const chevron = document.getElementById('chevron');
+            container.classList.toggle('open');
+            chevron.textContent = container.classList.contains('open') ? '▲' : '▼';
+        }
+
+        // State management
+        let rawHclOutput = "";
+        let parsedResources = [];
+        let tfMapping = [];
+
+        // Load mapping on startup
+        async function loadMapping() {
+            try {
+                const response = await fetch('huaweicloud_rms_tf_mapping.json');
+                if (response.ok) {
+                    tfMapping = await response.json();
+                    console.log("Loaded mapping:", tfMapping.length, "entries");
+                }
+            } catch (e) {
+                console.warn("Could not load mapping file:", e);
+                // Fallback to empty mapping
+            }
+        }
+        loadMapping();
+
+        // File upload handling
+        document.getElementById('fileInput').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('jsonInput').value = e.target.result;
+                hideError();
+            };
+            reader.readAsText(file);
+        });
+
+        function showError(msg, isWarning = false) {
+            const errEl = document.getElementById('errorMessage');
+            errEl.textContent = msg;
+            errEl.className = isWarning ? 'message warning' : 'message error';
+            errEl.style.display = 'block';
+        }
+
+        function hideError() {
+            document.getElementById('errorMessage').style.display = 'none';
+        }
+
+        function sanitizeName(name) {
+            if (!name) return "";
+            return name.toLowerCase()
+                .replace(/[-\s]+/g, '_')
+                .replace(/[^a-z0-9_]/g, '')
+                .replace(/^(\d)/, 'res_$1') // Ensure doesn't start with number
+                .replace(/_+$/, ''); // Trim trailing underscores
+        }
+
+        function toSnakeCase(str) {
+            if (!str) return "resource";
+            return str
+                .replace(/([A-Z])/g, "_$1")
+                .toLowerCase()
+                .replace(/^_/, "")
+                .replace(/[-\s]+/g, '_')
+                .replace(/_+/g, '_');
+        }
+
+        function escapeHtml(text) {
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
+        /**
+         * Robust HCL Highlighter
+         */
+        function highlightHCL(text) {
+            const lines = text.split('\n');
+            const highlightedLines = lines.map(line => {
+                const trimmed = line.trim();
+                if (trimmed.startsWith('#')) return `<span class="hcl-comment">${escapeHtml(line)}</span>`;
+                let output = escapeHtml(line);
+                output = output.replace(/"([^"]*)"/g, '<span class="hcl-string">"$1"</span>');
+                output = output.replace(/\b(import|to|id)\b/g, '<span class="hcl-keyword">$1</span>');
+                return output;
+            });
+            return highlightedLines.join('\n');
+        }
+
+        function listResources() {
+            const input = document.getElementById('jsonInput').value.trim();
+            const selectionSection = document.getElementById('selectionSection');
+            const listBody = document.getElementById('resourceListBody');
+
+            hideError();
+            document.getElementById('outputSection').style.display = 'none';
+
+            if (!input) {
+                showError("Please paste JSON or upload a file first.");
+                return;
+            }
+
+            let data;
+            try {
+                data = JSON.parse(input);
+            } catch (e) {
+                showError("Invalid JSON: " + e.message);
+                return;
+            }
+
+            parsedResources = (data.resources || []).filter(r => r.id);
+            if (parsedResources.length === 0) {
+                showError("No valid resources found in the JSON.", true);
+                return;
+            }
+
+            // Render table
+            listBody.innerHTML = parsedResources.map((res, index) => `
+                <tr>
+                    <td class="col-check"><input type="checkbox" class="custom-check res-check" data-index="${index}" checked onclick="updateSelectionSummary()"></td>
+                    <td class="col-name" title="${escapeHtml(res.name || '')}">${escapeHtml(res.name || 'Unnamed')}</td>
+                    <td class="col-type">${escapeHtml(res.type)}</td>
+                    <td class="col-provider">${escapeHtml(res.provider)}</td>
+                    <td class="col-region">${escapeHtml(res.region_id || '-')}</td>
+                    <td class="col-id" title="${escapeHtml(res.id)}">${escapeHtml(res.id.toString().substring(0, 13))}...</td>
+                </tr>
+            `).join('');
+
+            selectionSection.style.display = 'block';
+            document.getElementById('selectAll').checked = true;
+
+            renderBulkFilters();
+            updateSelectionSummary();
+            selectionSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderBulkFilters() {
+            const providers = [...new Set(parsedResources.map(r => r.provider))].sort();
+            const regions = [...new Set(parsedResources.map(r => r.region_id || 'Global'))].sort();
+
+            const pContainer = document.getElementById('providerFilters');
+            const rContainer = document.getElementById('regionFilters');
+
+            // Provider Filters with Select All
+            pContainer.innerHTML = `
+                <span class="filter-label">Providers:</span>
+                <label class="filter-chip" style="border-style: dashed; border-color: var(--accent-amber);">
+                    <input type="checkbox" checked onchange="toggleGroup('provider', this.checked)"> ALL
+                </label>
+            `;
+
+            providers.forEach(p => {
+                const label = document.createElement('label');
+                label.className = 'filter-chip';
+                label.innerHTML = `<input type="checkbox" checked class="provider-filter-chip" onchange="toggleByCriteria('provider', '${p}', this.checked)"> ${p.toUpperCase()}`;
+                pContainer.appendChild(label);
+            });
+
+            // Region Filters with Select All
+            rContainer.innerHTML = `
+                <span class="filter-label">Regions:</span>
+                <label class="filter-chip" style="border-style: dashed; border-color: var(--accent-amber);">
+                    <input type="checkbox" checked onchange="toggleGroup('region_id', this.checked)"> ALL
+                </label>
+            `;
+
+            regions.forEach(r => {
+                const label = document.createElement('label');
+                label.className = 'filter-chip';
+                label.innerHTML = `<input type="checkbox" checked class="region-filter-chip" onchange="toggleByCriteria('region_id', '${r}', this.checked)"> ${r}`;
+                rContainer.appendChild(label);
+            });
+        }
+
+        function toggleGroup(prop, checked) {
+            const className = prop === 'provider' ? '.provider-filter-chip' : '.region-filter-chip';
+            const chips = document.querySelectorAll(className);
+            chips.forEach(c => {
+                if (c.checked !== checked) {
+                    c.checked = checked;
+                    toggleByCriteria(prop, c.parentNode.textContent.trim(), checked, false);
+                }
+            });
+            updateSelectionSummary();
+        }
+
+        function toggleByCriteria(prop, value, checked, triggerSummary = true) {
+            const rows = document.querySelectorAll('.res-check');
+            rows.forEach(checkbox => {
+                const idx = parseInt(checkbox.dataset.index);
+                const res = parsedResources[idx];
+                const resVal = prop === 'region_id' ? (res[prop] || 'Global') : res[prop];
+
+                if (resVal.toString().toLowerCase() === value.toLowerCase()) {
+                    checkbox.checked = checked;
+                }
+            });
+            if (triggerSummary) updateSelectionSummary();
+        }
+
+        function toggleAll(checked) {
+            const checks = document.querySelectorAll('.res-check');
+            checks.forEach(c => c.checked = checked);
+
+            // Sync filter chips
+            document.querySelectorAll('.filter-chip input').forEach(fi => fi.checked = checked);
+
+            updateSelectionSummary();
+        }
+
+        function updateSelectionSummary() {
+            const checked = document.querySelectorAll('.res-check:checked').length;
+            const total = parsedResources.length;
+            document.getElementById('selectionSummary').textContent = `${checked} of ${total} resources selected`;
+            document.getElementById('selectAll').checked = checked === total;
+        }
+
+        function generateHcl() {
+            const outputSection = document.getElementById('outputSection');
+            const terminalBody = document.getElementById('terminalBody');
+            const summaryBar = document.getElementById('summaryBar');
+
+            const selectedIndices = Array.from(document.querySelectorAll('.res-check:checked')).map(c => parseInt(c.dataset.index));
+
+            if (selectedIndices.length === 0) {
+                alert("Please select at least one resource.");
+                return;
+            }
+
+            let finalHcl = "";
+            let generatedCount = 0;
+            const providers = {};
+            const usedFullRefs = new Set();
+
+            selectedIndices.forEach(idx => {
+                const res = parsedResources[idx];
+                const provider = (res.provider || "hc").toLowerCase();
+
+                // Use mapping if available
+                let resourceType = "";
+                const mapping = tfMapping.find(m =>
+                    m.rms_provider.toLowerCase() === res.provider.toLowerCase() &&
+                    m.rms_type.toLowerCase() === res.type.toLowerCase()
+                );
+
+                if (mapping && mapping.tf_resource) {
+                    resourceType = mapping.tf_resource;
+                } else {
+                    // Fallback to old guessing logic
+                    const type = toSnakeCase(res.type || "resource");
+                    resourceType = `huaweicloud_${provider}_${type}`;
+                }
+
+                if (!providers[provider]) providers[provider] = [];
+
+                let baseName = sanitizeName(res.name) || "resource";
+                let uniqueName = baseName;
+
+                let counter = 1;
+                while (usedFullRefs.has(`${resourceType}.${uniqueName}`)) {
+                    uniqueName = `${baseName}_${counter}`;
+                    if (counter > 5) {
+                        const shortId = res.id.toString().substring(0, 4);
+                        uniqueName = `${baseName}_${shortId}`;
+                    }
+                    counter++;
+                }
+                usedFullRefs.add(`${resourceType}.${uniqueName}`);
+
+                const block = `import {
+  to = ${resourceType}.${uniqueName}
+  id = "${res.id}"
+}\n\n`;
+
+                providers[provider].push(block);
+                generatedCount++;
+            });
+
+            const sortedKeys = Object.keys(providers).sort();
+            sortedKeys.forEach(k => {
+                finalHcl += `# --- Provider: ${k.toUpperCase()} ---\n\n`;
+                providers[k].forEach(block => finalHcl += block);
+            });
+
+            finalHcl += `# Then run:\n# terraform plan -generate-config-out="generated.tf"`;
+
+            rawHclOutput = finalHcl;
+            terminalBody.innerHTML = highlightHCL(finalHcl);
+            summaryBar.textContent = `✓ ${generatedCount} import blocks generated from selection`;
+            outputSection.style.display = 'block';
+            outputSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyToClipboard() {
+            const btn = document.getElementById('copyBtn');
+            const originalHtml = btn.innerHTML;
+            if (!rawHclOutput) return;
+            navigator.clipboard.writeText(rawHclOutput).then(() => {
+                btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+                btn.style.color = 'var(--accent-green)';
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                    btn.style.color = '';
+                }, 2000);
+            });
+        }
+
+        function downloadTfFile() {
+            if (!rawHclOutput) return;
+            const blob = new Blob([rawHclOutput], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'import.tf';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+    </script>
+
+    <!-- Methodology Modal -->
+    <div id="methodologyModal" class="modal-overlay" onclick="if(event.target === this) closeModal()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <h2>Behind the Scenes: Methodology</h2>
+            </div>
+            <div class="modal-body">
+                <p>Huawei Cloud Resource Management Service (RMS) provides a centralized view of all resources, but the
+                    naming convention for resources in the <code>ListAllResources</code> API often differs from the
+                    naming required by the HuaweiCloud Terraform Provider.</p>
+
+                <p>To see what's currently created in your cloud, you can use the <a
+                        href="https://console-intl.huaweicloud.com/apiexplorer/#/openapi/RMS/debug?api=ListAllResources"
+                        target="_blank" style="color: var(--accent-amber); font-weight: 500;">ListAllResources API</a>.
+                    This tool helps map those findings to Terraform resources like <a
+                        href="https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs/resources/compute_instance"
+                        target="_blank" style="color: var(--accent-amber); font-weight: 500;">compute_instance</a>.</p>
+
+                <h3>Step 1 — Extracting RMS resource types</h3>
+                <p>We use the <code>ListProviders</code> endpoint to get the full catalog of what RMS knows about. This
+                    provides a clean list of provider-type pairs.</p>
+                <pre>GET /v1/resource-manager/domains/{domain_id}/providers
+
+{
+  "provider": "ecs",
+  "resource_types": [{ "name": "cloudservers" }]
+}</pre>
+
+                <h3>Step 2 — Scrape Terraform resource names</h3>
+                <p>We correlate these with the source of truth on GitHub: <a
+                        href="https://github.com/huaweicloud/terraform-provider-huaweicloud" target="_blank"
+                        style="color: var(--accent-amber); font-weight: 500;">terraform-provider-huaweicloud</a>.</p>
+                <pre># Listing all resource documentation
+curl https://api.github.com/repos/huaweicloud/terraform-provider-huaweicloud/contents/docs/resources \
+  | jq -r '.[].name' | sed 's/\.md$//' | sort > tf_resources.txt</pre>
+
+                <h3>Step 3 — Build the mapping (Heuristic + LLM)</h3>
+                <p>The naming pattern is mostly consistent (e.g., <code>ecs.cloudservers</code> →
+                    <code>huaweicloud_compute_instance</code>), but not perfectly mechanical. We apply heuristics and
+                    LLM assistance to build the mapping used by this tool.
+                </p>
+
+                <h3># Terraform Example Code</h3>
+                <pre>
+terraform {
+  required_version = ">= 1.5.0"
+  required_providers {
+    huaweicloud = {
+      source  = "huaweicloud/huaweicloud"
+      version = "~> 1.77.3"
+    }
+  }
+}
+
+provider "huaweicloud" {
+  region     = "me-east-1" # Specify the region for the Huawei Cloud provider
+  access_key = var.access_key
+  secret_key = var.secret_key
+  auth_url   = "https://iam.me-east-1.myhuaweicloud.com/v3"
+  cloud      = "myhuaweicloud.com"
+  # regional   = "true" # Enable regional services
+  # charging_mode = "postPaid"
+}
+
+# Terraform Import block
+
+import {
+  to = huaweicloud_vpc.vpc_default
+  id = "9118766a-9v85-49e5-b513-ab3c159836ec"
+}
+import {
+  # add more imports here like this
+  ...
+}
+
+</pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
